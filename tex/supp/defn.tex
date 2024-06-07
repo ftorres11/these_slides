@@ -1,0 +1,106 @@
+% ENABLE/DISABLE COMMENTS
+
+% \newcommand{\Col}[2]{{#2}}
+% \newcommand{\Note}[2]{}
+\newcommand{\Col}[2]{{\color{#1}#2}}
+\newcommand{\Note}[2]{[\textbf{#1}: #2]}
+
+\newcommand{\iavr}[1]{\Col{blue}{#1}}
+\newcommand{\iavrc}[1]{\iavr{\Note{YA}{#1}}}
+\newcommand{\ronan}[1]{\Col{violet}{#1}}
+\newcommand{\ronanc}[1]{\ronan{\Note{RS}{#1}}}
+
+% colors
+
+% \definecolor{ForestGreen}{RGB}{34,139,34}
+% \definecolor{Orange}{RGB}{1.0, 0.55, 0.0}
+% \definecolor{Purple}{RGB}{0.58, 0.44, 0.86}
+% \definecolor{LightCyan}{rgb}{0.88,1,1}
+% \definecolor{TableColor}{rgb}{0.835, 0.894, 0.968}
+\definecolor{darkgreen}{rgb}{0.0, 0.2, 0.13}
+
+% method
+\newcommand{\relu}{{\operatorname{ReLU}}}
+\newcommand{\gelu}{{\operatorname{GeLU}}}
+\newcommand{\conv}{{\operatorname{conv}}}
+\newcommand{\avg}{{\operatorname{avg}}}
+\newcommand{\fc}{{\textsc{fc}}\xspace}
+\newcommand{\gap}{{\textsc{gap}}\xspace}
+\newcommand{\mlp}{{\textsc{mlp}}\xspace}
+\newcommand{\ca}{{\textsc{ca}}\xspace}
+\newcommand{\sa}{{\textsc{sa}}\xspace}
+\newcommand{\msa}{{\textsc{msa}}\xspace}
+\newcommand{\LN}{{\textsc{ln}}\xspace}
+\newcommand{\cls}{{\textsc{cls}}\xspace}
+\newcommand{\our}{{\textsc{ca}}}
+\newcommand{\ours}{{\textsc{ca}}\xspace}
+\newcommand{\Our}{{CA-Stream}}
+\newcommand{\Ours}{{CA-Stream}\xspace}
+\newcommand{\OURS}{{Cross Attention Stream}\xspace}
+\newcommand{\PO}{{\textsc{proj}$\to$\our}\xspace}
+\newcommand{\mae}{\textrm{MAE}}
+\newcommand{\mse}{\textrm{MSE}}
+\newcommand{\hi}{\textrm{HI}}
+\definecolor{DarkGreen}{rgb}{0.0, 0.2, 0.13}
+%\newcommand{\OM}{{\our$\to$\textsc{mlp}}\xspace}
+%\newcommand{\POM}{{\textsc{proj}$\to$\our$\to$\textsc{mlp}}\xspace}
+%\newcommand{\we}{\rowcolor{LightCyan}}                       % ours highlighted in table row
+%\newcommand{\us}[1]{{\cellcolor{LightCyan}#1}}               % ours highlighted in table cell
+\newcommand{\all}{\tikz{\draw[white,fill=black,line width=0.4pt] (0,0) circle (1.2pt);}}
+
+% experiments
+\newcommand{\imagenet}{{ImageNet-1k}\xspace}
+%\newcommand{\resnet}{{ResNet-$18$}\xspace}
+%\newcommand{\resnet50}{{ResNet-$50$}\xspace}
+%\newcommand{\vits}{{ViT-S}\xspace}
+%\newcommand{\vitt}{{ViT-T}\xspace}
+%\newcommand{\convnexts}{{ConvNeXT-S}\xspace}
+%\newcommand{\cifar10}{CIFAR-$10$\xspace}
+%\newcommand{\cifar100}{CIFAR-$100$\xspace}
+%\newcommand{\flowers}{Oxford Flowers\xspace}
+%\newcommand{\cub}{CUB-$200$\xspace}
+%\newcommand{\voc12}{VOC$12$\xspace}
+%\newcommand{\voc7}{VOC$07$\xspace}
+%\newcommand{\coco}{COCO\xspace}
+
+\newcommand{\gain}[1]{}
+\newcommand{\gp}[1]{{\color{ForestGreen}#1}}
+\newcommand{\gn}[1]{\red{#1}}
+\newcommand{\se}[1]{\blue{#1}}
+\newcommand{\sota}[1]{\red{\textbf{#1}}}
+\newcommand{\negative}[1]{\blue{#1}}
+
+\newcommand{\cam}{\textrm{CAM}}
+\newcommand{\gcam}{\textrm{Grad-CAM}}
+\newcommand{\scam}{\textrm{Score-CAM}}
+
+\newcommand{\Fdef}{Mask\xspace}
+\newcommand{\Fref}{Diff\xspace}
+\newcommand{\MIOFref}{IODiff\xspace}
+\newcommand{\MIODref}{IOMask\xspace}
+
+
+\newcommand{\AG}{\operatorname{AG}}
+\newcommand{\AGf}{Average Gain\xspace}
+\newcommand{\Agf}{Average gain\xspace}
+\newcommand{\agf}{average gain\xspace}
+
+\newcommand{\AC}{\operatorname{AC}}
+\newcommand{\ACf}{Average Contract\xspace}
+
+\newcommand{\AD}{\operatorname{AD}}
+\newcommand{\I}{\operatorname{I}}
+\newcommand{\D}{\operatorname{D}}
+\newcommand{\AI}{\operatorname{AI}}
+\newcommand{\OM}{\operatorname{OM}}
+\newcommand{\LE}{\operatorname{LE}}
+\newcommand{\Fo}{\operatorname{F1}}
+\newcommand{\prc}{\operatorname{precision}}
+\newcommand{\rec}{\operatorname{recall}}
+\newcommand{\BA}{\operatorname{BoxAcc}}
+\newcommand{\spg}{\operatorname{SP}}
+\newcommand{\epg}{\operatorname{EP}}
+\newcommand{\SM}{\operatorname{SM}}
+\newcommand{\iou}{\operatorname{IoU}}
+
+\definecolor{TableColor}{rgb}{0.835, 0.894, 0.968}

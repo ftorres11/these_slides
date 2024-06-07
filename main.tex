@@ -1,188 +1,102 @@
-\documentclass[xcolor={dvipsnames}]{beamer}
+\documentclass[xcolor=dvipsnames]{beamer}
 \usepackage[utf8]{inputenc}
-
-\usetheme{Madrid}
+\usepackage{comment}
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{pgfplots.groupplots}
+\usetikzlibrary{shapes,arrows,shadows,shadows.blur,positioning,calc,arrows.meta,automata}
+\usetikzlibrary{matrix,calc,decorations.pathreplacing}
+\usepackage{pgfpages}
+\usetheme{Berlin}
 \usecolortheme{default}
-\setbeamertemplate{enumerate items}[default]
 \setbeamercolor*{structure}{bg=white,fg=black}
+\setbeamertemplate{enumerate items}[default]
+\usepackage{times,url}
+\makeatletter
+\newcommand{\nonumsec}[1]{%
+\section*{#1}%
+\addtocontents{toc}{\protect\beamer@sectionintoc{\the\c@section}{#1}{\the\c@page}{\the\c@part}%
+        {0}}%
+}
+\makeatother
 
-% \setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
-% \setbeamercolor*{palette secondary}{use=structure,fg=white,bg=structure.fg!75}
-% \setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=structure.fg!50!black}
-% \setbeamercolor*{palette quaternary}{fg=white,bg=black}
+\setbeamertemplate{headline}
+{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+  \end{beamercolorbox}
+}
 
-% \setbeamercolor{section in toc}{fg=black,bg=white}
-% \setbeamercolor{alerted text}{use=structure,fg=structure.fg!50!black!80!black}
-% \setbeamercolor{frametitle}{bg=black,fg=white}
-
-% \setbeamercolor{titlelike}{parent=palette primary,fg=structure.fg!50!black}
-% \setbeamercolor{frametitle}{bg=gray!10!white,fg=black}
-
-% \setbeamercolor*{titlelike}{parent=palette primary}
-
-% \setbeamercolor{block title example}{bg=black,fg=white}
-
-% \usepackage{times,url}
-
-% \setbeamertemplate{footline}[frame number]
-% \setbeamertemplate{footline}[frame number]{}
-
-\setbeamertemplate{footline}{}
-
-\setbeamertemplate{footline}
-% {
-%   \leavevmode%
-%   \hbox{%
-%   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
-%     \usebeamerfont{author in head/foot}\insertsection
-%   \end{beamercolorbox}%
-%   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
-%     \usebeamerfont{title in head/foot}\insertsubsection
-%   \end{beamercolorbox}%
-%   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-%     \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
-%     \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
-%   \end{beamercolorbox}}%
-%   \vskip0pt%
-% }
-
-%------------------------------------------------------------
+\addtobeamertemplate{navigation symbols}{}{%
+    \usebeamerfont{footline}%
+    \usebeamercolor[fg]{footline}%
+    \hspace{1em}%
+    \insertframenumber/\inserttotalframenumber
+}
+%--------------------------------------------------------------------------------------------------
 %This block of code defines the information to appear in the
 %Title page
-\title[Learning Discriminative Representations to Interpret Image Recognition Models] %optional
+
+\title[] %Learning Discriminative Representations to Interpret Image Recognition Models
 {Learning Discriminative Representations to Interpret Image Recognition Models}
-
 \subtitle{Thèse de Doctorat}
-
 \author[Felipe Torres Figueroa] % (optional)
 {Felipe Torres Figueroa}
-
-\institute[VFU] % (optional)
+\institute[ECM] % (optional)
 {
   \'Ecole Centrale de Marseille
   \and
-  Aix-Marseille Universit\'e
+  Laboratoire d'Informatique et de Syst\`emes (LIS)
 }
-
-\date[VLC 2021] % (optional)
-{Marseille, July 2024}
-
-% 右下角使用logo的方式
-\logo{\includegraphics[height=1cm]{overleaf-logo}} 
-
+\date[2024] % (optional)
+{Marseille, September 2024}
+\logo{%
+  \makebox[0.95\paperwidth]{%
+    \includegraphics[height=1cm,keepaspectratio]{logo/logo-lis-2024-eps-converted-to.pdf}%    
+    \hfill%
+    \includegraphics[height=1cm,keepaspectratio]{logo/ecm_logo.png}%
+  }%
+}
 %End of title page configuration block
-%------------------------------------------------------------
-
-
-
-%------------------------------------------------------------
+%--------------------------------------------------------------------------------------------------
 %The next block of commands puts the table of contents at the 
 %beginning of each section and highlights the current section:
-
-\AtBeginSection[]
+\AtBeginSection
 {
   \begin{frame}
     \frametitle{Table of Contents}
     \tableofcontents[currentsection]
   \end{frame}
 }
-%------------------------------------------------------------
-
-
+\input{tex/supp/plots}
+\input{tex/supp/abbrev}
+\input{tex/supp/defn}
+%--------------------------------------------------------------------------------------------------
 \begin{document}
-
-%The next statement creates the title page.
-\frame{\titlepage}
-
-
-%---------------------------------------------------------
-%This block of code is for the table of contents after
-%the title page
-\begin{frame}
-\frametitle{Table of Contents}
-\tableofcontents
-\end{frame}
-%---------------------------------------------------------
-
-
-\section{First section}
-
-%---------------------------------------------------------
-%Changing visivility of the text
-\begin{frame}
-\frametitle{Sample frame title}
-This is a text in second frame. For the sake of showing an example.
-
-\begin{itemize}
-    \item<1-> Text visible on slide 1
-    \item<2-> Text visible on slide 2
-    \item<3> Text visible on slides 3
-    \item<4-> Text visible on slide 4
-\end{itemize}
-\end{frame}
-
-%---------------------------------------------------------
-
-
-%---------------------------------------------------------
-%Example of the \pause command
-\begin{frame}
-In this slide \pause
-
-the text will be partially visible \pause
-
-And finally everything will be there
-\end{frame}
-%---------------------------------------------------------
-
-\section{Second section}
-
-%---------------------------------------------------------
-%Highlighting text
-\begin{frame}
-\frametitle{Sample frame title}
-
-In this slide, some important text will be
-\alert{highlighted} because it's important.
-Please, don't abuse it.
-
-\begin{block}{Remark}
-Sample text
-\end{block}
-
-\begin{alertblock}{Important theorem}
-Sample text in red box
-\end{alertblock}
-
-\begin{examples}
-Sample text in green box. The title of the block is ``Examples".
-\end{examples}
-\end{frame}
-%---------------------------------------------------------
-
-
-%---------------------------------------------------------
-%Two columns
-\begin{frame}
-\frametitle{Two-column slide}
-
-\begin{columns}
-
-\column{0.5\textwidth}
-This is a text in first column.
-$$E=mc^2$$
-\begin{itemize}
-\item First item
-\item Second item
-\end{itemize}
-
-\column{0.5\textwidth}
-This text will be in the second column
-and on a second tought this is a nice looking
-layout in some cases.
-\end{columns}
-\end{frame}
-%---------------------------------------------------------
-
-
+	%The next statement creates the title page.
+	{
+	\setbeamertemplate{headline}{}
+	\begin{frame}
+		\maketitle
+	\end{frame}
+	}
+	\logo{}
+	%---------------------------------------------------------
+	%This block of code is for the table of contents after
+	%the title page
+	\begin{frame}
+		\frametitle{Table of Contents}
+		\tableofcontents
+	\end{frame}
+	\input{tex/intro/main}
+	\input{tex/rel/main}
+	\input{tex/opticam/main}
+	\input{tex/castream/main}
+	\input{tex/gradient/main}
+	\input{tex/references}
+	%-----------------------------------------------------------------------------------------------
 \end{document}
