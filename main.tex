@@ -2,16 +2,17 @@
 \usepackage[utf8]{inputenc}
 \usepackage{comment}
 \usepackage{pgfplots}
+\usepackage{pgfpages}
+\usepackage{times,url}
 \pgfplotsset{compat=newest}
 \usetikzlibrary{pgfplots.groupplots}
 \usetikzlibrary{shapes,arrows,shadows,shadows.blur,positioning,calc,arrows.meta,automata}
 \usetikzlibrary{matrix,calc,decorations.pathreplacing}
-\usepackage{pgfpages}
+\usepgfplotslibrary{fillbetween}
 \usetheme{Frankfurt}
 \usecolortheme{default}
 \setbeamercolor*{structure}{bg=white,fg=black}
 \setbeamertemplate{enumerate items}[default]
-\usepackage{times,url}
 \makeatletter
 \newcommand{\nonumsec}[1]{%
 \section*{#1}%
@@ -37,10 +38,14 @@
     \hspace{1em}%
     \insertframenumber/\inserttotalframenumber
 }
+
+\newcommand*{\xMin}{-4}%
+\newcommand*{\xMax}{4}%
+\newcommand*{\yMin}{-4}%
+\newcommand*{\yMax}{4}%
 %--------------------------------------------------------------------------------------------------
 %This block of code defines the information to appear in the
 %Title page
-
 \title[] %Learning Discriminative Representations to Interpret Image Recognition Models
 {Learning Discriminative Representations to Interpret Image Recognition Models}
 \subtitle{Thèse de Doctorat}

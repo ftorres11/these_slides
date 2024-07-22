@@ -1,0 +1,22 @@
+%\begin{figure}[H]
+    \scalebox{.65}{%
+    \begin{tikzpicture}[]
+        %% CNN branch
+        \node(recon) at (3, 3.3541){Recognition};
+        \node(reconst) at (0, 0) {Reconstruction};
+        \node(reorg) at (6, 0) {Reorganization};
+
+        \draw[-Stealth] ([xshift=-6pt] reconst.north) -- node {} ([xshift=-6pt] recon.south);
+        \draw[-Stealth] ([xshift=-2pt] recon.south) -- node {} ([xshift=-2pt] reconst.north);
+
+        \draw[-Stealth] ([xshift=2pt] recon.south) -- node {} ([xshift=2pt] reorg.north);
+        \draw[-Stealth] ([xshift=6pt] reorg.north) -- node {} ([xshift=6pt] recon.south);
+
+        \draw[-Stealth] ([yshift=2pt] reconst.east) -- node {} ([yshift=2pt] reorg.west);
+        \draw[-Stealth] ([yshift=-2pt] reorg.west) -- node {} ([yshift=-2pt] reconst.east);        
+    
+    \end{tikzpicture}
+    }
+    %\caption{\cite{malik2016three}}
+    %\label{fig:malik_rs}
+%\end{figure}

@@ -1,8 +1,42 @@
 \section{Background}
-This is a text in second frame. For the sake of showing an example.
-\begin{itemize}
-    \item<1-> Text visible on slide 1
-    \item<2-> Text visible on slide 2
-    \item<3> Text visible on slides 3
-    \item<4-> Text visible on slide 4
-\end{itemize}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Background}
+    To familiarize with this work, we split it into three points:\\\pause
+    \begin{columns}[t]
+        \column{.275\textwidth}
+        \begin{center}
+            \footnotesize\textbf{Preliminaries}\\
+            \begin{itemize}
+                \footnotesize\item Approaching Vision.
+                \footnotesize\item David Marr's approach.
+                \footnotesize\item CV currently.
+                \footnotesize\item Desiredata of Interpretability Study.
+            \end{itemize}
+        \end{center}
+        \column{.375\textwidth}
+        \begin{center}
+            \footnotesize\textbf{Image Recognition Models}\\
+            \begin{itemize}
+                \footnotesize\item Traditional Models.
+                \footnotesize\item Convolutional Neural Networks (CNN).
+                \footnotesize\item Hybrid Architectures.
+            \end{itemize}
+        \end{center}
+        \column{.4\textwidth}
+        \begin{center}
+            \footnotesize\textbf{Interpretability}\\
+            \begin{itemize}
+                \footnotesize\item Transparency.
+                \footnotesize\item Post-Hoc Interpretability.
+                \begin{itemize}
+                    \footnotesize\item Class Activation Methods.
+                \end{itemize}
+                \footnotesize\item Evaluating Interpretability.
+            \end{itemize}
+        \end{center}
+    \end{columns}            
+\end{frame}
+\input{tex/rel/tex/landing}
+\input{tex/rel/tex/imrecon}
+\input{tex/rel/tex/interp}

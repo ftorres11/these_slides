@@ -21,9 +21,13 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{mythos_interp}
-Z.~C. Lipton, ``The mythos of model interpretability: In machine learning, the
-  concept of interpretability is both important and slippery.'' \emph{Queue},
-  vol.~16, no.~3, pp. 31--57, 2018.
+\bibitem{malik2016three}
+J.~Malik, P.~Arbel{\'a}ez, J.~Carreira, K.~Fragkiadaki, R.~Girshick,
+  G.~Gkioxari, S.~Gupta, B.~Hariharan, A.~Kar, and S.~Tulsiani, ``The three
+  r’s of computer vision: Recognition, reconstruction and reorganization,''
+  \emph{Pattern Recognition Letters}, vol.~72, pp. 4--14, 2016.
+
+\bibitem{mccarthy2007artificial}
+J.~McCarthy \emph{et~al.}, ``What is artificial intelligence,'' 2007.
 
 \end{thebibliography}

@@ -1,0 +1,38 @@
+\scalebox{.6}{
+    %% Definitions
+    \def\aicirc{(0,0) circle (3.75cm)}
+    \def\mlcirc{(0.8838834764831843cm, -0.8838834764831843cm) circle (2.5cm)}
+    \def\dlcirc{(1.7677669529663687, -1.7677669529663687) circle (1.25cm)}
+    \def\cvcirc{(-0.8838834764831843, -0.8838834764831843) circle (2.5cm)}
+    \def\nlpcirc{(0.8838834764831843, 0.8838834764831843) circle (2.5cm)}
+    \def\xaicirc{(-2, -3) circle (3.75)}
+    \begin{tikzpicture}
+        \begin{scope}
+            %% Anchors
+            \filldraw[color=blue, fill=blue!5, opacity=0.5] \aicirc;
+            \filldraw[color=purple, fill=purple!5, opacity=0.5] \mlcirc;
+            \filldraw[color=green, fill=green!5, opacity=0.5] \dlcirc;
+            \filldraw[color=red, fill=red!5, opacity=0.5] \cvcirc;
+            \filldraw[color=cyan, fill=cyan!5, opacity=0.5] \nlpcirc;
+            %% Text Nodes
+            \node[] at (0, 4) (aitxt) {AI};
+            \node[] at (0.8838834764831843, 1.8661165235168156) (mltxt) {ML};
+            \node[] at (0.8838834764831843, 3.6338834764831844) (nlptxt) {NLP};
+            \node[] at (-0.8838834764831843, 1.8661165235168156) (cvtxt) {CV};
+            \node[] at (1.7677669529663687, -0.26776695296636865) (dltxt) {DL};    
+            \pause
+            \filldraw[color=orange, fill=orange!5, opacity=0.5] \xaicirc;
+            \node[] at (-2, -7) (xaitxt) {xAI};
+            \pause
+            %% Intersection node
+            \begin{scope}
+                \clip \dlcirc;
+                \clip \nlpcirc;
+                \fill[red] \xaicirc;
+            \end{scope}
+            \node[] at (1, -1.25) (empt_1) {};
+            \node[] at (5, -1.25) (exp) {This study!};
+            \draw[->] (empt_1.center) -- node{} (exp.west);
+        \end{scope}
+\end{tikzpicture} 
+}

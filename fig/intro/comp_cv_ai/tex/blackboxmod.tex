@@ -1,0 +1,18 @@
+    \begin{center}
+            \begin{tikzpicture}[] 
+                %% Anchors
+                \node[rectangle, opacity=1, draw=black, fill=black!, minimum width=3cm, minimum height=1.5cm]
+                    at (0,0) (blackbox) {};
+                \node[] at (-3, 0) (in) {\includegraphics[scale=0.075]{fig/intro/motivation/lo_stakes/img/shoe_current.pdf}};
+                \node[] at (3, 0) (out) {\emph{Nike}\\\emph{Sneakers}};
+                %% Tags
+                \node[] at (-3, 1.25) (intxt) {$x$};
+                \node[] at (0, 1) (bboxtxt) {$f$};
+                \node[] at (3, 1.1) (pred) {$y$};
+                %% Arrows
+                \draw[->] (in) -- (blackbox);
+                \draw[->] (blackbox) -- (out);
+
+        \end{tikzpicture}    
+    \end{center}
+    
