@@ -8,22 +8,42 @@
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
     \framesubtitle{Convolutional Neural Networks}
-    \begin{tikzpicture}
-        \node (timeline) at (current page.south) 
-            {\includegraphics[width=\textwidth]{fig/rel/common/img/CNN_timeline.pdf}};
-    \end{tikzpicture}
-    
-    
+    \begin{columns}
+        \column[T]{0.5\textwidth}
+        {\footnotesize Based on the \textbf{convolution operation}.\\
+         A representation $f\star g$ is computed for a feature map $f$ and a kernel $g$.\\
+         First approach with \emph{Neocognitron} \cite{fukushima1975cognitron}}
+        \column[T]{0.5\textwidth}
+            \includegraphics[scale=0.75]{fig/rel/imrecon/img/conv_schema.pdf}
+    \end{columns}\pause
+    \begin{center}
+        {\includegraphics[width=\textwidth]{fig/rel/imrecon/img/CNN_timeline.pdf}}
+    \end{center}
+        
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
     \framesubtitle{Self Attention Architectures}
+    \begin{columns}
+        \column[T]{.5\textwidth}
+         {\footnotesize Updates a representation, using the relevance of each element relative to others in an 
+         embedding.\\
+         An input is projected to three spaces ($Q K V$), the weights control the relevance of each 
+         element.}
+        \column[T]{.5\textwidth}
+        \begin{center}
+            \includegraphics[width=0.5\textwidth]{fig/rel/imrecon/img/scaled_dotproduct.pdf}
+        \end{center}
+        
+    \end{columns}
     
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
-    \framesubtitle{Hybrid Architectures}
+    \framesubtitle{The Current Landscape}
+    Transformers had a strong impact on image recognition. 
+    \input{fig/rel/imrecon/tex/cnn_impact.tex}
     
 \end{frame}

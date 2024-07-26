@@ -30,4 +30,8 @@ J.~Malik, P.~Arbel{\'a}ez, J.~Carreira, K.~Fragkiadaki, R.~Girshick,
 \bibitem{mccarthy2007artificial}
 J.~McCarthy \emph{et~al.}, ``What is artificial intelligence,'' 2007.
 
+\bibitem{fukushima1975cognitron}
+K.~Fukushima, ``Cognitron: A self-organizing multilayered neural network,''
+  \emph{Biological cybernetics}, vol.~20, no. 3-4, pp. 121--136, 1975.
+
 \end{thebibliography}

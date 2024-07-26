@@ -1,0 +1,39 @@
+%--------------------------------------------------------------------------------------------------
+\pgfplotstableread[col sep=comma,]{fig/rel/data/models_year.csv}\datatable
+    \begin{tikzpicture}
+        \begin{axis}[
+            %font={\scriptsize},
+            date coordinates in=x,
+            date ZERO=2017-03-31,
+            xtick distance=0.25,
+            %xtick={\datatable}{Year},
+            %xticklabel={\year-\month-\day},
+            xtick=data,
+            width=\textwidth,
+            height=6.5cm,
+            xticklabel style={rotate=90, anchor=near xticklabel},
+            ylabel={Proportion of Papers (Quarterly)},
+            legend style={at={(0, 1)}, anchor=north west},
+            yticklabel style={/pgf/number format/fixed}
+            ]
+            \tikzstyle{every node}=[font=\scriptsize]
+            \addplot [mark=*, red!80] table [x={Year}, y={ResNet}]{\datatable};
+            \addlegendentry{{\tiny \Th{ResNet}}}
+
+            \addplot [mark=*, black!80] table [x={Year}, y={VGG}]{\datatable};
+            \addlegendentry{{\tiny \Th{VGG}}}
+
+            \addplot [mark=*, green!80] table [x={Year}, y={DenseNet}]{\datatable};
+            \addlegendentry{{\tiny\Th{DenseNet}}}
+
+            \addplot [mark=*, cyan!80] table [x={Year}, y={EfficientNet}]{\datatable};
+            \addlegendentry{{\tiny \Th{EfficientNet}}}
+
+            \addplot [mark=*, blue!80] table [x={Year}, y={ViT}]{\datatable};
+            \addlegendentry{{\tiny \Th{ViT}}}
+        \end{axis}
+    \end{tikzpicture}
+%    \caption{\textbf{Proportion of articles published on ImageNet,} using image recognition models as backbone across the years. 
+%             Original from \url{https://paperswithcode.com/method/resnet}}
+%    \label{fig:paradigmn_shift}
+%\end{figure}
