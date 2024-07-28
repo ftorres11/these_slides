@@ -3,6 +3,22 @@
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
     \framesubtitle{Classic Models}
+    A two step process:\pause 
+    \vspace{10pt}
+    \begin{columns}
+        \column[T]{0.5\textwidth}
+        \textbf{Feature Extraction:}\\
+        Extracting meaningful features from high noise/complexity $H\times W\times 3$ images.\\
+        Examples such as:
+        \begin{tikzpicture}
+            \node[] at (0,5) (img_textons) {\includegraphics[scale=0.01]{fig/rel/imrecon/img/textons.png}};
+            \node[] at (img_textons.south west) (img_hog) {\includegraphics[scale=0.01]{fig/rel/imrecon/img/histograms.jpg}};
+        \end{tikzpicture}
+        \pause
+        \column[T]{0.5\textwidth}
+        \textbf{Classifier Training:}\\
+        Relying on \emph{Machine Learning} methodologies.
+    \end{columns}
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
@@ -12,13 +28,13 @@
         \column[T]{0.5\textwidth}
         {\footnotesize Based on the \textbf{convolution operation}.\\
          A representation $f\star g$ is computed for a feature map $f$ and a kernel $g$.\\
-         First approach with \emph{Neocognitron} \cite{fukushima1975cognitron}}
+         First approach with \emph{Neocognitron}\cite{fukushima1975cognitron}}
         \column[T]{0.5\textwidth}
-            \includegraphics[scale=0.75]{fig/rel/imrecon/img/conv_schema.pdf}
-    \end{columns}\pause
-    \begin{center}
-        {\includegraphics[width=\textwidth]{fig/rel/imrecon/img/CNN_timeline.pdf}}
-    \end{center}
+            \includegraphics[scale=0.75]{fig/rel/imrecon/img/conv_schema.pdf}\pause
+    \end{columns}
+        \begin{center}
+            \includegraphics[width=\textwidth]{fig/rel/imrecon/img/CNN_timeline.pdf}
+        \end{center}
         
 \end{frame}
 %--------------------------------------------------------------------------------------------------
@@ -28,9 +44,9 @@
     \begin{columns}
         \column[T]{.5\textwidth}
          {\footnotesize Updates a representation, using the relevance of each element relative to others in an 
-         embedding.\\
-         An input is projected to three spaces ($Q K V$), the weights control the relevance of each 
-         element.}
+         embedding.\\\vspace{10pt}
+         An input is projected to three spaces ($Q K V$), the projection weights ($W_Q, W_K, W_V$) control 
+         the relevance of each element.}
         \column[T]{.5\textwidth}
         \begin{center}
             \includegraphics[width=0.5\textwidth]{fig/rel/imrecon/img/scaled_dotproduct.pdf}
