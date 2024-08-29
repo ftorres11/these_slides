@@ -1,0 +1,38 @@
+\subsection*{Opti-CAM}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Opti-CAM}
+    \framesubtitle{Motivation}
+    {\footnotesize 
+        \begin{itemize}
+            \item \textbf{Combination of Feature Maps}\\
+            To compute $w^c_k$, Score-CAM \cite{wang2020score} considers feature maps
+            independently.\\
+            \emph{What about a linear combination?}\\
+            \begin{equation*}
+                F(\textbf{w})\defn f\left(\textbf{\mbox{u}}\odot n\left(\mbox{up}\left(\sum_k w_k 
+                    A^k_l \right)\right)\right)_c
+            \end{equation*}
+            F is optimizable with respect to \textbf{w} and an initial \textbf{\mbox{$w_0$}} via 
+            backpropagation.\pause
+            \item \textbf{Masking-based Saliency}
+            Saliency maps produced by optimization in the input space \cite{fong2017interpretable,
+            fong2019understanding}\\
+            The optimization usually takes form of:
+            \begin{equation*}
+                S^c(\mbox{\textbf{u}})\defn \underset{\mbox{m}\in M}{\mbox{arg max}} 
+                      f\left(\mbox{\textbf{u}}\odot{n}\left(\mbox{up}(\textbf{\mbox{m}}) \right)\right)_c + \delta R(\mbox{\textbf{m}})
+            \end{equation*}
+        \end{itemize}
+    }
+    
+    
+\end{frame}
+
+\begin{frame}[t]
+    \frametitle{Opti-CAM}    
+    \framesubtitle{Optimization}
+    \begin{columns}
+
+    \end{columns}
+\end{frame}

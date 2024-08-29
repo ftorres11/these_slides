@@ -1,22 +1,67 @@
 \subsection*{Interpretability}
 %--------------------------------------------------------------------------------------------------
-\begin{frame}[t]
+\begin{frame}[c]
     \frametitle{Interpretability}
-    \framesubtitle{Transparency}
-\end{frame}
-%--------------------------------------------------------------------------------------------------
-\begin{frame}[t]
-    \frametitle{Interpretability}
-    \framesubtitle{Post-Hoc Interpretability}
+    \framesubtitle{Two dimension grouping}
+    \pause
+    \begin{columns}
+        \column{0.5\textwidth}
+        \textbf{Transparency}\\
+        Approaches requiring changes to an architecture or training process.
+        \column{0.5\textwidth}
+        \textbf{Post-Hoc Interpretability}\\
+        Approaches utilizing information contained within a model.
+    \end{columns}
     
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{Interpretability}
     \framesubtitle{Class Activation Methods}
+    Semantic information is found in deeper stages of a model \cite{lee2009convolutional}. \\
+    \begin{center}
+        \includegraphics[width=\textwidth]{fig/rel/interp/img/conv_layers.pdf}
+    \end{center}
+    \pause
+    Salient regions are highlighted for an input image:
+    \begin{center}
+        \resizebox{.8\textwidth}{!}{%}
+         \input{fig/rel/interp/tex/cam_schema.tex}
+         }
+    \end{center}
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{Interpretability}
     \framesubtitle{Evaluating Interpretability}
+    Saliency: what is relevant towards a prediction.\\
+    An explanation should demonstrate similar predictive properties to its query.\\
+    \vspace{20pt}
+    \begin{columns}
+        \column{0.3\textwidth}
+            \begin{center}
+                {\scriptsize Input image. ($I$)}\\
+                \includegraphics[width=\textwidth]{fig/rel/interp/img/ILSVRC2012_val_00000027.JPEG}\\
+                {\scriptsize $Y^c_i = 0.8756$}
+            \end{center}
+        \column{0.3\textwidth}
+            \begin{center}
+                {\scriptsize Explanation Map. ($E^c$)}\\
+                \includegraphics[width=\textwidth]{fig/rel/interp/img/masked_resized.png}\\
+                {\scriptsize $O^c_i = 0.7442$}
+            \end{center}
+        \pause
+        \column{.4\textwidth}
+            {\scriptsize%
+                \begin{itemize}
+                    \item Prediction loss when using an explanation. (Average Drop 
+                        (AD) \cite{chattopadhay2018grad})
+                    \item Ratio of explanations being better than the input image. (Average Increase 
+                        (AI) \cite{chattopadhay2018grad})
+                    \item Reaction to saliency guided modifications (Insertion/Deletion 
+                        (Ins/Del) \cite{petsiuk2018rise}) 
+                \end{itemize}
+            }
+    \end{columns}
+    
 \end{frame}

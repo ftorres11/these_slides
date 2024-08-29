@@ -1,1 +1,27 @@
 \section[Opti-CAM]{Opti-CAM: Optimizing saliency maps for interpretability}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Preliminaries}
+    \framesubtitle{Premise}
+        \begin{center}
+        \emph{Is it possible to optimize the weighting coefficient $w^c_k$ to obtain a 
+        saliency map with the highest probability of prediction?}
+    \end{center}
+    \input{fig/opticam/common/tex/mainfig.tex}
+\end{frame}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[c]
+    \frametitle{Preliminaries}
+    \framesubtitle{Contributions}
+    \begin{columns}
+        \column{.5\textwidth}
+        \textbf{Opti-CAM}\\
+        Maximization of predicted probability of an explanation.
+        \column{.5\textwidth}
+        \textbf{Average Drop}\\
+        Evaluation metric designed to enhance comparisons.
+    \end{columns}
+\end{frame}
+\input{tex/opticam/tex/opticam}
+%\input{tex/opticam/tex/imrecon}
+%\input{tex/opticam/tex/interp}

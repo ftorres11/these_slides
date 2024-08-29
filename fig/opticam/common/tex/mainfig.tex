@@ -1,0 +1,79 @@
+%------------------------------------------------------------------------------
+\resizebox{\textwidth}{!}{%
+    \begin{tikzpicture}[
+        scale=.12,
+        font={\small},
+        node distance=.2,
+        label distance=2pt,
+        net/.style={draw,trapezium,trapezium angle=75,inner sep=3pt},
+        enc/.style={net,shape border rotate=270},
+        txt/.style={inner sep=3pt},
+        frame/.style={draw,minimum size=1cm},
+        feat/.style={frame},
+        sq/.style={minimum size=.15cm},
+        elem/.style={draw,sq},
+        vec/.style={draw,minimum width=.8cm,minimum height=.15cm},
+        var/.style={blue!60},
+        B/.style={fill=blue!20},
+        R/.style={fill=red!20},
+        G/.style={fill=green!20},
+        Y/.style={fill=yellow!40},
+        P/.style={fill=black!20},
+    ]
+    \matrix[
+        tight,row sep=0,column sep=14,
+        cells={scale=.3,},
+    ] {
+        \&\&\&\&\&\&\&
+    % 	\node[var,op] (error) {$-$}; \&
+        \node[txt] (loss) {objective \\ $F^c_\ell(\vx; \mathbf{u})$}; \\
+        \node[label=90:{input image $\vx$}] (in) {\figah[1.5cm]{opticam/common/img/input}}; \&
+        \node[enc] (net) {network \\ $f$}; \&
+        \foreach \s/\c in {-2/B,-1/R,0/G,1/Y,2/P}
+            {\node[feat,\c] (feat\s) at ($.4*(\s,-\s)$) {};}
+        \node        at (feat2) {\figah[1cm]{opticam/common/img/27_fea0}};
+        \node[frame] at (feat2) {};
+        \coordinate[label=90:{feature \\ maps $A^k_\ell$}]
+                    (feat-north) at (feat-2.north -| feat0.north);
+        \coordinate (feat-west)  at (feat-2.west  |- feat0.west);
+        \coordinate (feat-east)  at (feat2.east   |- feat0.east);
+        \&
+        \node[var,op] (cam) {$\times$};
+        \foreach \s/\c in {-2/B,-1/R,0/G,1/Y,2/P}
+            {\node[elem,\c] (elem\s) at ($.6*(\s,-6)$) {};}
+        \node[sq,label=-90:{weights $\mathbf{u}$}] (weight) at (elem0) {};
+        \&
+        \node[var,label=90:{saliency map \\ $S_\ell(\vx; \mathbf{u})$}] (sal) {\figah[1.5cm]{opticam/common/img/saliency}}; \&
+        \node[var,op] (mask) {$\odot$}; \&
+        \node[label=90:{masked image}] (masked) {\figah[1.5cm]{opticam/common/img/masked}}; \&
+        \node[enc] (net2) {network \\ $f$}; \\[8]
+        \&\&\&
+        \coordinate (mid); \\
+    };
+    
+    \draw[->]
+        (in) edge (net)
+        (net) edge (feat-west)
+        (feat-east) edge (cam)
+        (net2) edge node[pos=.5,right] {class \\ logits} (loss)
+    % 	(net) |- node[pos=.3,left] {class \\ logits} (error)
+        ;
+    
+    \draw[var,->]
+        (weight) edge (cam)
+        (cam) edge (sal)
+        (sal) edge (mask)
+        (mask) edge (masked)
+        (masked) edge (net2)
+    % 	(net2) edge (error)
+    % 	(error) edge (loss)
+        (net2) edge (loss)
+        ;
+    
+    \draw[->]
+        (in) |- (mid)
+        (mid) -| (mask)
+        ;
+    
+    \end{tikzpicture}
+}

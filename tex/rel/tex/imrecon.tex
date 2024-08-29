@@ -1,65 +1,131 @@
 \subsection*{Image Recognition Models}
 %--------------------------------------------------------------------------------------------------
-\begin{frame}[t]
-    \frametitle{Image Recognition Models}
-    \framesubtitle{Classic Models}
-    A two step process:\pause 
-    \vspace{10pt}
-    \begin{columns}
-        \column[T]{0.5\textwidth}
-        \textbf{Feature Extraction:}\\
-        Extracting meaningful features from high noise/complexity $H\times W\times 3$ images.\\
-        Examples such as:
-        \begin{tikzpicture}
-            \node[] at (0,5) (img_textons) {\includegraphics[scale=0.01]{fig/rel/imrecon/img/textons.png}};
-            \node[] at (img_textons.south west) (img_hog) {\includegraphics[scale=0.01]{fig/rel/imrecon/img/histograms.jpg}};
-        \end{tikzpicture}
-        \pause
-        \column[T]{0.5\textwidth}
-        \textbf{Classifier Training:}\\
-        Relying on \emph{Machine Learning} methodologies.
-    \end{columns}
-\end{frame}
+%\begin{frame}[t]
+%    \frametitle{Image Recognition Models}
+%    \framesubtitle{Classic Models}
+%    A two step process:\pause 
+%    \vspace{10pt}
+%    \begin{columns}
+%        \column[T]{0.5\textwidth}
+%        \textbf{Feature Extraction:}\\
+%        Generation of meaningful representation of images.\\
+%        Examples such as:\\
+%        \begin{center}
+%            \begin{tikzpicture}
+%                \node[] at (0,5) (img_textons) {\includegraphics[scale=0.25]{fig/rel/imrecon/img/textons.png}};
+%                \node[] at (img_textons.north) (txt_textons) {\scriptsize Textons};
+%                \node[] at (img_textons.south east) (img_hog) {\includegraphics[scale=0.25]{fig/rel/imrecon/img/histograms.jpg}};
+%                \node[] at (img_hog.south) (txt_hog) {\scriptsize Histograms};
+%            \end{tikzpicture}            
+%        \end{center}
+%        \pause
+%        \column[T]{0.5\textwidth}
+%        \textbf{Classifier Training:}\\
+%        Relying on \emph{Machine Learning} methodologies.\\
+%        \begin{tikzpicture}
+%            \node[] at (0, 5) (img_svm) 
+%                {\includegraphics[scale=0.15]{fig/rel/imrecon/img/SVM.png}};
+%            \node[] at (img_svm.north) (txt_svm) {\scriptsize SVMs};
+%
+%            \node[] at (img_svm.south east) (img_tree) 
+%                {\includegraphics[scale=0.05]{fig/rel/imrecon/img/decision_tree.png}};
+%            \node[] at (img_tree.south east) (txt_tree) {\scriptsize Decision Trees};
+%
+%            \node[] at (img_tree.south west) (img_clus) 
+%                {\includegraphics[scale=.25]{fig/rel/imrecon/img/clustering.png}};
+%            \node[] at (img_clus.south) (txt_clus) {\scriptsize Clustering};
+%        \end{tikzpicture}
+%    \end{columns}
+%\end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
-    \framesubtitle{Convolutional Neural Networks}
+    \framesubtitle{Convolutional Neural Networks (CNN)}
     \begin{columns}
         \column[T]{0.5\textwidth}
         {\footnotesize Based on the \textbf{convolution operation}.\\
          A representation $f\star g$ is computed for a feature map $f$ and a kernel $g$.\\
-         First approach with \emph{Neocognitron}\cite{fukushima1975cognitron}}
+         First approach with \emph{Neocognitron} \cite{fukushima1975cognitron}}
         \column[T]{0.5\textwidth}
             \includegraphics[scale=0.75]{fig/rel/imrecon/img/conv_schema.pdf}\pause
     \end{columns}
         \begin{center}
             \includegraphics[width=\textwidth]{fig/rel/imrecon/img/CNN_timeline.pdf}
         \end{center}
-        
 \end{frame}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Image Recognition Models}
+    \framesubtitle{Convolutional Neural Networks(CNN)}
+    Training deep models is difficult\\
+    Gradient information can be lost with depth.\\\pause
+    A model surviving the test of time: \emph{ResNet} \cite{he2016deep}.
+    \input{fig/rel/imrecon/tex/resnet_bbone.tex}
+    \begin{columns}
+        \column[T]{.5\textwidth}
+        {\scriptsize\textbf{Basic Block}}
+        \begin{center}
+            \resizebox{.75\textwidth}{!}{%}
+                \input{fig/rel/imrecon/tex/basic_block.tex}
+            }
+        \end{center}
+        
+        \column[T]{.5\textwidth}
+        {\scriptsize\textbf{Bottleneck Block}}
+            \begin{center}
+                \resizebox{.85\textwidth}{!}{%
+                \input{fig/rel/imrecon/tex/bottleneck.tex}
+                }
+            \end{center}
+    \end{columns}
+\end{frame}
+
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
     \framesubtitle{Self Attention Architectures}
     \begin{columns}
         \column[T]{.5\textwidth}
-         {\footnotesize Updates a representation, using the relevance of each element relative to others in an 
+         {\footnotesize \textbf{Transformers}\\\vspace{10pt}
+         \emph{Attention:} compute the relevance of each element relative to others in an 
          embedding.\\\vspace{10pt}
-         An input is projected to three spaces ($Q K V$), the projection weights ($W_Q, W_K, W_V$) control 
-         the relevance of each element.}
+         {\scriptsize
+            \begin{equation*}
+                \mbox{Attention}(Q, K, V) = \mbox{softmax}\left(\frac{Q\times K^T}{\sqrt{d_k}}\right) V
+            \end{equation*}
+         }
+         \pause
+         An abstract representation of a class is computed, updated with information across the 
+         embedding \cite{devlin2018bert}.
+         }
         \column[T]{.5\textwidth}
         \begin{center}
-            \includegraphics[width=0.5\textwidth]{fig/rel/imrecon/img/scaled_dotproduct.pdf}
+            \includegraphics[width=.5\textwidth]{fig/rel/imrecon/img/scaled_dotproduct.pdf}
         \end{center}
         
     \end{columns}
-    
+\end{frame}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Image Recognition Models}
+    \framesubtitle{Self Attention Architectures}
+    A modification of transformers to vision, the \emph{Vision Transformer} (ViT) \cite{dosovitskiy2020image}
+    \begin{columns}
+        \column[T]{.5\textwidth}
+        \begin{center}
+            \includegraphics[scale=.75]{fig/rel/imrecon/img/vit_schema.pdf}\pause    
+        \end{center}
+        \column[T]{.5\textwidth}
+        \begin{center}
+            \includegraphics[scale=.75]{fig/rel/imrecon/img/vit_block.pdf}    
+        \end{center}
+    \end{columns}
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
     \framesubtitle{The Current Landscape}
-    Transformers had a strong impact on image recognition. 
+    Transformers had a strong impact on image recognition:
     \input{fig/rel/imrecon/tex/cnn_impact.tex}
     
 \end{frame}
