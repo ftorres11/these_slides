@@ -1,0 +1,16 @@
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \setlength{\tabcolsep}{3.5pt}
+        \begin{tabular}{lcccccc}\\\toprule
+        \mc{7}{Regularization Selection}\\\midrule
+        \Th{Regularizer}&\Th{Acc}&\Th{AD$\downarrow$}&\Th{AG$\uparrow$}&\Th{AI$\uparrow$}&\Th{Ins$\uparrow$}&\Th{Del$\downarrow$}\\\midrule
+        - &73.42&30.16&15.23&29.99&58.47&17.47\\
+        Cosine&72.86&\textbf{28.09}&\textbf{16.19}&\textbf{31.53}&58.76&17.57\\
+        Histogram &73.88&30.39&14.78&29.38&58.52&\textbf{17.35}\\
+        MAE &\textbf{73.41}& 30.33 & 15.06 &29.61 & 58.13 & 17.95\\
+        MSE & 73.86& 29.64 & 15.19 &30.11 & \textbf{59.05} & 18.02\\\bottomrule
+        \end{tabular}
+        \caption{\textbf{Regularization selection: } Evaluation of the four proposed regularization with ResNet-18 on CIFAR-100.}%}
+        \label{tab:Regs}
+\end{table}

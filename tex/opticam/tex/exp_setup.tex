@@ -1,0 +1,32 @@
+%--------------------------------------------------------------------------------------------------
+\subsection*{Set-Up}
+\begin{frame}[t]
+    \frametitle{Experimental Set-Up}
+    {\footnotesize
+    \begin{columns}
+        \column[T]{.5\textwidth}
+        \textbf{Implementation}
+            \begin{itemize}
+                \item All images are set to $224\times224\times3$.
+                \item Adam \cite{kingma2014adam} optimizer, for 100 iterations.
+                \item Cross Entropy.
+                \item Stop optimizing if loss is less than  $10^{-10}$.
+            \end{itemize}\pause
+        \column[T]{.5\textwidth}
+        \textbf{Datasets and Models}
+        \begin{itemize}
+            \item \textbf{ILSVRC} Validation splits of ImageNet 
+                   (\cite{krizhevsky2012imagenet, ILSVRC15}), 50k images,
+                  over 1k classes.
+            \item \textbf{Medical Data} Chest X-ray images with 3 diseases \cite{kermany2018labeled},
+                  endoscopy images for pathologies, findings and landmarks 
+                  \cite{pogorelov2017kvasir}.
+            \item \textbf{Networks} ResNet-50 \cite{he2016deep}, and VGG \cite{simonyan2015deep}. \footnotemark
+                   ViT-B (16-224) \cite{dosovitskiy2020image} and DeiT-B (16-224)
+                   \cite{touvron2021augmenting} \footnotemark.
+        \end{itemize}
+    \end{columns}
+    }
+    \footnotetext[1]{\tiny{Pytorch Model Zoo \url{https://pytorch.org/vision/0.8/models.html}}}
+    \footnotetext[2]{\tiny{{Timm \url{https://github.com/rwightman/pytorch-image-models}}}}
+\end{frame}

@@ -1,0 +1,27 @@
+%--------------------------------------------------------------------------------------------------
+\begin{table}[H]
+    \footnotesize
+    \centering
+    \setlength{\tabcolsep}{4pt}
+    \renewcommand{\arraystretch}{0.8}
+    \begin{tabular}{lccc|ccc|ccc} \toprule
+    \mr{2}{\Th{Method}}                            & \mc{3}{\Th{$\AD\!\downarrow$}} & \mc{3}{\Th{$\AG\!\uparrow$}}& \mc{3}{\Th{$\AI\!\uparrow$}} \\ \cmidrule{2-10}
+                                                   & {$S$} & {$B \!\cap\! S$} & {$S \!\setminus\! B$} & {$S$} & {$B \!\cap\! S$} & {$S \!\setminus\! B$}& {$S$} & {$B \!\cap\! S$} & {$S \!\setminus\! B$} \\ \midrule
+    $S \defn B$                                    & 67.2 &   -- &   -- &  2.3 &   -- &   -- &  9.2 &   -- &   -- \\
+    $S \defn I \setminus B$                        & 44.0 &   -- &   -- &  2.8 &   -- &   -- & 16.3 &   -- &   -- \\ \midrule
+    Fake-CAM                                       &  0.5 & 67.2 & 44.1 &  0.7 &  2.3 &  2.8 & 42.0 &  9.2 & 18.9 \\ \midrule
+    Grad-CAM                                       & 15.0 & 72.6 & 52.1 & 15.3 &  1.8 &  6.0 & 40.4 &  8.4 & 19.4 \\
+    Grad-CAM++                                     & 16.5 & 72.9 & 53.1 & 10.6 &  1.6 &  4.1 & 35.2 &  7.3 & 17.1 \\
+    Score-CAM                                      & 12.5 & 71.5 & 50.5 & 16.1 &  2.2 &  6.3 & 42.5 &  8.6 & 20.8 \\
+    Ablation-CAM                                   & 15.1 & 72.8 & 52.1 & 13.5 &  1.7 &  5.6 & 39.9 &  7.8 & 19.0 \\
+    XGrad-CAM                                      & 14.3 & 72.6 & 51.4 & 15.1 &  1.8 &  6.0 & 42.1 &  8.0 & 20.1 \\
+    Layer-CAM                                      & 49.2 & 84.2 & 74.4 &  2.7 &  0.4 &  1.2 & 12.7 &  4.4 &  7.3 \\
+    ExPerturbation                                 & 43.8 & 81.6 & 71.0 &  7.1 &  1.4 &  3.2 & 18.9 &  5.6 & 11.1 \\
+    \hline
+    Opti-CAM (ours)                                & \tb{1.4} & \tb{62.5} & \tb{34.8} & \tb{66.3} & \tb{8.7} & \tb{25.8} & \tb{92.5} & \tb{18.6} & \tb{47.1} \\ \bottomrule
+    \end{tabular}
+    \caption{\textbf{Bounding box} study. Classification metrics on ImageNet validation set using VGG16. $B$: ground-truth box used by localization metrics; $I$: entire image; $S$: saliency map. $\AD$/$\AI$: average drop/increase \autocite{chattopadhay2018grad}; $\AG$: average gain (ours); $\downarrow$ / $\uparrow$: lower / higher is better; bold: best, excluding Fake-CAM.}
+    %\caption{}
+    \label{tab:localization}
+    % \vspace{-0.2cm}
+\end{table}

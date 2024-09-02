@@ -3,7 +3,7 @@
 \begin{frame}[t]
     \frametitle{Opti-CAM}
     \framesubtitle{Motivation}
-    {\footnotesize 
+    {\small 
         \begin{itemize}
             \item \textbf{Combination of Feature Maps}\\
             To compute $w^c_k$, Score-CAM \cite{wang2020score} considers feature maps
@@ -20,19 +20,45 @@
             fong2019understanding}\\
             The optimization usually takes form of:
             \begin{equation*}
-                S^c(\mbox{\textbf{u}})\defn \underset{\mbox{m}\in M}{\mbox{arg max}} 
+                S^c(\mbox{\textbf{u}})\defn \underset{\mbox{m}\in M}{\mbox{argmax}}  
                       f\left(\mbox{\textbf{u}}\odot{n}\left(\mbox{up}(\textbf{\mbox{m}}) \right)\right)_c + \delta R(\mbox{\textbf{m}})
             \end{equation*}
         \end{itemize}
     }
-    
-    
 \end{frame}
 
 \begin{frame}[t]
     \frametitle{Opti-CAM}    
     \framesubtitle{Optimization}
+    {\small
+    \textbf{Formulation} Assuming channel weights $w_k\defn \mbox{softmax}(\textbf{u})_k$,
+        the saliency map $S_\ell$ is a function of both an input image \textbf{$x$} and a 
+        variable $\textbf{u}$:
+        \begin{equation}
+            S_\ell(\mbox{\textbf{x}}; \mbox{\textbf{u}})\defn \sum_k \mbox{softmax}(\textbf{\mbox{u}})_kA^k_\ell
+        \end{equation}
+    \vspace{-15pt}
+    \pause
     \begin{columns}
-
+        \column[T]{.6\textwidth}
+        Find vector $\textbf{\mbox{u*}}$ maximizing confidence for class $c$, 
+        with an input \textbf{x} masked by Saliency Map $S_\ell(\mbox{\textbf{x}}; \mbox{\textbf{u*}})$:
+        \begin{equation}
+            \mbox{\textbf{u*}}\defn \underset{\mbox{u}}{\mbox{argmax}}F^c_\ell (\mbox{\textbf{x}}; \mbox{\textbf{u*}}),
+        \end{equation}
+        \column[T]{.4\textwidth}
+        The objective function:
+        \begin{equation}
+            F^c_\ell(\textbf{\mbox{x}}; \textbf{\mbox{u}}) \defn g_c (f(\mbox{x}\odot)n)
+        \end{equation} 
     \end{columns}
+    \vspace{10pt}
+    \pause
+    The Saliency Map then becomes:
+    \begin{equation}
+        S^c_\ell(\textbf{x})\defn S_\ell(\textbf{\mbox{x}}; \textbf{\mbox{u*}}) =
+        S_\ell (\textbf{\mbox{x}}; \underset{\mbox{u}}{\mbox{argmax}}F^c_\ell
+        (\textbf{\mbox{x}}; \textbf{\mbox{u}}))
+    \end{equation}    
+    }
 \end{frame}

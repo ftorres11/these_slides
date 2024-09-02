@@ -1,0 +1,41 @@
+\begin{table}[h]
+    \centering
+    \scriptsize
+    \setlength{\tabcolsep}{4pt}
+    %\resizebox{\columnwidth}{!}{%}
+    \begin{tabular}{lcccccc}\toprule
+        \mc{7}{\Th{Accuracy and Parameters}}\\\midrule
+        &\Th{Placement}&\mc{2}{\Th{CLS dim}}&\mc{2}{\Th{\#Param}}&\Th{Acc$\uparrow$}\\\midrule
+        
+        &$S_0-S_4$&\mc{2}{$64$}  &\mc{2}{6.96M}&\textbf{74.70}\\  % 6.963.264
+        &$S_1-S_4$&\mc{2}{$256$} &\mc{2}{6.95M}&74.67\\           % 6.947.072
+        &$S_2-S_4$&\mc{2}{$512$} &\mc{2}{6.82M}&74.67\\           % 6.816.256
+        &$S_3-S_4$&\mc{2}{$1024$}&\mc{2}{6.29M}&74.67\\           % 6.292.480
+        &$S_4-S_4$&\mc{2}{$2048$}&\mc{2}{4.20M}&74.63\\\midrule   % 4.196.352
+        
+        \mc{7}{\Th{Interpretability Metrics}}\\\midrule
+        \Th{Method}&\Th{Placement}&\Th{AD$\downarrow$}&\Th{AG$\uparrow$}&\Th{AI$\uparrow$}&\Th{I$\uparrow$}&\Th{D$\downarrow$}\\\midrule
+        
+        \mr{5}{\Th{Grad-CAM}}&$S_0-S_4$&\textbf{12.54}&\textbf{22.67}&48.56&75.53&13.50\\ % Checked
+            &$S_1-S_4$&12.69&22.65&48.31&75.53&13.41\\ % Checked
+            &$S_2-S_4$&\textbf{12.54}&21.67&\textbf{48.58}&75.54&13.50\\ % Running
+            &$S_3-S_4$&12.69&22.28&47.89&\textbf{75.55}&13.40\\ % Running
+            &$S_4-S_4$&12.77&20.65&47.14&74.32&\textbf{13.37}\\\midrule % Checked
+            
+        \mr{5}{\Th{Grad-CAM++}}&$S_0-S_4$&13.99&19.29&44.60&75.21&13.78\\ % Checked
+            &$S_1-S_4$&13.99&19.29&44.62&75.21&13.78\\ % Checked
+            &$S_2-S_4$&13.71&\textbf{19.90}&\textbf{45.43}&75.34&13.50\\ % Running
+            &$S_3-S_4$&13.69&19.61&45.04&\textbf{75.36}&13.50\\ % Running
+            &$S_4-S_4$&\textbf{13.67}&18.36&44.40&74.19&\textbf{13.30}\\\midrule % Checked
+            
+        \mr{5}{\Th{Score-CAM}}&$S_0-S_4$&\textbf{7.09}&23.65&54.20&74.91&14.68\\ % Checked
+            &$S_1-S_4$&\textbf{7.09}&23.65&54.20&74.92&14.68\\ % Checked
+            &$S_2-S_4$&\textbf{7.09}&\textbf{23.66}&\textbf{54.21}&74.91&14.68\\ % Running
+            &$S_3-S_4$&7.74&23.03&52.92&\textbf{74.97}&14.65\\ % Running
+            &$S_4-S_4$&7.52&19.45&50.45&74.19&\textbf{14.46}\\\bottomrule % Checked
+    \end{tabular}
+    % }
+    %\vspace{3pt}
+    \caption{\textbf{Effect of stream placement} on accuracy, parameters and interpretability metrics  for ResNet-50 on ImageNet. $S_\ell-S_L$: \Ours runs from stage $\ell$ to $L$ (last); \Th{$\#$Param}: parameters of \Ours only.}
+    \label{tab:intrecog-resnet}
+    \end{table}

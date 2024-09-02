@@ -1,0 +1,20 @@
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \setlength{\tabcolsep}{3.5pt}
+        \begin{tabular}{lcccccc}\\\toprule
+        \mc{7}{Regularization Selection}\\\midrule
+        $\lambda$&\Th{Acc}&\Th{AD$\downarrow$}&\Th{AG$\uparrow$}&\Th{AI$\uparrow$}&\Th{Ins$\uparrow$}&\Th{Del$\downarrow$}\\\midrule
+        - &73.42&30.16&15.23&29.99&58.47&17.47\\
+        $1\times10^{-3}$ &\textbf{73.71}&29.52&15.17&30.03&59.23&\textbf{17.45}\\
+        $2.5\times10^{-3}$ &72.99&30.53&15.82&30.56&59.04&17.96\\
+        $5\times10^{-3}$ &72.46&30.10&16.06&30.67&57.47&17.80\\
+        $7.5\times10^{-3}$ &72.86&\textbf{28.09}&\textbf{16.20}&\textbf{31.53}&58.76&17.57\\
+        $1\times10^{-2}$ &73.28&28.97&15.75&31.16&58.99&17.50\\
+        $1\times10^{-1}$ &73.00&28.93&16.13&31.55&\textbf{59.66}&17.95\\
+        $1$ &73.30&28.44&16.02&31.31&58.64&17.48\\
+        $10$ &73.04&29.28&15.23&30.47&58.74&17.47\\\bottomrule
+        \end{tabular}
+        \caption{\textbf{Regularization coefficient:} Evaluation of the regularization coefficient $\lambda$, using ResNet-18 with \textit{Cosine Similarity} on CIFAR-100.}%}
+        \label{tab:variation}
+\end{table}    

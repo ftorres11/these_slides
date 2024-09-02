@@ -43,7 +43,7 @@
     \framesubtitle{Convolutional Neural Networks (CNN)}
     \begin{columns}
         \column[T]{0.5\textwidth}
-        {\footnotesize Based on the \textbf{convolution operation}.\\
+        {\small Based on the \textbf{convolution operation}.\\
          A representation $f\star g$ is computed for a feature map $f$ and a kernel $g$.\\
          First approach with \emph{Neocognitron} \cite{fukushima1975cognitron}}
         \column[T]{0.5\textwidth}
@@ -57,9 +57,9 @@
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
     \framesubtitle{Convolutional Neural Networks(CNN)}
-    Training deep models is difficult\\
-    Gradient information can be lost with depth.\\\pause
-    A model surviving the test of time: \emph{ResNet} \cite{he2016deep}.
+    {\small Training deep models is difficult, 
+     gradient information \emph{is} lost with depth.\\\pause
+    A model surviving the test of time: \emph{ResNet} \cite{he2016deep}.}
     \input{fig/rel/imrecon/tex/resnet_bbone.tex}
     \begin{columns}
         \column[T]{.5\textwidth}
@@ -86,7 +86,7 @@
     \framesubtitle{Self Attention Architectures}
     \begin{columns}
         \column[T]{.5\textwidth}
-         {\footnotesize \textbf{Transformers}\\\vspace{10pt}
+         {\small \textbf{Transformers}\\\vspace{10pt}
          \emph{Attention:} compute the relevance of each element relative to others in an 
          embedding.\\\vspace{10pt}
          {\scriptsize
@@ -109,7 +109,7 @@
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
     \framesubtitle{Self Attention Architectures}
-    A modification of transformers to vision, the \emph{Vision Transformer} (ViT) \cite{dosovitskiy2020image}
+    {\small A modification of transformers to vision, the \emph{Vision Transformer} (ViT) \cite{dosovitskiy2020image}}
     \begin{columns}
         \column[T]{.5\textwidth}
         \begin{center}
@@ -125,7 +125,7 @@
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
     \framesubtitle{The Current Landscape}
-    Transformers had a strong impact on image recognition:
+    \small Transformers had a strong impact on image recognition:
     \input{fig/rel/imrecon/tex/cnn_impact.tex}
     
 \end{frame}

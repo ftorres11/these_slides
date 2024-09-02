@@ -5,6 +5,7 @@
     \framesubtitle{Two dimension grouping}
     \pause
     \begin{columns}
+        \small
         \column{0.5\textwidth}
         \textbf{Transparency}\\
         Approaches requiring changes to an architecture or training process.
@@ -18,31 +19,44 @@
 \begin{frame}[t]
     \frametitle{Interpretability}
     \framesubtitle{Class Activation Methods}
+    \small
     Semantic information is found in deeper stages of a model \cite{lee2009convolutional}. \\
     \begin{center}
         \includegraphics[width=\textwidth]{fig/rel/interp/img/conv_layers.pdf}
     \end{center}
     \pause
-    Salient regions are highlighted for an input image:
-    \begin{center}
-        \resizebox{.8\textwidth}{!}{%}
-         \input{fig/rel/interp/tex/cam_schema.tex}
-         }
-    \end{center}
+    
+    \begin{columns}
+        \column[T]{.65\textwidth}
+        Salient regions are highlighted for an input image:
+        \vspace{-20pt}
+        \begin{center}
+            \resizebox{\textwidth}{!}{%}
+             \input{fig/rel/interp/tex/cam_schema.tex}
+             }
+        \end{center}
+        \column[T]{.35\textwidth}
+        \small Governed by equation:
+        \begin{equation}
+            \small S^c_\ell (\textbf{\mbox{u}}) \defn h \left(\sum_k w^c_k A^k_l \right)
+        \end{equation}
+    \end{columns}
+
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{Interpretability}
     \framesubtitle{Evaluating Interpretability}
+    \small
     Saliency: what is relevant towards a prediction.\\
     An explanation should demonstrate similar predictive properties to its query.\\
-    \vspace{20pt}
+    \vspace{5pt}
     \begin{columns}
         \column{0.3\textwidth}
             \begin{center}
                 {\scriptsize Input image. ($I$)}\\
                 \includegraphics[width=\textwidth]{fig/rel/interp/img/ILSVRC2012_val_00000027.JPEG}\\
-                {\scriptsize $Y^c_i = 0.8756$}
+                {\scriptsize $P^c_i = 0.8756$}
             \end{center}
         \column{0.3\textwidth}
             \begin{center}
@@ -63,5 +77,5 @@
                 \end{itemize}
             }
     \end{columns}
-    
+    \label{slide:evaluation}
 \end{frame}

@@ -1,0 +1,48 @@
+\begin{table}[H]
+    \centering
+    \scriptsize
+    \begin{tabular}{cccc}\toprule
+        \Th{Property}&\Th{Attribution Type}&\Th{Method}&\Th{Reference}\\\midrule
+        \mr{14}{Transparency}&\mr{2}{Rule Based}&Tree Regularization for Deep Models&\autocite{wu2018beyond}\\
+        &&Regionally Faithful Explanations&\autocite{wu2020regional}\\\cline{2-4}
+        &\mr{4}{Hidden-Semantics}&Network Dissection&\autocite{bau2017network}\\
+        &&Interpretable \gls{cnn}&\autocite{zhang2018interpretable}\\
+        &&DAUnit&\autocite{bohle2022b}\\
+        &&B-Cos Networks&\autocite{bohle2024b}\\\cline{2-4}
+        &\mr{3}{Prototype-Based}&Case-Based Reasoning&\autocite{li2018deep}\\
+        &&This looks Like That&\autocite{chen2019looks}\\
+        &&Protopool&\autocite{rymarczyk2022interpretable}\\\cline{2-4}
+        &\mr{5}{Attribution-Based}&Right for the Right Reasons&\autocite{ross2017right}\\
+        &&Saliency Learning&\autocite{ghaeini2019saliency}\\
+        &&Saliency Guided Training&\autocite{ismail2021improving}\\
+        &&LFI-CAM&\autocite{lee2021lfi}\\
+        &&-&\autocite{Zhou_2022_BMVC}\\\midrule
+        \mr{25}{Post-hoc Interpretability}&\mr{6}{Gradient-Based}&Exp. Vectors&\autocite{baehrens2010explain}\\
+        &&Standard Gradient&\autocite{simonyan2013deep}\\
+        &&Guided Gradient&\autocite{guidedbackprop}\\
+        &&LRP&\autocite{bach2015pixel}\\
+        &&Integrated Gradient&\autocite{sundararajan2017axiomatic}\\
+        &&Smoothgrad&\autocite{smilkov2017smoothgrad}\\\cline{2-4}
+        &\mr{5}{Learning-Based}&-&\autocite{dabkowski2017real}\\
+        &&FIDO&\autocite{chang2018explaining}\\
+        &&CASM&\autocite{zolna2020classifier}\\
+        &&Masker&\autocite{phang2020investigating}\\
+        &&-&\autocite{schulz2020restricting}\\\cline{2-4}
+        &\mr{4}{Masking-Based}&LIME&\autocite{ribeiro2016should}\\
+        &&Meaningful Perturbation&\autocite{fong2017interpretable}\\
+        &&RISE&\autocite{petsiuk2018rise}\\
+        &&Extremal perturbations&\autocite{fong2019understanding}\\\cline{2-4}
+        &\mr{3}{Attention-Based}&Raw-Attention&\mr{2}{\autocite{abnar2020quantifying}}\\
+        &&Rollout-Attention&\\
+        &&TIBAV&\autocite{chefer2021transformer}\\\cline{2-4}
+        &\mr{7}{CAM-Based}&CAM&\autocite{zhou2016learning}\\
+        &&Grad-CAM&\autocite{selvaraju2017grad}\\
+        &&Grad-CAM++&\autocite{chattopadhay2018grad}\\
+        &&Score-CAM&\autocite{wang2020score}\\
+        &&Axiom-CAM&\autocite{axiombased}\\
+        &&Ablation-CAM&\autocite{ablationcam}\\
+        &&Layer-CAM&\autocite{jiang2021layercam}\\\bottomrule
+    \end{tabular}
+    \caption{\textbf{Interpretability approaches} grouping using Lipton \autocite{mythos_interp} and Zhang's definitions \autocite{zhang2021survey}}%}
+\label{tab:interp_overall}
+\end{table}

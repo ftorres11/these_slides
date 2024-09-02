@@ -1,0 +1,14 @@
+\begin{table}
+    \centering
+    \footnotesize
+    %\resizebox{\columnwidth}{!}{%}
+    \begin{tabular}{lccccc}\toprule
+            \Th{Method}&\Th{AD}$\downarrow$&\Th{AG$\uparrow$}&\Th{AI$\uparrow$}&\Th{I$\uparrow$}&\Th{D$\downarrow$}\\\midrule
+            Raw-Attention&13.42&15.76&41.48&73.86&16.29\\
+            Grad-CAM&12.54&22.67&48.56&75.53&13.50\\\bottomrule
+    \end{tabular}
+    %}
+    \vspace{3pt}
+    \caption{\textbf{Interpretability metrics comparison } between Raw Attention and Grad-CAM}
+    \label{tab:rawatt_gradcam}
+\end{table}

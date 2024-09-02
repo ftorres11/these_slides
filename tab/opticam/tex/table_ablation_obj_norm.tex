@@ -1,0 +1,32 @@
+\newcommand{\ob}[1]{\textcolor{brown}{\tb{#1}}}
+\newcommand{\ab}[1]{\textcolor{blue}{\tb{#1}}}
+\begin{table}[t]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{0.8}
+\begin{tabular}{lccrrrrr} \toprule
+{\Th{Method}} & {$F^c_\ell$} & {$n$} & {$\AD\!\downarrow$}& {$\AG\!\uparrow$} & {$\AI\!\uparrow$}\\ \midrule
+Fake-CAM       & & & 0.5  &  0.7 & 42.1 \\
+\midrule
+Grad-CAM       & & & 15.0 & 15.3 & 40.4 \\
+Grad-CAM++     & & & 16.5 & 10.6 & 35.2  \\
+Score-CAM      & & & 12.5 & 16.1 & 42.6  \\
+Ablation-CAM   & & & 15.1 & 13.5 & 39.9  \\
+XGrad-CAM      & & & 14.3 & 15.1 & 42.1  \\
+Layer-CAM      & & & 49.2 &  2.7 & 12.7  \\
+ExPerturbation & & & 43.8 &  7.1 &  18.9  \\
+\midrule
+\mr{2}{Opti-CAM} & \Fdef~\eq{obj}  & Range~\eq{n-rng}   & \tb{1.4} & \tb{66.3} & \tb{92.5} \\
+	& \Fref~\eq{ref}  & Range~\eq{n-rng}   &     7.1  &     18.5  &     54.9  \\ \midrule
+\mr{2}{Opti-CAM} & \Fdef~\eq{obj}  & Max~\eq{n-max}     &     1.6  &     66.2  &     90.3  \\
+    & \Fref~\eq{ref}  & Max~\eq{n-max}     &     6.8  &     17.8  &     54.5  \\ \midrule
+\mr{2}{Opti-CAM} & \Fdef~\eq{obj}  & Sigmoid~\eq{n-sig} &     5.0  &     18.3  &     57.5  \\
+    & \Fref~\eq{ref}  & Sigmoid~\eq{n-sig} &     6.5  &     10.0  &     45.3  \\ \bottomrule
+\end{tabular}
+\caption{\textbf{Ablation study} using VGG16 on 1000 images of ImageNet validation set. $\AD$/$\AI$: 
+average drop/increase \autocite{chattopadhay2018grad}; $\AG$: average gain (ours); $\downarrow$ / 
+$\uparrow$: lower / higher is better; bold: best, excluding Fake-CAM.}
+\label{tab:ablate}
+% \vspace{-0.2cm}
+\end{table}

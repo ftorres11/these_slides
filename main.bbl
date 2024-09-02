@@ -91,4 +91,46 @@ R.~Fong, M.~Patrick, and A.~Vedaldi, ``Understanding deep networks via extremal
   perturbations and smooth masks,'' in \emph{Proceedings of the IEEE/CVF
   international conference on computer vision}, 2019, pp. 2950--2958.
 
+\bibitem{poppi2021revisiting}
+S.~Poppi, M.~Cornia, L.~Baraldi, and R.~Cucchiara, ``Revisiting the evaluation
+  of class activation mapping for explainability: A novel metric and
+  experimental analysis,'' in \emph{Proceedings of the IEEE/CVF Conference on
+  Computer Vision and Pattern Recognition}, 2021, pp. 2299--2304.
+
+\bibitem{kingma2014adam}
+D.~P. Kingma and J.~Ba, ``Adam: {A} method for stochastic optimization,''
+  \emph{ICLR}, 2015.
+
+\bibitem{krizhevsky2012imagenet}
+A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
+  deep convolutional neural networks,'' \emph{Advances in neural information
+  processing systems}, vol.~25, 2012.
+
+\bibitem{ILSVRC15}
+O.~Russakovsky, J.~Deng, H.~Su, J.~Krause, S.~Satheesh, S.~Ma, Z.~Huang,
+  A.~Karpathy, A.~Khosla, M.~Bernstein, A.~C. Berg, and L.~Fei-Fei, ``{ImageNet
+  Large Scale Visual Recognition Challenge},'' \emph{International Journal of
+  Computer Vision (IJCV)}, vol. 115, no.~3, pp. 211--252, 2015.
+
+\bibitem{kermany2018labeled}
+D.~Kermany, K.~Zhang, M.~Goldbaum \emph{et~al.}, ``Labeled optical coherence
+  tomography (oct) and chest x-ray images for classification,'' \emph{Mendeley
+  data}, vol.~2, no.~2, 2018.
+
+\bibitem{pogorelov2017kvasir}
+K.~Pogorelov, K.~R. Randel, C.~Griwodz, S.~L. Eskeland, T.~de~Lange,
+  D.~Johansen, C.~Spampinato, D.-T. Dang-Nguyen, M.~Lux, P.~T. Schmidt
+  \emph{et~al.}, ``Kvasir: A multi-class image dataset for computer aided
+  gastrointestinal disease detection,'' in \emph{Multimedia Systems Conf.},
+  2017.
+
+\bibitem{simonyan2015deep}
+K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
+  large-scale image recognition,'' 2015.
+
+\bibitem{touvron2021augmenting}
+H.~Touvron, M.~Cord, A.~El-Nouby, P.~Bojanowski, A.~Joulin, G.~Synnaeve, and
+  H.~J{\'e}gou, ``Augmenting convolutional networks with attention-based
+  aggregation,'' \emph{arXiv preprint arXiv:2112.13692}, 2021.
+
 \end{thebibliography}
