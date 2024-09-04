@@ -52,15 +52,15 @@
 {Learning Discriminative Representations to Interpret Image Recognition Models}
 \subtitle{Thèse de Doctorat}
 \author[Felipe Torres Figueroa] % (optional)
-{Felipe Torres Figueroa}
+{\small Felipe Torres Figueroa}
 \institute[ECM] % (optional)
-{
+{\footnotesize
   \'Ecole Centrale de Marseille
   \and
   Laboratoire d'Informatique et de Syst\`emes (LIS)
 }
 \date[2024] % (optional)
-{Marseille, September 23$^{rd}$ 2024}
+{\small Marseille, September 23$^{rd}$ 2024}
 \logo{%
   \makebox[0.95\paperwidth]{%
     \includegraphics[height=1cm,keepaspectratio]{logo/logo-lis-2024-eps-converted-to.pdf}%    
@@ -69,6 +69,8 @@
   }%
 }
 %End of title page configuration block
+%--------------------------------------------------------------------------------------------------
+% Title -V2
 %--------------------------------------------------------------------------------------------------
 %The next block of commands puts the table of contents at the 
 %beginning of each section and highlights the current section:
@@ -85,13 +87,36 @@
 %--------------------------------------------------------------------------------------------------
 \begin{document}
 	%The next statement creates the title page.
-	{
-	\setbeamertemplate{headline}{}
-	\begin{frame}
-		\maketitle
-	\end{frame}
-	}
-	\logo{}
+	%{
+	%\setbeamertemplate{headline}{}%
+	%\begin{frame}
+	%	\maketitle
+	%\end{frame}
+	%}
+	%\logo{}
+  %---------------------------------------------------------
+  % Title V2
+  \begin{frame}[plain]
+    \maketitle
+    \vspace{-20pt}
+    {\scriptsize
+    {\centering\itshape Jury Members\par}
+    President: Fr\'ed\'eric Jurie
+    \begin{tabular}[t]{@{}l@{\hspace{3pt}}p{.32\textwidth}@{}}
+    Examiners: & Fr\'ed\'eric Jurie \\
+    & Giorgos Tolias \\
+    & Fr\'ed\'eric Precioso \\
+    & Diane Larlus
+    \end{tabular}%
+    %\scriptsize
+    \begin{tabular}[t]{@{}l@{\hspace{3pt}}p{.3\textwidth}@{}}
+    Supervisor 1: & Ronan Sicre \\
+    Supervisor 2: & Stephane Ayache \\
+    Supervisor 3: & Yannis Avrithis
+    \end{tabular}
+    }%
+    \end{frame}
+    \logo{}
 	%---------------------------------------------------------
 	%This block of code is for the table of contents after
 	%the title page

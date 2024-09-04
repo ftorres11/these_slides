@@ -49,23 +49,24 @@
     \framesubtitle{Evaluating Interpretability}
     \small
     Saliency: what is relevant towards a prediction.\\
-    An explanation should demonstrate similar predictive properties to its query.\\
-    \vspace{5pt}
+    \textbf{Image Classification Approach}\\
+    An explanation should demonstrate similar predictive properties to its query:\\
+    \vspace{-10pt}
     \begin{columns}
-        \column{0.3\textwidth}
+        \column[T]{0.4\textwidth}
             \begin{center}
                 {\scriptsize Input image. ($I$)}\\
-                \includegraphics[width=\textwidth]{fig/rel/interp/img/ILSVRC2012_val_00000027.JPEG}\\
-                {\scriptsize $P^c_i = 0.8756$}
+                \includegraphics[width=.5\textwidth]{fig/rel/interp/img/ILSVRC2012_val_00000027.JPEG}\\
+                {\scriptsize $P^c_i = 0.8756$}\\
             \end{center}
-        \column{0.3\textwidth}
+        %\column{0.3\textwidth}
             \begin{center}
                 {\scriptsize Explanation Map. ($E^c$)}\\
-                \includegraphics[width=\textwidth]{fig/rel/interp/img/masked_resized.png}\\
+                \includegraphics[width=.5\textwidth]{fig/rel/interp/img/masked_resized.png}\\
                 {\scriptsize $O^c_i = 0.7442$}
             \end{center}
         \pause
-        \column{.4\textwidth}
+        \column[T]{.6\textwidth}
             {\scriptsize%
                 \begin{itemize}
                     \item Prediction loss when using an explanation. (Average Drop 
@@ -78,4 +79,37 @@
             }
     \end{columns}
     \label{slide:evaluation}
+\end{frame}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Interpretability}
+    \framesubtitle{Evaluating Interpretability}
+    \small
+    Saliency: what is relevant towards a prediction.\\
+    \textbf{Weakly Supervised Object Localization Approach}\\
+    A saliency map should be good to localize the object of interest for an example:\\
+    \vspace{-10pt}
+    \begin{columns}
+        \column[T]{0.4\textwidth}
+            \begin{center}
+                {\scriptsize Input image. ($I$)}\\
+                \includegraphics[width=.5\textwidth]{fig/rel/interp/img/ILSVRC2012_val_00000027.JPEG}\\
+            \end{center}
+        %\column{0.3\textwidth}
+            \begin{center}
+                {\scriptsize Saliency Map. ($E^c$)}\\
+                \includegraphics[width=.5\textwidth]{fig/rel/interp/img/saliency.png}\\
+            \end{center}
+        \pause
+        \column[T]{.6\textwidth}
+            {\scriptsize%
+                \begin{itemize}
+                    \item  Measurements between the predicted object bounding box and object bounding 
+                    boxes (OM, LE, F$_1$).
+                    \item Overlapping between largest connected bounding box and object bounding box (BA).
+                    \item Existence of the most salient points and the fraction of the map with the bounding box (EP, SP).
+                    \item Penalty of size of the bounding box with entropy and image size (SM).                        
+                \end{itemize}
+            }
+    \end{columns}
 \end{frame}
