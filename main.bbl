@@ -133,4 +133,22 @@ H.~Touvron, M.~Cord, A.~El-Nouby, P.~Bojanowski, A.~Joulin, G.~Synnaeve, and
   H.~J{\'e}gou, ``Augmenting convolutional networks with attention-based
   aggregation,'' \emph{arXiv preprint arXiv:2112.13692}, 2021.
 
+\bibitem{bottou2010large}
+L.~Bottou, ``Large-scale machine learning with stochastic gradient descent,''
+  in \emph{Proceedings of COMPSTAT'2010: 19th International Conference on
+  Computational StatisticsParis France, August 22-27, 2010 Keynote, Invited and
+  Contributed Papers}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2010,
+  pp. 177--186.
+
+\bibitem{Everingham15}
+M.~Everingham, S.~M.~A. Eslami, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and
+  A.~Zisserman, ``The pascal visual object classes challenge: A
+  retrospective,'' \emph{International Journal of Computer Vision}, vol. 111,
+  no.~1, pp. 98--136, Jan. 2015.
+
+\bibitem{WahCUB_200_2011}
+C.~Wah, S.~Branson, P.~Welinder, P.~Perona, and S.~Belongie, ``Caltech-ucsd
+  birds-200-2011,'' California Institute of Technology, Tech. Rep.
+  CNS-TR-2011-001, 2011.
+
 \end{thebibliography}

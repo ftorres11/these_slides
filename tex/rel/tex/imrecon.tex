@@ -90,9 +90,10 @@
          \emph{Attention:} compute the relevance of each element relative to others in an 
          embedding.\\\vspace{10pt}
          {\scriptsize
-            \begin{equation*}
-                \mbox{Attention}(Q, K, V) = \mbox{softmax}\left(\frac{Q\times K^T}{\sqrt{d_k}}\right) V
-            \end{equation*}
+            \begin{equation}
+                \mbox{Attention}(Q, K, V) = \mbox{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) V
+                \label{eq:att}
+            \end{equation}
          }
          \pause
          An abstract representation of a class is computed, updated with information across the 

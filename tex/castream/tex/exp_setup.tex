@@ -1,0 +1,32 @@
+%--------------------------------------------------------------------------------------------------
+\subsection*{Set-Up}
+\begin{frame}[t]
+    \frametitle{Experimental Set-Up}
+    {\footnotesize
+    \begin{columns}
+        \column[T]{.5\textwidth}
+        \textbf{Training and models}
+            \begin{itemize}
+                \item Training and evaluation in the train and val sets of ILSVRC 2012 
+                (\cite{krizhevsky2012imagenet, ILSVRC15}) respectively.
+                \item Training using ResNet 50 original procedure (90 epochs, SGD optimization \cite{bottou2010large}, 
+                lr decay every 90 epochs).\footnotemark
+                \item Trained models ResNet (18-50), ConvNeXt (Small, Base).
+                \item Pascal-VOC 2012\cite{Everingham15} and CUB\cite{WahCUB_200_2011} extensions. 
+                Finetuning from ImageNet models.
+                
+
+            \end{itemize}\pause
+        \column[T]{.5\textwidth}
+        \textbf{Evaluation }
+        \begin{itemize}
+            \item Evaluation using the whole image (not center crop), testing a bit of OOD.
+            \item No localization evaluation, lessons learnt from Opti-CAM.
+            \item Raw Attention used for OOD data, highlights on unseen data.
+            \item Ablation on parameters and design choices.
+        \end{itemize}
+    \end{columns}
+    }
+    \footnotetext{\tiny{\url{https://github.com/pytorch/vision/tree/main/references/classification}}}
+    %\footnotetext[2]{\tiny{{Timm \url{https://github.com/rwightman/pytorch-image-models}}}}
+\end{frame}

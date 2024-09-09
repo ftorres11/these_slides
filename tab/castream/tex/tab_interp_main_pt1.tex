@@ -1,0 +1,42 @@
+\begin{table}
+    \centering
+    \footnotesize
+    %\setlength{\tabcolsep}{3.5pt}
+    %\setlength\extrarowheight{-4pt}
+    \resizebox{.95\textwidth}{!}{%
+    \begin{tabular}{llcccccc}\toprule
+        \Th{Network}&\Th{Method}&\Th{Pool}&\Th{AD$\downarrow$}&\Th{AG$\uparrow$}&\Th{AI$\uparrow$}&\Th{I$\uparrow$}&\Th{D$\downarrow$}\\\midrule
+    
+        \mr{7}{\Th{ResNet-18}}&\mr{2}{Grad-CAM}&\Th{GAP}&17.64&12.73&41.21&63.13&\textbf{10.66}\\ %
+            & &\Th{CA}&\textbf{16.99}&\textbf{17.22}&\textbf{44.95}&\textbf{65.94}&10.68\\\cmidrule{2-8} %
+            & \mr{2}{Grad-CAM++}&\Th{GAP}&19.05&11.16&37.99&62.80&\textbf{10.75}\\ %
+            & &\Th{CA}&\textbf{19.02}&\textbf{14.76}&\textbf{40.82}&\textbf{65.53}&10.82\\\cmidrule{2-8} %
+            & \mr{2}{Score-CAM}&\Th{GAP}&13.64&12.98&44.53&62.56&\textbf{11.37}\\ %
+            & &\Th{CA}&\textbf{11.53}&\textbf{18.12}&\textbf{50.32}&\textbf{65.33}&11.51\\\midrule %
+    
+        %\mr{7}{\Th{ResNet-50}}&\mr{2}{Grad-CAM}&\Th{GAP}&13.04&17.56&44.47&72.57&\textbf{13.24}\\ %
+        %    & &\Th{CA}&\textbf{12.54}&\textbf{22.67}&\textbf{48.56}&\textbf{75.53}&13.50\\\cmidrule{2-8} %
+        %    & \mr{2}{Grad-CAM++}&\Th{GAP}&\textbf{13.79}&15.87&42.08&72.32&\textbf{13.33}\\ %
+        %    & &\Th{CA}&13.99&\textbf{19.29}&\textbf{44.60}&\textbf{75.21}&13.78\\\cmidrule{2-8} %
+        %    & \mr{2}{Score-CAM}&\Th{GAP}&8.83&17.97&48.46&71.99&\textbf{14.31}\\ %
+        %    & &\Th{CA}&\textbf{7.09}&\textbf{23.65}&\textbf{54.20}&\textbf{74.91}&14.68\\\midrule%
+       
+        \mr{7}{\Th{ConvNeXt-S}}&\mr{2}{Grad-CAM}&\Th{GAP}&42.99&1.69&12.60&48.42&\textbf{30.12}\\ % Numbers match, check saliency
+            & &\Th{CA}&\textbf{22.09}&\textbf{14.91}&\textbf{32.65}&\textbf{84.82}&43.02\\\cmidrule{2-8} % Revision running
+            & \mr{2}{Grad-CAM++}&\Th{GAP}&56.42&1.32&10.35&48.28&\textbf{33.41}\\ % Pending
+            & &\Th{CA}&\textbf{51.87}&\textbf{9.40}&\textbf{20.55}&\textbf{84.28}&52.58\\\cmidrule{2-8} % Revision running
+            & \mr{2}{Score-CAM}&\Th{GAP}&74.79&1.29&10.10&47.40&\textbf{38.21}\\ % Pending
+            & &\Th{CA}&\textbf{64.21}&\textbf{8.81}&\textbf{18.96}&\textbf{82.92}&57.46\\\midrule % Revision running
+    
+   %     \mr{7}{\Th{ConvNeXt-B}}&\mr{2}{Grad-CAM}&\Th{GAP}&33.72&2.43&15.25&52.85&\textbf{29.57}\\ % Pending
+        %    & &\Th{CA}&\textbf{19.45}&\textbf{13.96}&\textbf{32.89}&\textbf{86.38}&45.29\\\cmidrule{2-8} % Revision running
+        %    & \mr{2}{Grad-CAM++}&\Th{GAP}&\textbf{34.01}&2.37&15.60&52.83&\textbf{29.17}\\ % Pending
+        %    & &\Th{CA}&36.69&\textbf{8.00}&\textbf{21.95}&\textbf{85.39}&53.42\\\cmidrule{2-8} % Revision running
+        %    & \mr{2}{Score-CAM}&\Th{GAP}&43.55&2.23&15.67&50.96&\textbf{39.49}\\ % Pending
+        %    & &\Th{CA}&\textbf{23.51}&\textbf{11.04}&\textbf{27.35}&\textbf{83.41}&60.53\\\midrule% Revision running
+
+    \end{tabular}
+    %\caption{\textbf{Interpretability metrics} of \Ours \vs baseline \Th{GAP} for different networks and interpretability methods on ImageNet.}
+    %\label{tab:intrecon-all}
+    }
+\end{table}

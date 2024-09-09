@@ -37,8 +37,10 @@
         \end{center}
         \column[T]{.35\textwidth}
         \small Governed by equation:
+        \scriptsize
         \begin{equation}
             \small S^c_\ell (\textbf{\mbox{u}}) \defn h \left(\sum_k w^c_k A^k_l \right)
+            \label{eq:cam}
         \end{equation}
     \end{columns}
 
@@ -104,11 +106,10 @@
         \column[T]{.6\textwidth}
             {\scriptsize%
                 \begin{itemize}
-                    \item  Measurements between the predicted object bounding box and object bounding 
-                    boxes (OM, LE, F$_1$).
-                    \item Overlapping between largest connected bounding box and object bounding box (BA).
-                    \item Existence of the most salient points and the fraction of the map with the bounding box (EP, SP).
-                    \item Penalty of size of the bounding box with entropy and image size (SM).                        
+                    \item Relationships between the bounding boxes (OM, LE, F$_1$).
+                    \item Overlap between object mask and bounding box (BA).
+                    \item Localization of most salient points and fraction of them in the bounding box (EP, SP).
+                    \item Penalty of the size of the bounding box and image size, regarding prediction (SM).                        
                 \end{itemize}
             }
     \end{columns}
