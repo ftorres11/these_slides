@@ -1,0 +1,33 @@
+%--------------------------------------------------------------------------------------------------
+\subsection*{Set-Up}
+\begin{frame}[t]
+    \frametitle{Experimental Set-Up}
+    {\footnotesize
+    \begin{columns}
+        \column[T]{.5\textwidth}
+        \textbf{Training and models}
+            \begin{itemize}
+                \item Training and validation in train and val sets of CIFAR-100
+                (\cite{krizhevsky2009learning}) respectively.
+                \item Using an optimized recipe for the dataset  \footnotemark.
+                % (90 epochs, SGD optimization \cite{bottou2010large}, 
+                % lr decay every 90 epochs).\footnotemark
+                \item Training ResNet (18), MobileNet \cite{DBLP:journals/corr/HowardZCKWWAA17}.
+                %Finetuning from ImageNet models.
+                
+
+            \end{itemize}\pause
+        \column[T]{.5\textwidth}
+        \textbf{Evaluation }
+        \begin{itemize}
+            \item CIFAR has no center crop. All image it is.%.
+            \item No localization evaluation.%, lessons learnt from Opti-CAM.
+            %\item Raw Attention used for OOD data.%, highlights on unseen data.
+            \item Ablation on regularization functions.
+        \end{itemize}
+    \end{columns}
+    }
+    \footnotetext{\tiny{\url{https://github.com/weiaicunzai/pytorch-cifar100}}}
+    %\footnotetext[2]{\tiny{{Timm \url{https://github.com/rwightman/pytorch-image-models}}}}
+    %\footnote{https://github.com/weiaicunzai/pytorch-cifar100}
+\end{frame}

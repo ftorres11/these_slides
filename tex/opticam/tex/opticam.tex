@@ -6,15 +6,15 @@
     {\small 
         \begin{itemize}
             \item \textbf{Combination of Feature Maps}\\
-            To compute $w^c_k$, Score-CAM \cite{wang2020score} considers feature maps
-            independently.\\
+            Featyre maps can be considered independentl to compute $w^c_k$ \cite{wang2020score}.
             \emph{What about a linear combination?}\\
             \begin{equation*}
                 F(\textbf{w})\defn f\left(\textbf{\mbox{u}}\odot n\left(\mbox{up}\left(\sum_k w_k 
                     A^k_l \right)\right)\right)_c
             \end{equation*}
-            F is optimizable with respect to \textbf{w} and an initial \textbf{\mbox{$w_0$}} via 
-            backpropagation.\pause
+            %F is optimizable with respect to \textbf{w} and an initial \textbf{\mbox{$w_0$}} via 
+            %backpropagation.
+            \pause
             \item \textbf{Masking-based Saliency}
             Saliency maps produced by optimization in the input space \cite{fong2017interpretable,
             fong2019understanding}\\
@@ -37,7 +37,7 @@
         \begin{equation}
             S_\ell(\mbox{\textbf{x}}; \mbox{\textbf{u}})\defn \sum_k \mbox{softmax}(\textbf{\mbox{u}})_kA^k_\ell
         \end{equation}
-    \vspace{-15pt}
+    \vspace{-5pt}
     \pause
     \begin{columns}
         \column[T]{.6\textwidth}
@@ -55,7 +55,7 @@
     \end{columns}
     \vspace{10pt}
     \pause
-    The Saliency Map then becomes:
+    Then:
     \begin{equation}
         S^c_\ell(\textbf{x})\defn S_\ell(\textbf{\mbox{x}}; \textbf{\mbox{u*}}) =
         S_\ell (\textbf{\mbox{x}}; \underset{\mbox{u}}{\mbox{argmax}}F^c_\ell

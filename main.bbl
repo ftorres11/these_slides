@@ -91,12 +91,6 @@ R.~Fong, M.~Patrick, and A.~Vedaldi, ``Understanding deep networks via extremal
   perturbations and smooth masks,'' in \emph{Proceedings of the IEEE/CVF
   international conference on computer vision}, 2019, pp. 2950--2958.
 
-\bibitem{poppi2021revisiting}
-S.~Poppi, M.~Cornia, L.~Baraldi, and R.~Cucchiara, ``Revisiting the evaluation
-  of class activation mapping for explainability: A novel metric and
-  experimental analysis,'' in \emph{Proceedings of the IEEE/CVF Conference on
-  Computer Vision and Pattern Recognition}, 2021, pp. 2299--2304.
-
 \bibitem{kingma2014adam}
 D.~P. Kingma and J.~Ba, ``Adam: {A} method for stochastic optimization,''
   \emph{ICLR}, 2015.
@@ -150,5 +144,30 @@ M.~Everingham, S.~M.~A. Eslami, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and
 C.~Wah, S.~Branson, P.~Welinder, P.~Perona, and S.~Belongie, ``Caltech-ucsd
   birds-200-2011,'' California Institute of Technology, Tech. Rep.
   CNS-TR-2011-001, 2011.
+
+\bibitem{guidedbackprop}
+J.~T. Springenberg, A.~Dosovitskiy, T.~Brox, and M.~Riedmiller, ``Striving for
+  simplicity: The all convolutional net,'' \emph{arXiv preprint
+  arXiv:1412.6806}, 2014.
+
+\bibitem{smilkov2017smoothgrad}
+D.~Smilkov, N.~Thorat, B.~Kim, F.~Vi{\'e}gas, and M.~Wattenberg, ``Smoothgrad:
+  removing noise by adding noise,'' \emph{arXiv preprint arXiv:1706.03825},
+  2017.
+
+\bibitem{krizhevsky2009learning}
+\BIBentryALTinterwordspacing
+A.~Krizhevsky, ``Learning multiple layers of features from tiny images,'' pp.
+  32--33, 2009. [Online]. Available:
+  \url{https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf}
+\BIBentrySTDinterwordspacing
+
+\bibitem{DBLP:journals/corr/HowardZCKWWAA17}
+\BIBentryALTinterwordspacing
+A.~G. Howard, M.~Zhu, B.~Chen, D.~Kalenichenko, W.~Wang, T.~Weyand,
+  M.~Andreetto, and H.~Adam, ``Mobilenets: Efficient convolutional neural
+  networks for mobile vision applications,'' \emph{CoRR}, vol. abs/1704.04861,
+  2017. [Online]. Available: \url{http://arxiv.org/abs/1704.04861}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

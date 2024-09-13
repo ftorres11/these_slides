@@ -1,0 +1,36 @@
+\subsection*{Method}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Interpretable Gradients}
+    \framesubtitle{Gradient as Regularization}
+    \small
+    Goal: Denoise the gradient during training using guided backprop.\\
+    \emph{How?} Regularize using guided backprop.\\\pause
+    Assuming target labels $T$:
+
+    \begin{equation}
+        L_R(X, \theta, T) = \frac{1}{n} \sum_{i=1}^n E(\delta x_i, \delta_G x_i),
+    \end{equation}
+    \pause
+    And the total loss:
+    \begin{equation}
+        L(x, \theta, t) = L_C(x, \theta, t) + \lambda L_R(x, \theta, t),
+    \label{eq:total}
+    \end{equation}
+\end{frame}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[c]
+    \frametitle{Interpretable Gradients}    
+    \framesubtitle{Formalized}
+    %\small
+    \input{fig/gradient/tex/method_fig.tex}
+    %\begin{columns}
+    %    \column[T]{.6\textwidth}
+    %        \begin{center}
+    %            \input{fig/gradient/tex/method_fig.tex}
+    %        \end{center}
+    %    \column[T]{.4\textwidth}
+    %        \input{tex/gradient/tex/algorithm.tex}
+    %\end{columns}
+    
+\end{frame}

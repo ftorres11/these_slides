@@ -1,1 +1,48 @@
 \section[Gradient]{A learning paradigm for interpretable gradients}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Preliminaries}
+    \framesubtitle{Premise}
+    \begin{center}
+        \emph{Gradient information is noisy and hard to interpret, 
+        however smoothing it makes it discriminative. Can gradient
+         information be denoised during training, improving interpretability properties? }
+        \vspace{20pt}
+        \begin{columns}
+            \column{0.2\textwidth}
+            \column{0.4\textwidth}
+                \includegraphics[width=0.95\textwidth]{fig/gradient/fig/method/input.jpg}
+            \column{0.2\textwidth}
+                \includegraphics[width=0.95\textwidth]{fig/gradient/fig/method/gradient.jpg}\\
+                \includegraphics[width=0.95\textwidth]{fig/gradient/fig/method/guided_gradient.jpg}
+            \column{0.2\textwidth}
+
+        \end{columns}
+        %\input{fig/castream/tex/ca_mainfig.tex}
+    \end{center}
+\end{frame}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}
+    \frametitle{Preliminaries}
+    \framesubtitle{Contributions}
+    \begin{itemize}
+        \item Novel regularization for interpretable guided training.
+        \item Improvement of post-hoc interpretations following transparency ideas.
+         
+    \end{itemize}
+    %\begin{itemize}
+        %\item \textbf{CAM is Attention}\\
+        %We demonstrate that CAM behaves in a similar manner as attention.
+        %\item \textbf{Cross Attention: [CLS] on CNNs}\\
+        %We train an abstract class representation using a stream, alongside standard CNNs.
+        %\item \textbf{CAM on more architectures}\\
+        %CAM is usually validated only on ResNet and VGG. Extension to ConvNeXt.
+    %\end{itemize}
+\end{frame}
+%--------------------------------------------------------------------------------------------------
+\input{tex/gradient/tex/gradsmooth}
+\input{tex/gradient/tex/intgrad}
+\input{tex/gradient/tex/exp_setup}
+\input{tex/gradient/tex/qualitative}
+\input{tex/gradient/tex/quantitative}
+\input{tex/gradient/tex/conclusion}

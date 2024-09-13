@@ -3,11 +3,10 @@
 \begin{frame}[t]
     \frametitle{Average Gain}
     \framesubtitle{Motivation}
-    {\footnotesize
+    \footnotesize
      Existing metrics for measuring interpretability (AD$\downarrow$, AI$\uparrow$), can be 
      fooled.\\\pause
-     \textbf{Fake-CAM} \cite{poppi2021revisiting}\\
-     What happens if you provide a Saliency Map where all the pixels \emph{but-one} are 1?}
+     All pixels are salient \emph{but-one}:
     \begin{columns}        
         \column{.1\textwidth}
         \column{.2\textwidth}
@@ -31,9 +30,9 @@
         }
     \end{columns}     
     \pause
-    \vspace{20pt}
-    {\footnotesize Therefore, we don't drop much predictive power, \emph{but}, 
-    we don't gain confidence in our prediciton.}
+    %\vspace{20pt}
+    %{\footnotesize Therefore, we don't drop much predictive power, \emph{but}, 
+    %we don't gain confidence in our prediciton.}
     
 \end{frame}
 %--------------------------------------------------------------------------------------------------

@@ -1,0 +1,27 @@
+\begin{algorithm}[H]
+    {\scriptsize 
+	\SetFuncSty{textsc}
+	\SetDataSty{emph}
+	\newcommand{\commentsty}[1]{{\color{DarkGreen}#1}}
+	\SetCommentSty{commentsty}
+	\SetKwComment{Comment}{$\triangleright$ }{}
+
+	\SetKwFunction{Detatch}{detatch}
+
+	\KwIn{network $f$, parameters $\theta$}
+	\KwIn{input images $X = \{x_i\}_{i=1}^n$}
+	\KwIn{target labels $T = \{t_i\}_{i=1}^n$}
+	\KwOut{loss $L$}
+	$L_C \gets \frac{1}{n} \sum_i (f(x_i; \theta), t_i)$ \Comment*[f]{class. loss} \\ %\ce(f(x_i; \theta), t_i)$ \Comment*[f]{class. loss \eq{class}} \\
+    \ForEach{$i \in \{1,\dots,n\}$}{
+        $\delta x_i \gets \ipder{L_C}{x_i}$ \Comment*[f]{standard grad} \\
+	 	$\delta_G x_i \gets \ipder{_G L_C}{x_i}$ \Comment*[f]{guided grad} \\
+        $\mbox{\Th{Detach}}(\delta_G x_i)$ \Comment*[f]{detach from graph} \\
+	  }
+   $L_R \gets \frac{1}{n} \sum_{i=1}^n E(\delta x_i, \delta_G x_i) $ \Comment*[f]{reg. loss}\\
+   $L \gets L_C + \lambda L_R$
+ \Comment*[f]{total loss ~\eq{total}} \\
+    }
+%\caption{Interpretable gradient loss}
+\label{alg:grad}
+\end{algorithm}
