@@ -40,12 +40,13 @@
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
-    \framesubtitle{Convolutional Neural Networks (CNN)}
+    \framesubtitle{Convolutional Neural Networks (CNNs)}
+    \small
     \begin{columns}
         \column[T]{0.5\textwidth}
-        {\small Based on the \textbf{convolution operation}.\\
+        Based on the \textbf{convolution operation}.\\
          A representation $f\star g$ is computed for a feature map $f$ and a kernel $g$.\\
-         First approach with \emph{Neocognitron} \cite{fukushima1975cognitron}}
+         %First approach with \emph{Neocognitron} \cite{fukushima1975cognitron}}
         \column[T]{0.5\textwidth}
             \includegraphics[scale=0.75]{fig/rel/imrecon/img/conv_schema.pdf}\pause
     \end{columns}
@@ -56,11 +57,12 @@
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
-    \framesubtitle{Convolutional Neural Networks(CNN)}
-    {\small Training deep models is difficult, 
-     gradient information \emph{is} lost with depth.\\\pause
-    A model surviving the test of time: \emph{ResNet} \cite{he2016deep}.}
-    \input{fig/rel/imrecon/tex/resnet_bbone.tex}
+    \framesubtitle{Convolutional Neural Networks (CNNs)}
+    \small 
+    Training deep models is difficult, gradient information \emph{is} lost with depth.\\
+    A model surviving the test of time: \emph{ResNet} \cite{he2016deep}.
+    \pause
+    \input{fig/rel/imrecon/tex/resnet_bbone.tex}    
     \begin{columns}
         \column[T]{.5\textwidth}
         {\scriptsize\textbf{Basic Block}}
@@ -84,26 +86,26 @@
 \begin{frame}[t]
     \frametitle{Image Recognition Models}
     \framesubtitle{Self Attention Architectures}
+    \small
     \begin{columns}
         \column[T]{.5\textwidth}
-         {\small \textbf{Transformers}\\\vspace{10pt}
-         \emph{Attention:} compute the relevance of each element relative to others in an 
-         embedding.\\\vspace{10pt}
-         {\scriptsize
-            \begin{equation}
-                \mbox{Attention}(Q, K, V) = \mbox{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) V
-                \label{eq:att}
-            \end{equation}
-         }
-         \pause
-         \textbf{\Th{CLS} token}: An abstract class representation \cite{devlin2018bert}.
-         }
+            \textbf{Transformers}\\\vspace{10pt}
+            \emph{Attention:} compute the relevance of each element relative to others in an 
+            embedding.\\\vspace{10pt}
+            {\scriptsize
+               \begin{equation}
+                   \mbox{Self Attention}(Q, K, V) = \mbox{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) V
+                   \label{eq:att}
+               \end{equation}
+            }
+        \pause 
         \column[T]{.5\textwidth}
         \begin{center}
-            \includegraphics[width=.5\textwidth]{fig/rel/imrecon/img/scaled_dotproduct.pdf}
+            \includegraphics[width=.45\textwidth]{fig/rel/imrecon/img/scaled_dotproduct.pdf}
         \end{center}
-        
     \end{columns}
+    \vspace{10pt}
+    \textbf{\Th{CLS} token}: An abstract class representation \cite{devlin2018bert}.
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]

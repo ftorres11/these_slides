@@ -3,7 +3,7 @@
 \begin{frame}[t]
     \frametitle{Opti-CAM}
     \framesubtitle{Motivation}
-    {\small 
+    \small 
         \begin{itemize}
             \item \textbf{Combination of Feature Maps}\\
             Featyre maps can be considered independentl to compute $w^c_k$ \cite{wang2020score}.
@@ -24,13 +24,12 @@
                       f\left(\mbox{\textbf{u}}\odot{n}\left(\mbox{up}(\textbf{\mbox{m}}) \right)\right)_c + \delta R(\mbox{\textbf{m}})
             \end{equation*}
         \end{itemize}
-    }
 \end{frame}
 
 \begin{frame}[t]
     \frametitle{Opti-CAM}    
     \framesubtitle{Optimization}
-    {\small
+    \small
     \textbf{Formulation} Assuming channel weights $w_k\defn \mbox{softmax}(\textbf{u})_k$,
         the saliency map $S_\ell$ is a function of both an input image \textbf{$x$} and a 
         variable $\textbf{u}$:
@@ -61,5 +60,4 @@
         S_\ell (\textbf{\mbox{x}}; \underset{\mbox{u}}{\mbox{argmax}}F^c_\ell
         (\textbf{\mbox{x}}; \textbf{\mbox{u}}))
     \end{equation}    
-    }
 \end{frame}

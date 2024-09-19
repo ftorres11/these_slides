@@ -9,25 +9,27 @@
 \headcommand {\beamer@framepages {3}{3}}
 \headcommand {\beamer@subsectionpages {3}{3}}
 \headcommand {\beamer@subsectionentry {0}{1}{1}{4}{Motivation}}
-\headcommand {\slideentry {1}{1}{1}{4/7}{Motivation}{0}}
-\headcommand {\beamer@framepages {4}{7}}
-\headcommand {\slideentry {1}{1}{2}{8/8}{Motivation}{0}}
+\headcommand {\slideentry {1}{1}{1}{4/6}{Motivation}{0}}
+\headcommand {\beamer@framepages {4}{6}}
+\headcommand {\slideentry {1}{1}{2}{7/7}{Motivation}{0}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\slideentry {1}{1}{3}{8/8}{Motivation}{0}}
 \headcommand {\beamer@framepages {8}{8}}
-\headcommand {\slideentry {1}{1}{3}{9/9}{Motivation}{0}}
+\headcommand {\beamer@subsectionpages {4}{8}}
+\headcommand {\beamer@subsectionentry {0}{1}{2}{9}{Computation, Computer Vision and AI}}
+\headcommand {\slideentry {1}{2}{1}{9/9}{Computation, Computer Vision and AI}{0}}
 \headcommand {\beamer@framepages {9}{9}}
-\headcommand {\beamer@subsectionpages {4}{9}}
-\headcommand {\beamer@subsectionentry {0}{1}{2}{10}{Computation, Computer Vision and AI}}
-\headcommand {\slideentry {1}{2}{1}{10/10}{Computation, Computer Vision and AI}{0}}
-\headcommand {\beamer@framepages {10}{10}}
-\headcommand {\slideentry {1}{2}{2}{11/12}{Computation, Computer Vision and AI}{0}}
-\headcommand {\beamer@framepages {11}{12}}
-\headcommand {\slideentry {1}{2}{3}{13/14}{Computation, Computer Vision and AI}{0}}
-\headcommand {\beamer@framepages {13}{14}}
-\headcommand {\slideentry {1}{2}{4}{15/16}{Computation, Computer Vision and AI}{0}}
-\headcommand {\beamer@framepages {15}{16}}
-\headcommand {\slideentry {1}{2}{5}{17/19}{Computation, Computer Vision and AI}{0}}
+\headcommand {\slideentry {1}{2}{2}{10/11}{Computation, Computer Vision and AI}{0}}
+\headcommand {\beamer@framepages {10}{11}}
+\headcommand {\slideentry {1}{2}{3}{12/13}{Computation, Computer Vision and AI}{0}}
+\headcommand {\beamer@framepages {12}{13}}
+\headcommand {\slideentry {1}{2}{4}{14/15}{Computation, Computer Vision and AI}{0}}
+\headcommand {\beamer@framepages {14}{15}}
+\headcommand {\slideentry {1}{2}{5}{16/16}{Computation, Computer Vision and AI}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {1}{2}{6}{17/19}{Computation, Computer Vision and AI}{0}}
 \headcommand {\beamer@framepages {17}{19}}
-\headcommand {\beamer@subsectionpages {10}{19}}
+\headcommand {\beamer@subsectionpages {9}{19}}
 \headcommand {\beamer@subsectionentry {0}{1}{3}{20}{Objectives}}
 \headcommand {\slideentry {1}{3}{1}{20/21}{Objectives}{0}}
 \headcommand {\beamer@framepages {20}{21}}
@@ -38,69 +40,67 @@
 \headcommand {\beamer@framepages {22}{22}}
 \headcommand {\beamer@subsectionpages {22}{22}}
 \headcommand {\beamer@subsectionentry {0}{2}{1}{23}{Preliminaries}}
-\headcommand {\slideentry {2}{1}{1}{23/24}{Preliminaries}{0}}
+\headcommand {\beamer@subsectionpages {23}{22}}
+\headcommand {\beamer@subsectionentry {0}{2}{2}{23}{Image Recognition Models}}
+\headcommand {\slideentry {2}{2}{1}{23/24}{Image Recognition Models}{0}}
 \headcommand {\beamer@framepages {23}{24}}
-\headcommand {\beamer@subsectionpages {23}{24}}
-\headcommand {\beamer@subsectionentry {0}{2}{2}{25}{Image Recognition Models}}
-\headcommand {\slideentry {2}{2}{1}{25/26}{Image Recognition Models}{0}}
+\headcommand {\slideentry {2}{2}{2}{25/26}{Image Recognition Models}{0}}
 \headcommand {\beamer@framepages {25}{26}}
-\headcommand {\slideentry {2}{2}{2}{27/28}{Image Recognition Models}{0}}
+\headcommand {\slideentry {2}{2}{3}{27/28}{Image Recognition Models}{0}}
 \headcommand {\beamer@framepages {27}{28}}
-\headcommand {\slideentry {2}{2}{3}{29/30}{Image Recognition Models}{0}}
+\headcommand {\slideentry {2}{2}{4}{29/30}{Image Recognition Models}{0}}
 \headcommand {\beamer@framepages {29}{30}}
-\headcommand {\slideentry {2}{2}{4}{31/32}{Image Recognition Models}{0}}
-\headcommand {\beamer@framepages {31}{32}}
-\headcommand {\slideentry {2}{2}{5}{33/33}{Image Recognition Models}{0}}
-\headcommand {\beamer@framepages {33}{33}}
-\headcommand {\beamer@subsectionpages {25}{33}}
-\headcommand {\beamer@subsectionentry {0}{2}{3}{34}{Interpretability}}
-\headcommand {\slideentry {2}{3}{1}{34/35}{Interpretability}{0}}
-\headcommand {\beamer@framepages {34}{35}}
-\headcommand {\slideentry {2}{3}{2}{36/37}{Interpretability}{0}}
-\headcommand {\beamer@framepages {36}{37}}
-\headcommand {\slideentry {2}{3}{3}{38/39}{Interpretability}{0}}
-\headcommand {\beamer@framepages {38}{39}}
-\headcommand {\slideentry {2}{3}{4}{40/41}{Interpretability}{0}}
-\headcommand {\beamer@framepages {40}{41}}
-\headcommand {\beamer@sectionpages {22}{41}}
-\headcommand {\beamer@subsectionpages {34}{41}}
-\headcommand {\sectionentry {3}{Opti-CAM}{42}{Opti-CAM}{0}}
-\headcommand {\slideentry {3}{0}{1}{42/42}{}{0}}
-\headcommand {\beamer@framepages {42}{42}}
-\headcommand {\slideentry {3}{0}{2}{43/43}{}{0}}
-\headcommand {\beamer@framepages {43}{43}}
-\headcommand {\slideentry {3}{0}{3}{44/44}{}{0}}
-\headcommand {\beamer@framepages {44}{44}}
-\headcommand {\beamer@subsectionpages {42}{44}}
-\headcommand {\beamer@subsectionentry {0}{3}{1}{45}{Opti-CAM}}
-\headcommand {\slideentry {3}{1}{1}{45/46}{Opti-CAM}{0}}
-\headcommand {\beamer@framepages {45}{46}}
-\headcommand {\slideentry {3}{1}{2}{47/50}{Opti-CAM}{0}}
-\headcommand {\beamer@framepages {47}{50}}
-\headcommand {\beamer@subsectionpages {45}{50}}
-\headcommand {\beamer@subsectionentry {0}{3}{2}{51}{Average Drop}}
-\headcommand {\slideentry {3}{2}{1}{51/53}{Average Drop}{0}}
-\headcommand {\beamer@framepages {51}{53}}
-\headcommand {\slideentry {3}{2}{2}{54/54}{Average Drop}{0}}
-\headcommand {\beamer@framepages {54}{54}}
-\headcommand {\beamer@subsectionpages {51}{54}}
-\headcommand {\beamer@subsectionentry {0}{3}{3}{55}{Set-Up}}
-\headcommand {\slideentry {3}{3}{1}{55/56}{Set-Up}{0}}
-\headcommand {\beamer@framepages {55}{56}}
-\headcommand {\beamer@subsectionpages {55}{56}}
-\headcommand {\beamer@subsectionentry {0}{3}{4}{57}{Evaluation}}
-\headcommand {\slideentry {3}{4}{1}{57/59}{Evaluation}{0}}
-\headcommand {\beamer@framepages {57}{59}}
-\headcommand {\slideentry {3}{4}{2}{60/60}{Evaluation}{0}}
-\headcommand {\beamer@framepages {60}{60}}
-\headcommand {\slideentry {3}{4}{3}{61/61}{Evaluation}{0}}
-\headcommand {\beamer@framepages {61}{61}}
-\headcommand {\beamer@subsectionpages {57}{61}}
-\headcommand {\beamer@subsectionentry {0}{3}{5}{62}{Conclusion}}
-\headcommand {\slideentry {3}{5}{1}{62/62}{Conclusion}{0}}
-\headcommand {\beamer@framepages {62}{62}}
-\headcommand {\beamer@sectionpages {42}{62}}
-\headcommand {\beamer@subsectionpages {62}{62}}
+\headcommand {\slideentry {2}{2}{5}{31/31}{Image Recognition Models}{0}}
+\headcommand {\beamer@framepages {31}{31}}
+\headcommand {\beamer@subsectionpages {23}{31}}
+\headcommand {\beamer@subsectionentry {0}{2}{3}{32}{Interpretability}}
+\headcommand {\slideentry {2}{3}{1}{32/32}{Interpretability}{0}}
+\headcommand {\beamer@framepages {32}{32}}
+\headcommand {\slideentry {2}{3}{2}{33/34}{Interpretability}{0}}
+\headcommand {\beamer@framepages {33}{34}}
+\headcommand {\slideentry {2}{3}{3}{35/36}{Interpretability}{0}}
+\headcommand {\beamer@framepages {35}{36}}
+\headcommand {\slideentry {2}{3}{4}{37/38}{Interpretability}{0}}
+\headcommand {\beamer@framepages {37}{38}}
+\headcommand {\beamer@sectionpages {22}{38}}
+\headcommand {\beamer@subsectionpages {32}{38}}
+\headcommand {\sectionentry {3}{Opti-CAM}{39}{Opti-CAM}{0}}
+\headcommand {\slideentry {3}{0}{1}{39/39}{}{0}}
+\headcommand {\beamer@framepages {39}{39}}
+\headcommand {\slideentry {3}{0}{2}{40/40}{}{0}}
+\headcommand {\beamer@framepages {40}{40}}
+\headcommand {\slideentry {3}{0}{3}{41/41}{}{0}}
+\headcommand {\beamer@framepages {41}{41}}
+\headcommand {\beamer@subsectionpages {39}{41}}
+\headcommand {\beamer@subsectionentry {0}{3}{1}{42}{Opti-CAM}}
+\headcommand {\slideentry {3}{1}{1}{42/43}{Opti-CAM}{0}}
+\headcommand {\beamer@framepages {42}{43}}
+\headcommand {\slideentry {3}{1}{2}{44/47}{Opti-CAM}{0}}
+\headcommand {\beamer@framepages {44}{47}}
+\headcommand {\beamer@subsectionpages {42}{47}}
+\headcommand {\beamer@subsectionentry {0}{3}{2}{48}{Average Drop}}
+\headcommand {\slideentry {3}{2}{1}{48/49}{Average Drop}{0}}
+\headcommand {\beamer@framepages {48}{49}}
+\headcommand {\slideentry {3}{2}{2}{50/50}{Average Drop}{0}}
+\headcommand {\beamer@framepages {50}{50}}
+\headcommand {\beamer@subsectionpages {48}{50}}
+\headcommand {\beamer@subsectionentry {0}{3}{3}{51}{Set-Up}}
+\headcommand {\slideentry {3}{3}{1}{51/52}{Set-Up}{0}}
+\headcommand {\beamer@framepages {51}{52}}
+\headcommand {\beamer@subsectionpages {51}{52}}
+\headcommand {\beamer@subsectionentry {0}{3}{4}{53}{Evaluation}}
+\headcommand {\slideentry {3}{4}{1}{53/55}{Evaluation}{0}}
+\headcommand {\beamer@framepages {53}{55}}
+\headcommand {\slideentry {3}{4}{2}{56/56}{Evaluation}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\slideentry {3}{4}{3}{57/57}{Evaluation}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\beamer@subsectionpages {53}{57}}
+\headcommand {\beamer@subsectionentry {0}{3}{5}{58}{Conclusion}}
+\headcommand {\slideentry {3}{5}{1}{58/62}{Conclusion}{0}}
+\headcommand {\beamer@framepages {58}{62}}
+\headcommand {\beamer@sectionpages {39}{62}}
+\headcommand {\beamer@subsectionpages {58}{62}}
 \headcommand {\sectionentry {4}{CA-Stream}{63}{CA-Stream}{0}}
 \headcommand {\slideentry {4}{0}{1}{63/63}{}{0}}
 \headcommand {\beamer@framepages {63}{63}}
@@ -132,72 +132,60 @@
 \headcommand {\beamer@framepages {82}{82}}
 \headcommand {\beamer@subsectionpages {78}{82}}
 \headcommand {\beamer@subsectionentry {0}{4}{3}{83}{Conclusion}}
-\headcommand {\slideentry {4}{3}{1}{83/83}{Conclusion}{0}}
-\headcommand {\beamer@framepages {83}{83}}
-\headcommand {\beamer@sectionpages {63}{83}}
-\headcommand {\beamer@subsectionpages {83}{83}}
-\headcommand {\sectionentry {5}{Gradient}{84}{Gradient}{0}}
-\headcommand {\slideentry {5}{0}{1}{84/84}{}{0}}
-\headcommand {\beamer@framepages {84}{84}}
-\headcommand {\slideentry {5}{0}{2}{85/85}{}{0}}
-\headcommand {\beamer@framepages {85}{85}}
-\headcommand {\slideentry {5}{0}{3}{86/86}{}{0}}
-\headcommand {\beamer@framepages {86}{86}}
-\headcommand {\beamer@subsectionpages {84}{86}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{87}{Motivation}}
-\headcommand {\slideentry {5}{1}{1}{87/88}{Motivation}{0}}
-\headcommand {\beamer@framepages {87}{88}}
-\headcommand {\slideentry {5}{1}{2}{89/90}{Motivation}{0}}
-\headcommand {\beamer@framepages {89}{90}}
-\headcommand {\beamer@subsectionpages {87}{90}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{91}{Method}}
-\headcommand {\slideentry {5}{2}{1}{91/93}{Method}{0}}
-\headcommand {\beamer@framepages {91}{93}}
-\headcommand {\slideentry {5}{2}{2}{94/94}{Method}{0}}
-\headcommand {\beamer@framepages {94}{94}}
-\headcommand {\beamer@subsectionpages {91}{94}}
-\headcommand {\beamer@subsectionentry {0}{5}{3}{95}{Set-Up}}
-\headcommand {\slideentry {5}{3}{1}{95/96}{Set-Up}{0}}
-\headcommand {\beamer@framepages {95}{96}}
-\headcommand {\beamer@subsectionpages {95}{96}}
-\headcommand {\beamer@subsectionentry {0}{5}{4}{97}{Experiments}}
-\headcommand {\slideentry {5}{4}{1}{97/97}{Experiments}{0}}
+\headcommand {\slideentry {4}{3}{1}{83/86}{Conclusion}{0}}
+\headcommand {\beamer@framepages {83}{86}}
+\headcommand {\beamer@sectionpages {63}{86}}
+\headcommand {\beamer@subsectionpages {83}{86}}
+\headcommand {\sectionentry {5}{Gradient}{87}{Gradient}{0}}
+\headcommand {\slideentry {5}{0}{1}{87/87}{}{0}}
+\headcommand {\beamer@framepages {87}{87}}
+\headcommand {\slideentry {5}{0}{2}{88/88}{}{0}}
+\headcommand {\beamer@framepages {88}{88}}
+\headcommand {\slideentry {5}{0}{3}{89/89}{}{0}}
+\headcommand {\beamer@framepages {89}{89}}
+\headcommand {\beamer@subsectionpages {87}{89}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{90}{Motivation}}
+\headcommand {\slideentry {5}{1}{1}{90/91}{Motivation}{0}}
+\headcommand {\beamer@framepages {90}{91}}
+\headcommand {\slideentry {5}{1}{2}{92/93}{Motivation}{0}}
+\headcommand {\beamer@framepages {92}{93}}
+\headcommand {\beamer@subsectionpages {90}{93}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{94}{Method}}
+\headcommand {\slideentry {5}{2}{1}{94/96}{Method}{0}}
+\headcommand {\beamer@framepages {94}{96}}
+\headcommand {\slideentry {5}{2}{2}{97/97}{Method}{0}}
 \headcommand {\beamer@framepages {97}{97}}
-\headcommand {\slideentry {5}{4}{2}{98/98}{Experiments}{0}}
-\headcommand {\beamer@framepages {98}{98}}
-\headcommand {\slideentry {5}{4}{3}{99/99}{Experiments}{0}}
-\headcommand {\beamer@framepages {99}{99}}
-\headcommand {\slideentry {5}{4}{4}{100/100}{Experiments}{0}}
+\headcommand {\beamer@subsectionpages {94}{97}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{98}{Set-Up}}
+\headcommand {\slideentry {5}{3}{1}{98/99}{Set-Up}{0}}
+\headcommand {\beamer@framepages {98}{99}}
+\headcommand {\beamer@subsectionpages {98}{99}}
+\headcommand {\beamer@subsectionentry {0}{5}{4}{100}{Experiments}}
+\headcommand {\slideentry {5}{4}{1}{100/100}{Experiments}{0}}
 \headcommand {\beamer@framepages {100}{100}}
-\headcommand {\beamer@subsectionpages {97}{100}}
-\headcommand {\beamer@subsectionentry {0}{5}{5}{101}{Conclusions}}
-\headcommand {\slideentry {5}{5}{1}{101/101}{Conclusions}{0}}
+\headcommand {\slideentry {5}{4}{2}{101/101}{Experiments}{0}}
 \headcommand {\beamer@framepages {101}{101}}
-\headcommand {\beamer@sectionpages {84}{101}}
-\headcommand {\beamer@subsectionpages {101}{101}}
-\headcommand {\sectionentry {6}{References}{102}{References}{0}}
-\headcommand {\slideentry {6}{0}{1}{102/102}{}{0}}
+\headcommand {\slideentry {5}{4}{3}{102/102}{Experiments}{0}}
 \headcommand {\beamer@framepages {102}{102}}
-\headcommand {\slideentry {6}{0}{2}{103/103}{}{0}}
+\headcommand {\slideentry {5}{4}{4}{103/103}{Experiments}{0}}
 \headcommand {\beamer@framepages {103}{103}}
-\headcommand {\slideentry {6}{0}{2}{103/104}{}{0}}
-\headcommand {\beamer@framepages {103}{104}}
-\headcommand {\slideentry {6}{0}{2}{103/105}{}{0}}
-\headcommand {\beamer@framepages {103}{105}}
-\headcommand {\slideentry {6}{0}{2}{103/106}{}{0}}
-\headcommand {\beamer@framepages {103}{106}}
-\headcommand {\slideentry {6}{0}{2}{103/107}{}{0}}
-\headcommand {\beamer@framepages {103}{107}}
-\headcommand {\slideentry {6}{0}{2}{103/108}{}{0}}
-\headcommand {\beamer@framepages {103}{108}}
-\headcommand {\slideentry {6}{0}{2}{103/109}{}{0}}
-\headcommand {\beamer@framepages {103}{109}}
-\headcommand {\slideentry {6}{0}{2}{103/110}{}{0}}
-\headcommand {\beamer@framepages {103}{110}}
-\headcommand {\slideentry {6}{0}{2}{103/111}{}{0}}
-\headcommand {\beamer@framepages {103}{111}}
+\headcommand {\beamer@subsectionpages {100}{103}}
+\headcommand {\beamer@subsectionentry {0}{5}{5}{104}{Conclusions}}
+\headcommand {\slideentry {5}{5}{1}{104/107}{Conclusions}{0}}
+\headcommand {\beamer@framepages {104}{107}}
+\headcommand {\beamer@sectionpages {87}{107}}
+\headcommand {\beamer@subsectionpages {104}{107}}
+\headcommand {\sectionentry {6}{References}{108}{References}{0}}
+\headcommand {\slideentry {6}{0}{1}{108/108}{}{0}}
+\headcommand {\beamer@framepages {108}{108}}
+\headcommand {\slideentry {6}{0}{2}{109/109}{}{0}}
+\headcommand {\beamer@framepages {109}{109}}
+\headcommand {\slideentry {6}{0}{2}{109/110}{}{0}}
+\headcommand {\beamer@framepages {109}{110}}
+\headcommand {\slideentry {6}{0}{2}{109/111}{}{0}}
+\headcommand {\beamer@framepages {109}{111}}
 \headcommand {\beamer@partpages {1}{111}}
-\headcommand {\beamer@subsectionpages {102}{111}}
-\headcommand {\beamer@sectionpages {102}{111}}
+\headcommand {\beamer@subsectionpages {108}{111}}
+\headcommand {\beamer@sectionpages {108}{111}}
 \headcommand {\beamer@documentpages {111}}
-\headcommand {\gdef \inserttotalframenumber {71}}
+\headcommand {\gdef \inserttotalframenumber {65}}

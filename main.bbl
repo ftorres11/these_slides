@@ -39,10 +39,6 @@ Z.~C. Lipton, ``The mythos of model interpretability: In machine learning, the
   concept of interpretability is both important and slippery.'' \emph{Queue},
   vol.~16, no.~3, pp. 31--57, 2018.
 
-\bibitem{fukushima1975cognitron}
-K.~Fukushima, ``Cognitron: A self-organizing multilayered neural network,''
-  \emph{Biological cybernetics}, vol.~20, no. 3-4, pp. 121--136, 1975.
-
 \bibitem{he2016deep}
 K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
   recognition,'' in \emph{Proceedings of the IEEE conference on computer vision
