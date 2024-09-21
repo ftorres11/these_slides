@@ -4,27 +4,34 @@
     \frametitle{Preliminaries}
     \framesubtitle{Premise}
         \begin{center}
-            \emph{Is it possible to optimize the weighting coefficient $w^c_k$ to obtain a 
-            saliency map with the highest probability of prediction?}
+            \emph{Is it possible to optimize a saliency map probability with the highest probability of 
+            prediction?}
         \end{center}
-    \input{fig/opticam/common/tex/mainfig.tex}
+        \begin{columns}
+            \column[T]{.33\textwidth}
+                \begin{center}
+                    \vspace{10pt}
+                    \includegraphics[width=.8\textwidth]{fig/opticam/mainfig/img/select/ILSVRC2012_val_00000069.JPEG}
+                    \scriptsize $p(x)_{774} = 0.745$
+                \end{center}                
+            \column[T]{.33\textwidth}
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{fig/opticam/mainfig/img/select/ILSVRC2012_val_00000069JPEG_vgg_ScoreCAM_vis.png}
+                    \scriptsize $p(x)^{CAM}_{774} = 0.728$    
+                \end{center}
+            \pause
+            \column[T]{.33\textwidth}
+                \begin{center}
+                    \includegraphics[width=.8\textwidth]{fig/opticam/mainfig/img/select/ILSVRC2012_val_00000069JPEG_vgg_versionP0_vis.png}\\
+                    \scriptsize $p(x)^{Optimal}_{774} = 0.853$
+                \end{center}            
+        \end{columns}
 \end{frame}
 %--------------------------------------------------------------------------------------------------
-\begin{frame}[c]
-    \frametitle{Preliminaries}
-    \framesubtitle{Contributions}
-    \begin{columns}
-        \column{.5\textwidth}
-        \textbf{Opti-CAM}\\
-        Maximization of predicted probability of an explanation.
-        \column{.5\textwidth}
-        \textbf{Average Drop}\\
-        Evaluation metric designed to enhance comparisons.
-    \end{columns}
-\end{frame}
+% -> Define Score-CAM in detail-ish, remove jungle of equations
 \input{tex/opticam/tex/opticam}
-\input{tex/opticam/tex/averagegain}
+%\input{tex/opticam/tex/averagegain} % Not just AG, Add metrics in general
 \input{tex/opticam/tex/exp_setup}
-\input{tex/opticam/tex/qualitative}
-\input{tex/opticam/tex/quantitative}
+\input{tex/opticam/tex/qualitative} % Remove some rows just in case
+\input{tex/opticam/tex/quantitative} % Kept, explain better.
 \input{tex/opticam/tex/conclusion}

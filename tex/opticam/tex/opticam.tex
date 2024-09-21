@@ -1,63 +1,88 @@
 \subsection*{Opti-CAM}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
-    \frametitle{Opti-CAM}
-    \framesubtitle{Motivation}
-    \small 
-        \begin{itemize}
-            \item \textbf{Combination of Feature Maps}\\
-            Featyre maps can be considered independentl to compute $w^c_k$ \cite{wang2020score}.
-            \emph{What about a linear combination?}\\
-            \begin{equation*}
-                F(\textbf{w})\defn f\left(\textbf{\mbox{u}}\odot n\left(\mbox{up}\left(\sum_k w_k 
-                    A^k_l \right)\right)\right)_c
-            \end{equation*}
-            %F is optimizable with respect to \textbf{w} and an initial \textbf{\mbox{$w_0$}} via 
-            %backpropagation.
-            \pause
-            \item \textbf{Masking-based Saliency}
-            Saliency maps produced by optimization in the input space \cite{fong2017interpretable,
-            fong2019understanding}\\
-            The optimization usually takes form of:
-            \begin{equation*}
-                S^c(\mbox{\textbf{u}})\defn \underset{\mbox{m}\in M}{\mbox{argmax}}  
-                      f\left(\mbox{\textbf{u}}\odot{n}\left(\mbox{up}(\textbf{\mbox{m}}) \right)\right)_c + \delta R(\mbox{\textbf{m}})
-            \end{equation*}
-        \end{itemize}
+    \frametitle{Background}
+    \framesubtitle{CAM Methods}
+    \input{fig/rel/interp/tex/cam_schema.tex}
 \end{frame}
-
+%--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
-    \frametitle{Opti-CAM}    
-    \framesubtitle{Optimization}
+    \frametitle{Background}
+    \framesubtitle{CAM Formalized}
     \small
-    \textbf{Formulation} Assuming channel weights $w_k\defn \mbox{softmax}(\textbf{u})_k$,
-        the saliency map $S_\ell$ is a function of both an input image \textbf{$x$} and a 
-        variable $\textbf{u}$:
-        \begin{equation}
-            S_\ell(\mbox{\textbf{x}}; \mbox{\textbf{u}})\defn \sum_k \mbox{softmax}(\textbf{\mbox{u}})_kA^k_\ell
-        \end{equation}
-    \vspace{-5pt}
-    \pause
-    \begin{columns}
-        \column[T]{.6\textwidth}
-        Find vector $\textbf{\mbox{u*}}$ maximizing confidence for class $c$, 
-        with an input \textbf{x} masked by Saliency Map $S_\ell(\mbox{\textbf{x}}; \mbox{\textbf{u*}})$:
-        \begin{equation}
-            \mbox{\textbf{u*}}\defn \underset{\mbox{u}}{\mbox{argmax}}F^c_\ell (\mbox{\textbf{x}}; \mbox{\textbf{u*}}),
-        \end{equation}
-        \pause
-        \column[T]{.4\textwidth}
-        The objective function:
-        \begin{equation}
-            F^c_\ell(\textbf{\mbox{x}}; \textbf{\mbox{u}}) \defn g_c (f(\mbox{x}\odot)n)
-        \end{equation} 
-    \end{columns}
-    \vspace{10pt}
-    \pause
-    Then:
+    We define CAM according to the following equation:
     \begin{equation}
-        S^c_\ell(\textbf{x})\defn S_\ell(\textbf{\mbox{x}}; \textbf{\mbox{u*}}) =
-        S_\ell (\textbf{\mbox{x}}; \underset{\mbox{u}}{\mbox{argmax}}F^c_\ell
-        (\textbf{\mbox{x}}; \textbf{\mbox{u}}))
-    \end{equation}    
+        \small S^c_\ell (\textbf{\mbox{u}}) \defn h \left(\sum_k w^c_k A^k_l \right)
+        \label{eq:cam}
+    \end{equation}
+    \pause
+    The weighting coefficient $\mathbf{w^c_k}$ defining the CAM variant.\\\pause
+    Milestone CAM models:
+    \vspace{10pt}
+    \begin{columns}
+        \scriptsize
+        \column[T]{.33\textwidth}
+            \textbf{CAM\cite{zhou2016learning}:}\\ $w^c_k$ comes from the weights for one class. 
+            Only on the last convolutional layers followed by \Th{GAP}. 
+        \pause
+        \column[T]{.33\textwidth}
+            \textbf{Grad-CAM/Grad-CAM++ \cite{selvaraju2017grad, chattopadhay2018grad}:} \\$w^c_k$ is computed using gradients flowing from prediction to input space.\\
+            It can be used at any point of the model. 
+        \pause
+        \column[T]{.33\textwidth}
+            \textbf{Score-CAM\cite{wang2020score}:}\\$w^c_k$ is computed from the contributions of individual feature maps masking the input image.\\
+        \pause
+    \end{columns}
+    \vspace{20pt}
+    \small
+    The approach found in Score-CAM is interesting. Diving deeper:
 \end{frame}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Background}
+    \framesubtitle{Score-CAM}
+    \small
+    \begin{center}
+        \includegraphics[width=\textwidth]{fig/opticam/common/img/scorecam_schema.pdf} 
+        \emph{Original from \cite{wang2020score}}   
+    \end{center}
+\end{frame}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Background}
+    \framesubtitle{Score-CAM Formalized}
+    \small
+    Following equation (\ref{eq:cam}):\pause
+    \begin{itemize}
+        \item $h\defn\mathbf{ReLU}$
+        \item $\mathbf{w^c_k} \defn softmax(\mathbf{u}^c)_k$
+    \end{itemize}
+    \pause
+    \vspace{20pt}
+    With feature map contribution $\mathbf{u^c}_k$:
+    \begin{equation}
+        u^c_k \defn f (\mbox{\textbf{x}} \odot n(\mbox{up}(A^k_\ell)))_c - f(\mbox{\textbf{x}})_c
+        \label{eq:inc_conf}
+    \end{equation}
+    \vspace{10pt}
+    %\emph{But what would happen if we compute differently the channel contribution?}
+\end{frame}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Opti-CAM}
+    \framesubtitle{Approach}
+    \small
+    \input{fig/opticam/common/tex/mainfig.tex}\pause
+    Consider $S_\ell $, a function of $\mathbf{u}$ and $x$:
+    \begin{equation}
+        S_\ell(\mathbf{x; u})\defn \sum_k \mbox{softmax}(\mathbf{u})_kA^k_\ell
+    \end{equation}
+    \pause
+    $\mathbf{u^*}$ is the vector that maximizes class $c$ probability, when masking the  the input with $S_\ell$.
+    \begin{equation}
+        \mathbf{u^*} \defn \underset{\mbox{u}}{\mbox{argmax}} F^c_\ell(\mathbf{x;u})
+    \end{equation}
+    And the objective $F^c_\ell(\mathbf{x;u}) \defn f(\mathbf{x}\odot n(\mbox{up}(S_\ell(\mathbf{x; u}))))$  
+
+\end{frame}
+%--------------------------------------------------------------------------------------------------

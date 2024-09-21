@@ -1,0 +1,49 @@
+\begin{center}
+    \begin{tikzpicture}[->,>=stealth']
+        \tiny
+        %% Anchors
+        \node[rectangle, draw=black] at (0,0) (root) {Post-hoc Interpretability};
+        \node[] at (0, .5) (empt0) {};
+        \node[] at (0, -.5) (ept_kek) {};
+        \node[rectangle, draw=black] at (-2.25, 1.5) (lr) {Learning Based Methods};
+        \draw[-] (root.north) to (empt0.center);
+        \draw[-] (root.south) to (ept_kek.center);
+        \draw[->, bend left=10] (empt0.center) to (lr.south);
+        \node[rectangle, draw=black] at (2.25, 1.5) (att) {Attention-Based Methods};
+        \draw[->, bend right=10] (empt0.center) to (att.south);        
+        \node[] at (-5, 0) (ept1) {};
+        \node[] at (5, 0) (empt2) {};
+        \node[rectangle, draw=black] at (-4, -1.5) (grad) {Gradient-Based Methods};
+        \draw[->, bend left=-10] (ept_kek.center) to (grad.north);
+        \node[rectangle, draw=black] at (0, -1.5) (mask) {Masking-Based Methods};
+        \draw[->] (root.south) to (mask.north);
+        \node[rectangle, draw=black] at (4, -1.5) (cam) {CAM-Based Methods};
+        \draw[->, bend right=-10] (ept_kek.center) to (cam.north);
+        \pause
+        \draw[dashed, -] (root.west) -- (ept1);
+        \draw[dashed, -] (root.east) -- (empt2);
+        \node[] at (4,.25) (lqrelv) {\red{Less Impactful Methods}};
+        \node[] at (4,-.25) (plrelv) {\blue{ More Impactful Methods}};
+        \pause
+        \node[rectangle, draw=black] at (-4, -2.5) (grad_app)
+            {Standard backpropagation\cite{simonyan2013deep}\\
+             Guided backpropagation\cite{guidedbackprop}\\
+             Smooth Gradients\cite{smilkov2017smoothgrad}};
+        \draw[->] (grad.south) to (grad_app.north);
+        \pause
+        \node[rectangle, draw=black] at (0, -2.5) (mask_app)
+            {LIME\cite{ribeiro2016should}\\
+             RISE\cite{petsiuk2018rise}};
+        \draw[->] (mask.south) to (mask_app.north);
+        \pause
+        \node[rectangle, draw=black] at (4, -2.5) (cam_app)
+            {CAM \cite{zhou2016learning}\\
+             Grad-CAM\cite{selvaraju2017grad}\\
+             Grad-CAM++\cite{chattopadhay2018grad}\\
+             Score-CAM\cite{wang2020score}};
+        \draw[->] (cam.south) to (cam_app.north);
+        \pause
+        \node[circle, draw=red, minimum size=3cm] 
+                (aiabig) at (4, -2) {};
+    \end{tikzpicture}
+\end{center}

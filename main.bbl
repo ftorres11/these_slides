@@ -21,54 +21,32 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
-\bibitem{malik2016three}
-J.~Malik, P.~Arbel{\'a}ez, J.~Carreira, K.~Fragkiadaki, R.~Girshick,
-  G.~Gkioxari, S.~Gupta, B.~Hariharan, A.~Kar, and S.~Tulsiani, ``The three
-  r’s of computer vision: Recognition, reconstruction and reorganization,''
-  \emph{Pattern Recognition Letters}, vol.~72, pp. 4--14, 2016.
-
-\bibitem{mccarthy2007artificial}
-J.~McCarthy \emph{et~al.}, ``What is artificial intelligence,'' 2007.
-
-\bibitem{madiega2021artificial}
-T.~Madiega, ``Artificial intelligence act,'' \emph{European Parliament:
-  European Parliamentary Research Service}, 2021.
-
 \bibitem{mythos_interp}
 Z.~C. Lipton, ``The mythos of model interpretability: In machine learning, the
   concept of interpretability is both important and slippery.'' \emph{Queue},
   vol.~16, no.~3, pp. 31--57, 2018.
 
-\bibitem{he2016deep}
-K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
-  recognition,'' in \emph{Proceedings of the IEEE conference on computer vision
-  and pattern recognition}, 2016, pp. 770--778.
+\bibitem{zhang2021survey}
+Y.~Zhang, P.~Ti{\v{n}}o, A.~Leonardis, and K.~Tang, ``A survey on neural
+  network interpretability,'' \emph{IEEE Transactions on Emerging Topics in
+  Computational Intelligence}, vol.~5, no.~5, pp. 726--742, 2021.
 
-\bibitem{devlin2018bert}
-J.~Devlin, M.-W. Chang, K.~Lee, and K.~Toutanova, ``Bert: Pre-training of deep
-  bidirectional transformers for language understanding,'' \emph{arXiv preprint
-  arXiv:1810.04805}, 2018.
+\bibitem{zhou2016learning}
+B.~Zhou, A.~Khosla, A.~Lapedriza, A.~Oliva, and A.~Torralba, ``Learning deep
+  features for discriminative localization,'' in \emph{CVPR}, 2016.
 
-\bibitem{dosovitskiy2020image}
-A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai,
-  T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly \emph{et~al.},
-  ``An image is worth 16x16 words: Transformers for image recognition at
-  scale,'' \emph{arXiv preprint arXiv:2010.11929}, 2020.
-
-\bibitem{lee2009convolutional}
-H.~Lee, R.~Grosse, R.~Ranganath, and A.~Y. Ng, ``Convolutional deep belief
-  networks for scalable unsupervised learning of hierarchical
-  representations,'' in \emph{Proceedings of the 26th annual international
-  conference on machine learning}, 2009, pp. 609--616.
+\bibitem{selvaraju2017grad}
+\BIBentryALTinterwordspacing
+R.~R. Selvaraju, A.~Das, R.~Vedantam, M.~Cogswell, D.~Parikh, and D.~Batra,
+  ``Grad-cam: Why did you say that? visual explanations from deep networks via
+  gradient-based localization,'' \emph{CoRR}, vol. abs/1610.02391, 2016.
+  [Online]. Available: \url{http://arxiv.org/abs/1610.02391}
+\BIBentrySTDinterwordspacing
 
 \bibitem{chattopadhay2018grad}
 A.~Chattopadhay, A.~Sarkar, P.~Howlader, and V.~N. Balasubramanian,
   ``Grad-{CAM}++: Generalized gradient-based visual explanations for deep
   convolutional networks,'' in \emph{WACV}, 2018.
-
-\bibitem{petsiuk2018rise}
-P.~Vitali, D.~Abir, and S.~Kate, ``Rise: Randomized input sampling for
-  explanation of black-box models,'' \emph{BMVC}, 2018.
 
 \bibitem{wang2020score}
 \BIBentryALTinterwordspacing
@@ -77,6 +55,10 @@ H.~Wang, M.~Du, F.~Yang, and Z.~Zhang, ``Score-cam: Improved visual
   abs/1910.01279, 2019. [Online]. Available:
   \url{http://arxiv.org/abs/1910.01279}
 \BIBentrySTDinterwordspacing
+
+\bibitem{petsiuk2018rise}
+P.~Vitali, D.~Abir, and S.~Kate, ``Rise: Randomized input sampling for
+  explanation of black-box models,'' \emph{BMVC}, 2018.
 
 \bibitem{fong2017interpretable}
 R.~C. Fong and A.~Vedaldi, ``Interpretable explanations of black boxes by
@@ -87,60 +69,6 @@ R.~Fong, M.~Patrick, and A.~Vedaldi, ``Understanding deep networks via extremal
   perturbations and smooth masks,'' in \emph{Proceedings of the IEEE/CVF
   international conference on computer vision}, 2019, pp. 2950--2958.
 
-\bibitem{kingma2014adam}
-D.~P. Kingma and J.~Ba, ``Adam: {A} method for stochastic optimization,''
-  \emph{ICLR}, 2015.
-
-\bibitem{krizhevsky2012imagenet}
-A.~Krizhevsky, I.~Sutskever, and G.~E. Hinton, ``Imagenet classification with
-  deep convolutional neural networks,'' \emph{Advances in neural information
-  processing systems}, vol.~25, 2012.
-
-\bibitem{ILSVRC15}
-O.~Russakovsky, J.~Deng, H.~Su, J.~Krause, S.~Satheesh, S.~Ma, Z.~Huang,
-  A.~Karpathy, A.~Khosla, M.~Bernstein, A.~C. Berg, and L.~Fei-Fei, ``{ImageNet
-  Large Scale Visual Recognition Challenge},'' \emph{International Journal of
-  Computer Vision (IJCV)}, vol. 115, no.~3, pp. 211--252, 2015.
-
-\bibitem{kermany2018labeled}
-D.~Kermany, K.~Zhang, M.~Goldbaum \emph{et~al.}, ``Labeled optical coherence
-  tomography (oct) and chest x-ray images for classification,'' \emph{Mendeley
-  data}, vol.~2, no.~2, 2018.
-
-\bibitem{pogorelov2017kvasir}
-K.~Pogorelov, K.~R. Randel, C.~Griwodz, S.~L. Eskeland, T.~de~Lange,
-  D.~Johansen, C.~Spampinato, D.-T. Dang-Nguyen, M.~Lux, P.~T. Schmidt
-  \emph{et~al.}, ``Kvasir: A multi-class image dataset for computer aided
-  gastrointestinal disease detection,'' in \emph{Multimedia Systems Conf.},
-  2017.
-
-\bibitem{simonyan2015deep}
-K.~Simonyan and A.~Zisserman, ``Very deep convolutional networks for
-  large-scale image recognition,'' 2015.
-
-\bibitem{touvron2021augmenting}
-H.~Touvron, M.~Cord, A.~El-Nouby, P.~Bojanowski, A.~Joulin, G.~Synnaeve, and
-  H.~J{\'e}gou, ``Augmenting convolutional networks with attention-based
-  aggregation,'' \emph{arXiv preprint arXiv:2112.13692}, 2021.
-
-\bibitem{bottou2010large}
-L.~Bottou, ``Large-scale machine learning with stochastic gradient descent,''
-  in \emph{Proceedings of COMPSTAT'2010: 19th International Conference on
-  Computational StatisticsParis France, August 22-27, 2010 Keynote, Invited and
-  Contributed Papers}.\hskip 1em plus 0.5em minus 0.4em\relax Springer, 2010,
-  pp. 177--186.
-
-\bibitem{Everingham15}
-M.~Everingham, S.~M.~A. Eslami, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and
-  A.~Zisserman, ``The pascal visual object classes challenge: A
-  retrospective,'' \emph{International Journal of Computer Vision}, vol. 111,
-  no.~1, pp. 98--136, Jan. 2015.
-
-\bibitem{WahCUB_200_2011}
-C.~Wah, S.~Branson, P.~Welinder, P.~Perona, and S.~Belongie, ``Caltech-ucsd
-  birds-200-2011,'' California Institute of Technology, Tech. Rep.
-  CNS-TR-2011-001, 2011.
-
 \bibitem{guidedbackprop}
 J.~T. Springenberg, A.~Dosovitskiy, T.~Brox, and M.~Riedmiller, ``Striving for
   simplicity: The all convolutional net,'' \emph{arXiv preprint
@@ -150,20 +78,5 @@ J.~T. Springenberg, A.~Dosovitskiy, T.~Brox, and M.~Riedmiller, ``Striving for
 D.~Smilkov, N.~Thorat, B.~Kim, F.~Vi{\'e}gas, and M.~Wattenberg, ``Smoothgrad:
   removing noise by adding noise,'' \emph{arXiv preprint arXiv:1706.03825},
   2017.
-
-\bibitem{krizhevsky2009learning}
-\BIBentryALTinterwordspacing
-A.~Krizhevsky, ``Learning multiple layers of features from tiny images,'' pp.
-  32--33, 2009. [Online]. Available:
-  \url{https://www.cs.toronto.edu/~kriz/learning-features-2009-TR.pdf}
-\BIBentrySTDinterwordspacing
-
-\bibitem{DBLP:journals/corr/HowardZCKWWAA17}
-\BIBentryALTinterwordspacing
-A.~G. Howard, M.~Zhu, B.~Chen, D.~Kalenichenko, W.~Wang, T.~Weyand,
-  M.~Andreetto, and H.~Adam, ``Mobilenets: Efficient convolutional neural
-  networks for mobile vision applications,'' \emph{CoRR}, vol. abs/1704.04861,
-  2017. [Online]. Available: \url{http://arxiv.org/abs/1704.04861}
-\BIBentrySTDinterwordspacing
 
 \end{thebibliography}

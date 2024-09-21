@@ -1,0 +1,17 @@
+\begin{center}
+    \begin{tikzpicture}[] 
+        %% Anchors
+        \node[rectangle, opacity=.25, draw=black, fill=black!, minimum width=3cm, minimum height=1.5cm]
+            at (0,0) (blackbox) {};
+        \node[] at (-4, 0) (in) {\includegraphics[scale=0.275]{fig/rel/interp/img/cam.jpg}};
+        \node[] at (4, 0) (out) {\emph{Class ID}\\\emph{583}};
+        %% Tags
+        \node[] at (in.north) (intxt) {$x$};
+        \node[] at (0, 1) (bboxtxt) {$f$};
+        \node[] at (4, 1.1) (pred) {$y$};
+        %% Arrows
+        \draw[->] (in) -- (blackbox);
+        \draw[->] (blackbox) -- (out);
+
+\end{tikzpicture}    
+\end{center}

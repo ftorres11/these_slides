@@ -13,11 +13,11 @@
             \filldraw[color=purple, fill=purple!5, opacity=0.5] \mlcirc;
             \filldraw[color=green, fill=green!5, opacity=0.5] \dlcirc;
             \filldraw[color=red, fill=red!5, opacity=0.5] \cvcirc;
-            \filldraw[color=cyan, fill=cyan!5, opacity=0.5] \nlpcirc;
+            %\filldraw[color=cyan, fill=cyan!5, opacity=0.5] \nlpcirc;
             %% Text Nodes
             \node[] at (0, 4) (aitxt) {AI};
             \node[] at (0.8838834764831843, 1.8661165235168156) (mltxt) {ML};
-            \node[] at (0.8838834764831843, 3.6338834764831844) (nlptxt) {NLP};
+            %\node[] at (0.8838834764831843, 3.6338834764831844) (nlptxt) {NLP};
             \node[] at (-0.8838834764831843, 1.8661165235168156) (cvtxt) {CV};
             \node[] at (1.7677669529663687, -0.26776695296636865) (dltxt) {DL};    
             \pause
@@ -27,9 +27,16 @@
             %% Intersection node
             \begin{scope}
                 \clip \dlcirc;
-                \clip \nlpcirc;
-                \fill[red] \xaicirc;
+                \clip \xaicirc;
+                \fill[color=red] \cvcirc;
             \end{scope}
+            %------------------------------------------------------------------------
+            %\begin{scope}
+            %    \clip \dlcirc;
+            %    \clip \nlpcirc;
+            %    \fill[color=orange!5, opacity=0.5] \xaicirc;;
+            %\end{scope}
+
             \node[] at (1, -1.25) (empt_1) {};
             \node[] at (5, -1.25) (exp) {This study!};
             \draw[->] (empt_1.center) -- node{} (exp.west);

@@ -12,20 +12,19 @@
     \node(GAP) at (0.75,0.25) {\Th{GAP}};
     \node(gapclass) at (2.5, 0) {\includegraphics[width=.09375\textwidth]{fig/rel/interp/img/gapclass.pdf}};
     \node(logit) at (4.5, 0) {$\vy_c$};
-    \node(wck) at (-0.5, -3) {\includegraphics[width=0.025\textwidth, angle=90]{fig/rel/interp/img/classifier.pdf}};
-    \node(comb) at (-0.5, -3.5) {Weighting coefficient $w_k^c$};
-    \node[draw, circle] (odot) at (-0.5, -1.8) {$\times$};
-    \node(activ) at (-2.75, -1.5) {$h$};
-    \node(salient) at (-3, -1.8) {\includegraphics[width=.125\textwidth]{fig/rel/interp/img/cat_cam.jpg}};
-    \node[below] at (salient.south) {Saliency map $\mathbf{S_\ell}$};
-    %\node[] at (4, -1.8) (eq_cam) {$S^c_\ell (\textbf{\mbox{u}}) \defn h \left(\sum_k w^c_k A^k_l \right)$};
-    
-    %% Edge
+
     \draw[->] (input.east) -- node {} (cnn);
     \draw[->] (cnn.north) -- node[above] {$\ell$} (fmaps.west);
     \draw[->] (fmaps.east) -- node {} (gapclass.west);
     \draw[->] (gapclass.east) -- node[above] {} (logit.west);
+    \pause
+    \node(wck) at (-0.5, -3) {\includegraphics[width=0.025\textwidth, angle=90]{fig/rel/interp/img/classifier.pdf}};
+    \node(comb) at (-0.5, -3.5) {Weighting coefficient $w_k^c$};
+    \node[draw, circle] (odot) at (-0.5, -1.8) {$\times$};
     \draw[->] (fmaps.south) -- node {} (odot.north);
     \draw[->] (wck.north) -- node {} (odot.south);
+    \pause
+    \node(salient) at (-3, -1.8) {\includegraphics[width=.125\textwidth]{fig/rel/interp/img/cat_cam.jpg}};
+    \node[below] at (salient.south) {Saliency map $\mathbf{S_\ell}$};
     \draw[->] (odot.west) -- node {} (salient);          
 \end{tikzpicture}

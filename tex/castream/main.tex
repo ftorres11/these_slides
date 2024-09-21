@@ -4,30 +4,53 @@
     \frametitle{Preliminaries}
     \framesubtitle{Premise}
     \begin{center}
-        \emph{The \Th{[CLS]} token in transformers updates an abstract representation via 
-        attention with patch embeddings across the depth of a model. Is it possible to 
-        train a similar class representation on CNNs?}
+        %\emph{The \Th{[CLS]} token in transformers updates an abstract representation via 
+        %attention with patch embeddings across the depth of a model. Is it possible to 
+        %train a similar class representation on CNNs?}
+        \emph{Is it possible to incorporate transformers ideas onto CNNs, enhancing the predictive
+        power of CAM explanations?}
         \vspace{20pt}
-        \input{fig/castream/tex/ca_mainfig.tex}
+        %\input{fig/castream/tex/ca_mainfig.tex}
+        \begin{columns}
+            \column{.33\textwidth}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{fig/castream/img/Comparable/figure1_similarities/original/9602.jpeg}                
+                \end{center}
+                $p=0.7623$
+            \column{.33\textwidth}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{fig/castream/img/Comparable/figure1_similarities/shelf_gradcam/9602.jpeg}                
+                \end{center}
+                $p=0.7145$
+            \pause
+            \column{.33\textwidth}
+                \begin{center}
+                    \includegraphics[width=\textwidth]{fig/castream/img/Comparable/figure1_similarities/gradcam/9602.jpeg}                
+                \end{center}
+                $p=0.7478$
+        \end{columns}
     \end{center}
 \end{frame}
 %--------------------------------------------------------------------------------------------------
-\begin{frame}[t]
-    \frametitle{Preliminaries}
-    \framesubtitle{Contributions}
-    \begin{itemize}
-        \item \textbf{CAM is Attention}\\
-        CAM behaves in a similar manner as attention.
-        \item \textbf{Cross Attention: [CLS] on CNNs}\\
-        Training of a [CLS] token, alongside standard CNNs.
-        \item \textbf{CAM on more architectures}\\
-        CAM typical validation only found on ResNet and VGG. Extension to ConvNeXt.
-    \end{itemize}
-\end{frame}
+%\begin{frame}[t]
+%    \frametitle{Preliminaries}
+%    \framesubtitle{Contributions}
+%    \begin{itemize}
+%        \item \textbf{CAM is Attention}\\
+%        CAM behaves in a similar manner to attention.
+%        \item \textbf{Cross Attention: [CLS] on CNNs}\\
+%        Training of a [CLS] token, alongside standard CNNs.
+%        \item \textbf{CAM on more architectures}\\
+%        CAM typical validation only found on ResNet and VGG. Extension to ConvNeXt.
+%    \end{itemize}
+%\end{frame}
 %--------------------------------------------------------------------------------------------------
-\input{tex/castream/tex/ca_cam}
+\input{tex/castream/tex/ca_cam} % Straightforward the equations
 \input{tex/castream/tex/crosatt}
-\input{tex/castream/tex/exp_setup}
-\input{tex/castream/tex/qualitative}
-\input{tex/castream/tex/quantitative}
-\input{tex/castream/tex/conclusion}
+%\input{tex/castream/tex/exp_setup} % Check
+\input{tex/castream/tex/qualitative} % OK
+\input{tex/castream/tex/quantitative} % OK
+\input{tex/castream/tex/conclusion} % OK
+%-> CNN -> GAP -> Figure
+% GAP vs CLS
+% Add CLS into transformer, CLS is like CAM it weights figures

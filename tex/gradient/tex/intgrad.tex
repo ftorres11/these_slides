@@ -1,13 +1,19 @@
 \subsection*{Method}
 %--------------------------------------------------------------------------------------------------
-\begin{frame}[t]
-    \frametitle{Interpretable Gradients}
-    \framesubtitle{Gradient as Regularization}
+\begin{frame}[c]
+    \frametitle{Interpretable Gradients}    
+    \framesubtitle{Formalized}
     \small
     Goal: Denoise the gradient during training using guided backprop.\\
     \emph{How?} Regularize using guided backprop.\\\pause
+    \input{fig/gradient/tex/method_fig.tex}
+\end{frame}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Interpretable Gradients}
+    \framesubtitle{Smooth Gradient as Regularization}
+    \small
     Assuming target labels $T$:
-
     \begin{equation}
         L_R(X, \theta, T) = \frac{1}{n} \sum_{i=1}^n E(\delta x_i, \delta_G x_i),
     \end{equation}
@@ -19,18 +25,3 @@
     \end{equation}
 \end{frame}
 %--------------------------------------------------------------------------------------------------
-\begin{frame}[c]
-    \frametitle{Interpretable Gradients}    
-    \framesubtitle{Formalized}
-    %\small
-    \input{fig/gradient/tex/method_fig.tex}
-    %\begin{columns}
-    %    \column[T]{.6\textwidth}
-    %        \begin{center}
-    %            \input{fig/gradient/tex/method_fig.tex}
-    %        \end{center}
-    %    \column[T]{.4\textwidth}
-    %        \input{tex/gradient/tex/algorithm.tex}
-    %\end{columns}
-    
-\end{frame}

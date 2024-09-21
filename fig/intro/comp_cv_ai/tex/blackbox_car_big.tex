@@ -1,0 +1,17 @@
+\begin{center}
+    \begin{tikzpicture}[] 
+        %% Anchors
+        \node[rectangle, opacity=.75, draw=black, fill=black!, minimum width=5cm, minimum height=2.5cm]
+            at (0,0) (blackbox) {};
+        \node[] at (-4, 0) (in) {\includegraphics[scale=0.2]{fig/castream/img/Comparable/figure1/original/27079.jpeg}};
+        \node[] at (4, 0) (out) {\emph{Car ID}\\\emph{427}};
+        %% Tags
+        \node[] at (in.north) (intxt) {$x$};
+        \node[] at (0, 1.5) (bboxtxt) {$f$};
+        \node[] at (4, 1.1) (pred) {$y$};
+        %% Arrows
+        \draw[->] (in) -- (blackbox);
+        \draw[->] (blackbox) -- (out);
+
+\end{tikzpicture}    
+\end{center}

@@ -1,47 +1,111 @@
+\subsection*{Background}
+%--------------------------------------------------------------------------------------------------
+\begin{frame}[t]
+    \frametitle{Background}
+    \framesubtitle{Self Attention}
+    \small
+    Self-attention is the building block of Transformers:
+    \pause
+    \begin{equation}
+        \mbox{Self Attention}(Q, K, V) = \mbox{softmax}\left(\frac{QK^T}{\sqrt{d_\ell}}\right) V
+        \label{eq:att}
+    \end{equation}
+    \vspace{-10pt}
+    \begin{center}
+        \includegraphics[width=.35\textwidth]{fig/castream/img/att_pdf-crop.pdf}
+    \end{center}
+    \pause
+    Computation of the relevance of each element relative to others in an embedding.
+\end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{CAM is Attention}
     \framesubtitle{Derivation}
     \small
-    Let's freshen up: \\
-    Asuming $\mathbf{F}_\ell \in \mathbb{R}^{p_\ell\times d_\ell}$ a reshaping of $\mathbf{F}_\ell$, and 
-    $\mathbf{q}_\ell\in\mathbb{R}^{d_\ell}$ the \Th{CLS} token\footnotemark.\\
-    \footnotetext[3]{\tiny{$p$ relates to $width\times height$. Spatial dimension}}
-    \pause
-    Attention is defined as:
+    %\emph{We are interested in demonstrating that the Attention matrix is like CAM}\\\pause
+    From equation (\ref{eq:att}), the equation matrix $\mathbf{a}$:
     \begin{equation}
-        \mathbf{a} = A\tran = \softmax \left( \frac{F_\ell \vq_\ell}{\sqrt{d_\ell}} \right).
-    \label{eq:cross-attention}
-    \end{equation}   
-    \pause
-    Upon replacing $\mathbf{q}_\ell$ with an arbitrary vector $\alpha\in\mathbb{R}^{d_\ell}$
-    \begin{equation}
-        \mathbf{a} = h_\ell (F_\ell \mathbf{\alpha}) =
-        h_\ell \left( \sum_k \alpha_k \vf_\ell^k \right).
-        \label{eq:connection}
+        \mathbf{a}= \mbox{softmax}\left(\frac{Q\times K\tran}{\sqrt{d_\ell}}\right)
     \end{equation}
-    With the activation function $h_\ell(\mathbf{x}) = \mbox{softmax}(\mbox{x}/\sqrt{d_\ell})$
+    \pause
+    Now, asuming an arbitrary vector $\alpha$ to compute attention with, and embedding $V$ 
+    a feature map $A_\ell$:\pause
+    \begin{equation}
+        \mathbf{a} = \mbox{softmax}\left(\frac{\alpha\times A_\ell}{\sqrt{d_\ell}}\right)
+    \end{equation}
+    \pause
+    Where $\mbox{softmax}(.../\sqrt{d_\ell})$ is $h_\ell$. \pause Thus
+    \begin{equation}
+        \mathbf{a} = h_\ell(\alpha\times A_\ell) = h_\ell\left(\sum_k \alpha_k A^k_\ell\right)
+    \end{equation}
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
     \frametitle{CAM is Attention}
     \framesubtitle{Pooling or Masking}
-    \small
-    We intend to integrate attention into a model, such that prediction and explanation are linked.\\
+    \emph{We intend to integrate attention into a model, such that prediction and explanation are linked.}\\
     \pause
     \textbf{Cross Attention}:
+    Assuming an arbitrary embedding $\mathbf{q}$:
     \begin{equation}
-        \mbox{CA}_\ell(\mathbf{q}_\ell, F_\ell) \defn F\tran \mathbf{a} = F_\ell\tran h_\ell 
-        (F_\ell \mathbf{q}_\ell)_{\in \mathbb{R}^d_\ell}
+        \mbox{CA}_\ell(\mathbf{q}_\ell, A_\ell) \defn A\tran \mathbf{a} = A_\ell\tran h_\ell 
+        (A_\ell \mathbf{q}_\ell), \in \mathbb{R}^d_\ell
         \label{eq:pooling_1}
     \end{equation}
     \pause
-    Which, reshaping the feature matrix as $F_\ell\tran = (\vphi_\ell^1 \dots \vphi_\ell^{p_\ell})$,
-    a pooled representation can be expressed, via attention vector $\mathbf{a} = (a_1, \dots, a_{p_\ell})$:
+    With a flattened $A_\ell$, a pooled representation can be expressed via attention vector 
+    $\mathbf{a} = (a_1, \dots, a_{p_\ell})$:
     \begin{equation}
-        \mbox{CA}_\ell(\mathbf{q}_\ell, F_\ell)\defn F_\ell\tran\mathbf{a}=\sum_i a_i\vphi_\ell^i.
+        \mbox{CA}_\ell(\mathbf{q}_\ell, A_\ell)\defn A_\ell\tran\mathbf{a}%=\sum_i a_i\vphi_\ell^i.
     \end{equation}
     \pause
     A pooling similar to $\Th{GAP}$, masked in a fashion similar to CAM.
 
 \end{frame}
+%--------------------------------------------------------------------------------------------------
+%\begin{frame}[t]
+%    \frametitle{CAM is Attention}
+%    \framesubtitle{Derivation}
+%    \small
+%    Let's freshen up: \\
+%    Asuming $\mathbf{F}_\ell \in \mathbb{R}^{p_\ell\times d_\ell}$ a reshaping of $\mathbf{F}_\ell$, and 
+%    $\mathbf{q}_\ell\in\mathbb{R}^{d_\ell}$ the \Th{CLS} token\footnotemark.\\
+%    \footnotetext[3]{\tiny{$p$ relates to $width\times height$. Spatial dimension}}
+%    \pause
+%    Attention is defined as:
+%    \begin{equation}
+%        \mathbf{a} = A\tran = \softmax \left( \frac{F_\ell \vq_\ell}{\sqrt{d_\ell}} \right).
+%    \label{eq:cross-attention}
+%    \end{equation}   
+%    \pause
+%    Upon replacing $\mathbf{q}_\ell$ with an arbitrary vector $\alpha\in\mathbb{R}^{d_\ell}$
+%    \begin{equation}
+%        \mathbf{a} = h_\ell (F_\ell \mathbf{\alpha}) =
+%        h_\ell \left( \sum_k \alpha_k \vf_\ell^k \right).
+%        \label{eq:connection}
+%    \end{equation}
+%    With the activation function $h_\ell(\mathbf{x}) = \mbox{softmax}(\mbox{x}/\sqrt{d_\ell})$
+%\end{frame}
+%%--------------------------------------------------------------------------------------------------
+%\begin{frame}[t]
+%    \frametitle{CAM is Attention}
+%    \framesubtitle{Pooling or Masking}
+%    \small
+%    We intend to integrate attention into a model, such that prediction and explanation are linked.\\
+%    \pause
+%    \textbf{Cross Attention}:
+%    \begin{equation}
+%        \mbox{CA}_\ell(\mathbf{q}_\ell, F_\ell) \defn F\tran \mathbf{a} = F_\ell\tran h_\ell 
+%        (F_\ell \mathbf{q}_\ell)_{\in \mathbb{R}^d_\ell}
+%        \label{eq:pooling_1}
+%    \end{equation}
+%    \pause
+%    Which, reshaping the feature matrix as $F_\ell\tran = (\vphi_\ell^1 \dots \vphi_\ell^{p_\ell})$,
+%    a pooled representation can be expressed, via attention vector $\mathbf{a} = (a_1, \dots, a_{p_\ell})$:
+%    \begin{equation}
+%        \mbox{CA}_\ell(\mathbf{q}_\ell, F_\ell)\defn F_\ell\tran\mathbf{a}=\sum_i a_i\vphi_\ell^i.
+%    \end{equation}
+%    \pause
+%    A pooling similar to $\Th{GAP}$, masked in a fashion similar to CAM.
+%
+%\end{frame}

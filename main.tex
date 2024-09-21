@@ -8,10 +8,13 @@
 \usepackage{booktabs}
 \usepackage{multirow}
 \usepackage[ruled,vlined]{algorithm2e}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{dsfont}
 \pgfplotsset{compat=newest}
 \usetikzlibrary{pgfplots.groupplots}
 \usetikzlibrary{shapes,arrows,shadows,shadows.blur,positioning,calc,arrows.meta,automata}
 \usetikzlibrary{matrix,calc,decorations.pathreplacing}
+\usetikzlibrary[bending]
 \usepgfplotslibrary{fillbetween}
 \usetheme{Frankfurt}
 \usecolortheme{default}
@@ -58,10 +61,10 @@
 {\footnotesize
   \'Ecole Centrale de Marseille
   \and
-  Laboratoire d'Informatique et de Syst\`emes (LIS)
+  QARMA \@ Laboratoire d'Informatique et de Syst\`emes (LIS)
 }
 \date[2024] % (optional)
-{\small Marseille, Septembre 23 2024}
+{\small Marseille, September $23^{rd}$ 2024}
 \logo{%
   \makebox[0.95\paperwidth]{%
     \includegraphics[height=1cm,keepaspectratio]{logo/logo-lis-2024-eps-converted-to.pdf}%    
@@ -101,8 +104,8 @@
     \maketitle
     \vspace{-20pt}
     {\scriptsize
-    {\centering\itshape Jury Members\par}
-    Prèsident: Fr\'ed\'eric Jurie
+    %{\centering\itshape Jury Members\par}
+    President: Fr\'ed\'eric Jurie
     \begin{tabular}[t]{@{}l@{\hspace{3pt}}p{.32\textwidth}@{}}
     Reviewers: & Fr\'ed\'eric Jurie \\
     & Giorgos Tolias \\
@@ -130,8 +133,8 @@
 	\input{tex/opticam/main}
 	\input{tex/castream/main}
 	\input{tex/gradient/main}
-  \input{tex/futurework}
   \input{tex/conclusion}
-	%\input{tex/references}
+  %\input{tex/futurework}
+	\input{tex/references}
 	%-----------------------------------------------------------------------------------------------
 \end{document}

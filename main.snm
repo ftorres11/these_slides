@@ -1,8 +1,6 @@
-\beamer@slide {eq:att}{27}
 \beamer@slide {eq:cam}{33}
-\beamer@slide {slide:evaluation}{35}
-\beamer@slide {eq:cross-attention}{66}
-\beamer@slide {eq:connection}{66}
-\beamer@slide {eq:pooling_1}{69}
-\beamer@slide {eq:backtoin}{90}
-\beamer@slide {eq:total}{94}
+\beamer@slide {eq:inc_conf}{40}
+\beamer@slide {eq:att}{60}
+\beamer@slide {eq:pooling_1}{68}
+\beamer@slide {eq:backtoin}{81}
+\beamer@slide {eq:total}{87}
