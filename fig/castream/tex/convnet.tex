@@ -1,7 +1,7 @@
 %\begin{figure}[t]
 %    \centering
 \resizebox{\textwidth}{!}{%
-    \begin{tikzpicture}[font={\footnotesize},trap/.style={trapezium, rotate=-90,trapezium angle=75},]
+    \begin{tikzpicture}[font={\footnotesize},trap/.style={trapezium, rotate=-90,trapezium angle=75, fill=blue!5, opacity=.5},]
         %% CNN branch
         \node(input) at (-5.5, 0) {\includegraphics[width=.1\textwidth]{fig/castream/img/input.jpg}};
         \node[above] at (input.north) {Input image $\vx$};
@@ -14,12 +14,12 @@
         \node[draw, rotate=90, align=center] (class) at (7.5,0) {Classifier};
         \node(logit) at (8.25, 0) {$\vy$};
         %%% CLS stream
-        \node[](clsin) at (-4, -1.5) {{$\vq_0$}};
-        \node[draw](CA0) at (-2.5, -1.5) {{CA-0}};
-        \node[draw](CA1) at (-0.5, -1.5) {{CA-1}};
-        \node[draw](CA2) at (1.5, -1.5)  {{CA-2}};
-        \node[draw](CA3) at (3.5, -1.5)  {{CA-3}};
-        \node[draw](CA4) at (5.5, -1.5)  {{CA-4}};
+        %\node[](clsin) at (-4, -1.5) {{$\vq_0$}};
+        %\node[draw](CA0) at (-2.5, -1.5) {{CA-0}};
+        %\node[draw](CA1) at (-0.5, -1.5) {{CA-1}};
+        %\node[draw](CA2) at (1.5, -1.5)  {{CA-2}};
+        %\node[draw](CA3) at (3.5, -1.5)  {{CA-3}};
+        %\node[draw](CA4) at (5.5, -1.5)  {{CA-4}};
     
         %% CNN backbone
         \node(empt0) at (-4.65, 0) {};
@@ -28,22 +28,22 @@
         \draw[->] (res1) -- node[above] {$A_1$} (res2);
         \draw[->] (res2) -- node[above] {$A_2$} (res3);
         \draw[->] (res3) -- node[above] {$A_3$} (res4);
-        \draw[->, blue, dashed] (res4) -- node {\blue{\normalsize//}} (class);
-        \node[](GAP) at (6.25,0.25) {\blue{\textsc{GAP}}};
+        \draw[->] (res4) -- node {} (class);
+        \node[](GAP) at (6.25,0.25) {\textsc{GAP}};
         \draw[->] (class) -- node {} (logit);
         %% CLS Stream
-        \draw[->] (clsin) -- node {} (CA0);
-        \draw[dashed, ->] (res0.north) -|node {} (CA0);
-        \draw[->] (CA0) -- node[above] {$\vq_1$} (CA1);
-        \draw[dashed, ->] (res1.north) -|node {} (CA1);
-        \draw[->] (CA1) -- node[above] {$\vq_2$} (CA2);
-        \draw[dashed, ->] (res2.north) -|node {} (CA2);
-        \draw[->] (CA2) -- node[above] {$\vq_3$} (CA3);
-        \draw[dashed, ->] (res3.north) -|node {} (CA3);
-        \draw[->] (CA3) -- node[above] {$\vq_4$} (CA4);
-        \draw[dashed, ->] (res4.north) -|node[above] {$A_4$} (CA4);
-        \draw[-] (CA4.east) -| node[right] {$\vq_5$} (empt1.center);
-        \draw[->] (empt1.center) -- node {} (class);
+        %\draw[->] (clsin) -- node {} (CA0);
+        %\draw[dashed, ->] (res0.north) -|node {} (CA0);
+        %\draw[->] (CA0) -- node[above] {$\vq_1$} (CA1);
+        %\draw[dashed, ->] (res1.north) -|node {} (CA1);
+        %\draw[->] (CA1) -- node[above] {$\vq_2$} (CA2);
+        %\draw[dashed, ->] (res2.north) -|node {} (CA2);
+        %\draw[->] (CA2) -- node[above] {$\vq_3$} (CA3);
+        %\draw[dashed, ->] (res3.north) -|node {} (CA3);
+        %\draw[->] (CA3) -- node[above] {$\vq_4$} (CA4);
+        %\draw[dashed, ->] (res4.north) -|node[above] {$A_4$} (CA4);
+        %\draw[-] (CA4.east) -| node[right] {$\vq_5$} (empt1.center);
+        %\draw[->] (empt1.center) -- node {} (class);
     \end{tikzpicture}
 }
 %    \vspace{3pt}

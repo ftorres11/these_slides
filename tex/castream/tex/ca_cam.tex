@@ -15,56 +15,112 @@
         \includegraphics[width=.35\textwidth]{fig/castream/img/att_pdf-crop.pdf}
     \end{center}
     \pause
-    Computation of the relevance of each element relative to others in an embedding.
+    %Computation of the relevance of each element relative to others in an embedding.
+    \blue{An abstract class representation ([\Th{CLS}]) updated with information from the embedding. \cite{devlin2018bert}}
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
-    \frametitle{CAM is Attention}
-    \framesubtitle{Derivation}
+    \frametitle{Background}
+    \framesubtitle{Convolutions and Self Attention}
     \small
-    %\emph{We are interested in demonstrating that the Attention matrix is like CAM}\\\pause
-    From equation (\ref{eq:att}), the equation matrix $\mathbf{a}$:
-    \begin{equation}
-        \mathbf{a}= \mbox{softmax}\left(\frac{Q\times K\tran}{\sqrt{d_\ell}}\right)
-    \end{equation}
+    Different building blocks rely on different pooling mechanisms:\pause
+    \vspace{-10pt}
+    \begin{columns}
+        \column{.15\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth]{fig/rel/imrecon/img/conv_schema.pdf}\\
+                \tiny{Original from \cite{lin2013network}}
+            \end{center}
+        \column{.85\textwidth}
+            \begin{center}
+                \input{fig/castream/tex/convnet.tex}\\\pause
+            \end{center}
+            \small \Th{GAP} considers an uniform pooling.
+    \end{columns}
     \pause
-    Now, asuming an arbitrary vector $\alpha$ to compute attention with, and embedding $V$ 
-    a feature map $A_\ell$:\pause
-    \begin{equation}
-        \mathbf{a} = \mbox{softmax}\left(\frac{\alpha\times A_\ell}{\sqrt{d_\ell}}\right)
-    \end{equation}
-    \pause
-    Where $\mbox{softmax}(.../\sqrt{d_\ell})$ is $h_\ell$. \pause Thus
-    \begin{equation}
-        \mathbf{a} = h_\ell(\alpha\times A_\ell) = h_\ell\left(\sum_k \alpha_k A^k_\ell\right)
-    \end{equation}
+    \vspace{10pt}
+    \begin{columns}
+        \column{.15\textwidth}
+            \begin{center}
+                \includegraphics[width=\textwidth]{fig/rel/imrecon/img/vit_block.pdf}\\
+                \tiny{Original from \cite{dosovitskiy2020image}}
+            \end{center}
+        \column{.85\textwidth}
+            \begin{center}
+                \input{fig/castream/tex/transformer} 
+            \end{center}
+            \pause
+            \small \Th{CLS} is weighted with attention.
+    \end{columns}
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
-    \frametitle{CAM is Attention}
-    \framesubtitle{Pooling or Masking}
-    \emph{We intend to integrate attention into a model, such that prediction and explanation are linked.}\\
-    \pause
+    \frametitle{Motivation}
+    \framesubtitle{Including \Th{CLS} in CNNs}
     \textbf{Cross Attention}:
     Assuming an arbitrary embedding $\mathbf{q}$:
     \begin{equation}
-        \mbox{CA}_\ell(\mathbf{q}_\ell, A_\ell) \defn A\tran \mathbf{a} = A_\ell\tran h_\ell 
+        \mbox{CA}_\ell(\mathbf{q}_\ell, A_\ell) \defn A\tran \mathbf{q} = A_\ell\tran h_\ell 
         (A_\ell \mathbf{q}_\ell), \in \mathbb{R}^d_\ell
         \label{eq:pooling_1}
     \end{equation}
     \pause
-    With a flattened $A_\ell$, a pooled representation can be expressed via attention vector 
-    $\mathbf{a} = (a_1, \dots, a_{p_\ell})$:
+    For a feature map $A_\ell$, a pooled representation can be expressed via attention vector 
+    $\mathbf{a} = h_\ell(A_\ell\mathbf{q}_\ell)$:
     \begin{equation}
         \mbox{CA}_\ell(\mathbf{q}_\ell, A_\ell)\defn A_\ell\tran\mathbf{a}%=\sum_i a_i\vphi_\ell^i.
     \end{equation}
     \pause
     A pooling similar to $\Th{GAP}$, masked in a fashion similar to CAM.
-
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 %\begin{frame}[t]
 %    \frametitle{CAM is Attention}
+%    \framesubtitle{Derivation}
+%    \small
+%    %\emph{We are interested in demonstrating that the Attention matrix is like CAM}\\\pause
+%    From equation (\ref{eq:att}), the equation matrix $\mathbf{a}$:
+%    \begin{equation}
+%        \mathbf{a}= \mbox{softmax}\left(\frac{Q\times K\tran}{\sqrt{d_\ell}}\right)
+%    \end{equation}
+%    \pause
+%    Now, asuming an arbitrary vector $\alpha$ to compute attention with, and embedding $V$ 
+%    a feature map $A_\ell$:\pause
+%    \begin{equation}
+%        \mathbf{a} = \mbox{softmax}\left(\frac{\alpha\times A_\ell}{\sqrt{d_\ell}}\right)
+%    \end{equation}
+%    \pause
+%    Where $\mbox{softmax}(.../\sqrt{d_\ell})$ is $h_\ell$. \pause Thus
+%    \begin{equation}
+%        \mathbf{a} = h_\ell(\alpha\times A_\ell) = h_\ell\left(\sum_k \alpha_k A^k_\ell\right)
+%    \end{equation}
+%\end{frame}
+%%--------------------------------------------------------------------------------------------------
+%\begin{frame}[t]
+%    \frametitle{CAM is Attention}
+%    \framesubtitle{Pooling or Masking}
+%    \emph{We intend to integrate attention into a model, such that prediction and explanation are linked.}\\
+%    \pause
+%    \textbf{Cross Attention}:
+%    Assuming an arbitrary embedding $\mathbf{q}$:
+%    \begin{equation}
+%        \mbox{CA}_\ell(\mathbf{q}_\ell, A_\ell) \defn A\tran \mathbf{a} = A_\ell\tran h_\ell 
+%        (A_\ell \mathbf{q}_\ell), \in \mathbb{R}^d_\ell
+%        \label{eq:pooling_1}
+%    \end{equation}
+%    \pause
+%    With a flattened $A_\ell$, a pooled representation can be expressed via attention vector 
+%    $\mathbf{a} = (a_1, \dots, a_{p_\ell})$:
+%    \begin{equation}
+%        \mbox{CA}_\ell(\mathbf{q}_\ell, A_\ell)\defn A_\ell\tran\mathbf{a}%=\sum_i a_i\vphi_\ell^i.
+%    \end{equation}
+%    \pause
+%    A pooling similar to $\Th{GAP}$, masked in a fashion similar to CAM.
+%
+%\end{frame}
+%--------------------------------------------------------------------------------------------------
+%\begin{frame}[t]
+%%    \frametitle{CAM is Attention}
 %    \framesubtitle{Derivation}
 %    \small
 %    Let's freshen up: \\

@@ -1,29 +1,51 @@
 \scalebox{.75}{
     %% Definitions
     \def\posthoccirc{(0,0) circle (3.75cm)}
-    \def\lrcirc{(0.8838834764831843cm, -0.8838834764831843cm) circle (2.5cm)}
-    \def\attcirc{(1.7677669529663687, -1.7677669529663687) circle (1.25cm)}
-    \def\gradcirc{(-0.8838834764831843, -0.8838834764831843) circle (2.5cm)}
-    \def\maskcirc{(0.8838834764831843, 0.8838834764831843) circle (2.5cm)}
-    \def\camcirc{(0.8838834764831843, 0.8838834764831843) circle (2.5cm)}
+    %\def\lrcirc{(0.8838834764831843cm, -0.8838834764831843cm) circle (2.5cm)}
+    \def\lrcirc{(1.85, 0) circle (1.9cm)}
+    \def\attcirc{(0.571681439593652, -1.75945455514603) circle (1.9cm)}
+    \def\gradcirc{(-1.49668143959365, -1.08740271674108) circle (1.9cm)}
+    \def\maskcirc{(-1.49668143959365, 1.08740271674108) circle (1.9cm)}
+    \def\camcirc{(0.571681439593652, 1.75945455514603) circle (1.9cm)}
     %\def\xaicirc{(-2, -3) circle (3.75)}
     \begin{tikzpicture}
+        \scriptsize
+        %\footnotesize
         \begin{scope}
             %% Anchors
-            \filldraw[color=blue, fill=blue!5, opacity=0.5] \posthoccirc;
-            \node[] at (0, 4) (aitxt) {Post-hoc Interpretability};\pause
-            \node[] at (0.8838834764831843, 1.8661165235168156) (mltxt) {\scriptsize Learning Based Approaches};
-            \filldraw[color=purple, fill=purple!5, opacity=0.5] \lrcirc; \pause
-            \node[] at (0.8838834764831843, 3.6338834764831844) (nlptxt) {\scriptsize Attention Based Approaches};
-            \filldraw[color=green, fill=green!5, opacity=0.5] \attcirc; \pause
-            \node[] at (-0.8838834764831843, 1.8661165235168156) (cvtxt) {\scriptsize Gradient-Based Approaches};
-            \filldraw[color=red, fill=red!5, opacity=0.5] \gradcirc;\pause
-            \node[] at (1.7677669529663687, -0.26776695296636865) (dltxt) {\scriptsize Mask/Perturbation Based Approaches};    
-            \filldraw[color=cyan, fill=cyan!5, opacity=0.5] \maskcirc;\pause
-            \filldraw[color=orange, fill=orange!5, opacity=0.5] \camcirc;
+            \filldraw[color=blue, fill=blue!5, fill opacity=0.15] \posthoccirc;
+            \node[] at (0, 4) (aitxt) {\footnotesize \textbf{Post-hoc Interpretability Approaches}};\pause
+            \node[] at (2.45, 0) (mltxt) {\footnotesize Learning\\\footnotesize Based};
+            \filldraw[color=purple, fill=purple!5, fill opacity=0.15] \lrcirc; \pause
+            \node[] at (0.671681439593652, -2.55945455514603) (nlptxt) {\footnotesize Attention\\\footnotesize Based};
+            \filldraw[color=magenta, fill=magenta!5, fill opacity=0.15] \attcirc; \pause
+            \node[] at (-1.99668143959365, -1.48740271674108)  (cvtxt) {\footnotesize Gradient\\\footnotesize Based};
+            \filldraw[color=red, fill=red!5, fill opacity=0.15] \gradcirc;\pause
+            \node[] at (-1.99668143959365, 1.48740271674108) (dltxt) {\footnotesize Mask\\\footnotesize Based};    
+            \filldraw[color=cyan, fill=cyan!5, fill opacity=0.15] \maskcirc;\pause
+            \filldraw[color=orange, fill=orange!5, fill opacity=0.15] \camcirc;
+            \node[] at (0.671681439593652, 2.55945455514603) (camtxt) {\footnotesize CAM\\\footnotesize Based};\pause    
+
+            % Pure approaches
+            \node[] at (-5.5003381373, -1.48740271674108) (puregrad) {\textbf{Pure Gradient}\\
+                                                              Standard backpropagation\cite{simonyan2013deep}\\
+                                                              Guided backpropagation\cite{guidedbackprop}\\
+                                                              Smoothgrad\cite{smilkov2017smoothgrad}};
+            \node[] at (-5.5003381373, 1.48740271674108) (masking) {\textbf{Pure Masking}\\
+                                                                 LIME\cite{ribeiro2016should}\\
+                                                                 RISE\cite{petsiuk2018rise}};
+                                                                 %Perturbations\cite{fong2017interpretable,fong2019understanding}};
+            \node[] at (4.1588313, 2.56646194) (justcam) {\textbf{Pure CAM}\\CAM \cite{zhou2016learning}};\pause
+            % Hybrid ones
+            \node[] at (-4.5003381373, 2.56646194) (perturb) {\textbf{Mask \& Learn}\\Perturbations\cite{fong2017interpretable,fong2019understanding}};
+            \node[] at (4.7958471865, 1.283) (gradcams) {\textbf{CAM \& Grad}\\Grad-CAM\cite{selvaraju2017grad}\\
+                                                     Grad-CAM++\cite{chattopadhay2018grad}};
+            \node[] at (5.5003381373, 0) (scorecam) {\textbf{CAM \& Mask}\\ Score-CAM\cite{wang2020score}};
+            
+    
             %% Text Nodes            
             %\pause
-            %\filldraw[color=orange, fill=orange!5, opacity=0.5] \camcirc;
+            %\filldraw[color=orange, fill=orange!5, fill opacity=0.15] \camcirc;
             %\node[] at (-2, -7) (xaitxt) {xAI};
             %\pause
             %% Intersection node
@@ -36,12 +58,13 @@
             %\begin{scope}
             %    \clip \dlcirc;
             %    \clip \nlpcirc;
-            %    \fill[color=orange!5, opacity=0.5] \xaicirc;;
+            %    \fill[color=orange!5, opacity=0.15] \xaicirc;;
             %\end{scope}
 
             %\node[] at (1, -1.25) (empt_1) {};
             %\node[] at (5, -1.25) (exp) {This study!};
             %\draw[->] (empt_1.center) -- node{} (exp.west);
+            %\node[] at (0.8838834764831843, 3.6338834764831844) (nlptxt) {\scriptsize Attention Based Approaches};
         \end{scope}
 \end{tikzpicture} 
 }

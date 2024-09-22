@@ -31,9 +31,42 @@ Y.~Zhang, P.~Ti{\v{n}}o, A.~Leonardis, and K.~Tang, ``A survey on neural
   network interpretability,'' \emph{IEEE Transactions on Emerging Topics in
   Computational Intelligence}, vol.~5, no.~5, pp. 726--742, 2021.
 
+\bibitem{simonyan2013deep}
+K.~Simonyan, A.~Vedaldi, and A.~Zisserman, ``Deep inside convolutional
+  networks: Visualising image classification models and saliency maps,''
+  \emph{ICLR Workshop}, 2014.
+
+\bibitem{guidedbackprop}
+J.~T. Springenberg, A.~Dosovitskiy, T.~Brox, and M.~Riedmiller, ``Striving for
+  simplicity: The all convolutional net,'' \emph{arXiv preprint
+  arXiv:1412.6806}, 2014.
+
+\bibitem{smilkov2017smoothgrad}
+D.~Smilkov, N.~Thorat, B.~Kim, F.~Vi{\'e}gas, and M.~Wattenberg, ``Smoothgrad:
+  removing noise by adding noise,'' \emph{arXiv preprint arXiv:1706.03825},
+  2017.
+
+\bibitem{ribeiro2016should}
+M.~T. Ribeiro, S.~Singh, and C.~Guestrin, ``"why should i trust you?":
+  Explaining the predictions of any classifier,'' in \emph{SIGKDD}, ser. KDD
+  '16, 2016.
+
+\bibitem{petsiuk2018rise}
+P.~Vitali, D.~Abir, and S.~Kate, ``Rise: Randomized input sampling for
+  explanation of black-box models,'' \emph{BMVC}, 2018.
+
 \bibitem{zhou2016learning}
 B.~Zhou, A.~Khosla, A.~Lapedriza, A.~Oliva, and A.~Torralba, ``Learning deep
   features for discriminative localization,'' in \emph{CVPR}, 2016.
+
+\bibitem{fong2017interpretable}
+R.~C. Fong and A.~Vedaldi, ``Interpretable explanations of black boxes by
+  meaningful perturbation,'' in \emph{ICCV}, 2017.
+
+\bibitem{fong2019understanding}
+R.~Fong, M.~Patrick, and A.~Vedaldi, ``Understanding deep networks via extremal
+  perturbations and smooth masks,'' in \emph{Proceedings of the IEEE/CVF
+  international conference on computer vision}, 2019, pp. 2950--2958.
 
 \bibitem{selvaraju2017grad}
 \BIBentryALTinterwordspacing
@@ -56,27 +89,19 @@ H.~Wang, M.~Du, F.~Yang, and Z.~Zhang, ``Score-cam: Improved visual
   \url{http://arxiv.org/abs/1910.01279}
 \BIBentrySTDinterwordspacing
 
-\bibitem{petsiuk2018rise}
-P.~Vitali, D.~Abir, and S.~Kate, ``Rise: Randomized input sampling for
-  explanation of black-box models,'' \emph{BMVC}, 2018.
+\bibitem{devlin2018bert}
+J.~Devlin, M.-W. Chang, K.~Lee, and K.~Toutanova, ``Bert: Pre-training of deep
+  bidirectional transformers for language understanding,'' \emph{arXiv preprint
+  arXiv:1810.04805}, 2018.
 
-\bibitem{fong2017interpretable}
-R.~C. Fong and A.~Vedaldi, ``Interpretable explanations of black boxes by
-  meaningful perturbation,'' in \emph{ICCV}, 2017.
+\bibitem{lin2013network}
+M.~Lin, Q.~Chen, and S.~Yan, ``Network in network,'' \emph{arXiv preprint
+  arXiv:1312.4400}, 2013.
 
-\bibitem{fong2019understanding}
-R.~Fong, M.~Patrick, and A.~Vedaldi, ``Understanding deep networks via extremal
-  perturbations and smooth masks,'' in \emph{Proceedings of the IEEE/CVF
-  international conference on computer vision}, 2019, pp. 2950--2958.
-
-\bibitem{guidedbackprop}
-J.~T. Springenberg, A.~Dosovitskiy, T.~Brox, and M.~Riedmiller, ``Striving for
-  simplicity: The all convolutional net,'' \emph{arXiv preprint
-  arXiv:1412.6806}, 2014.
-
-\bibitem{smilkov2017smoothgrad}
-D.~Smilkov, N.~Thorat, B.~Kim, F.~Vi{\'e}gas, and M.~Wattenberg, ``Smoothgrad:
-  removing noise by adding noise,'' \emph{arXiv preprint arXiv:1706.03825},
-  2017.
+\bibitem{dosovitskiy2020image}
+A.~Dosovitskiy, L.~Beyer, A.~Kolesnikov, D.~Weissenborn, X.~Zhai,
+  T.~Unterthiner, M.~Dehghani, M.~Minderer, G.~Heigold, S.~Gelly \emph{et~al.},
+  ``An image is worth 16x16 words: Transformers for image recognition at
+  scale,'' \emph{arXiv preprint arXiv:2010.11929}, 2020.
 
 \end{thebibliography}

@@ -1,6 +1,9 @@
-\beamer@slide {eq:cam}{33}
-\beamer@slide {eq:inc_conf}{40}
-\beamer@slide {eq:att}{60}
-\beamer@slide {eq:pooling_1}{68}
-\beamer@slide {eq:backtoin}{81}
-\beamer@slide {eq:total}{87}
+\beamer@slide {ch:opticam}{30}
+\beamer@slide {eq:cam}{35}
+\beamer@slide {eq:inc_conf}{42}
+\beamer@slide {ch:CA-Stream}{60}
+\beamer@slide {eq:att}{62}
+\beamer@slide {eq:pooling_1}{70}
+\beamer@slide {ch:gradient}{82}
+\beamer@slide {eq:backtoin}{83}
+\beamer@slide {eq:total}{89}

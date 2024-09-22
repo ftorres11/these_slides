@@ -3,17 +3,16 @@
     \frametitle{Cross Attention Stream}
     \small
     Given a model $f$ we consider locations where critical operations take place:
+    \input{fig/castream/tex/ca_mainfig.tex}\\
     \begin{equation}
         f = g \circ \Th{GAP} \circ f_L \circ \dots f_0
     \end{equation}\pause
     %\vspace{20pt}
-    On another hand, a $[\Th{CLS}]$ token embedding is initialized, as  $\mathbf{q}_0 \in 
-    \mathbb{R}^{d_0}$, updated with a secquence of embeddings $\mathbf{q}_\ell \in \mathbb{R}^{d_\ell}$
-    via interaction along a stream with features on stage  $\ell$:
+    A $[\Th{CLS}]$ token embedding is initialized as  $\mathbf{q}_0 \in 
+    \mathbb{R}^{d_0}$.\\\pause
+    Updated with a secquence of embeddings $\mathbf{q}_\ell \in \mathbb{R}^{d_\ell}$,\\
+    interacting along a stream with features on stage  $\ell$:
     \begin{equation}
         \mathbf{q}_{\ell+1} = W_\ell\cdot\Th{CA}_\ell (\mathbf{q}_\ell, A_\ell)
-    \end{equation}
-    \pause
-    Visualized as:
-    \input{fig/castream/tex/ca_mainfig.tex}
+    \end{equation}   
 \end{frame}

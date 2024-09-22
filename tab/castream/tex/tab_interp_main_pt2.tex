@@ -1,9 +1,10 @@
 \begin{table}
     \centering
-    \footnotesize
+    \tiny
+    \setlength{\tabcolsep}{2pt}
     %\setlength{\tabcolsep}{3.5pt}
     %\setlength\extrarowheight{-4pt}
-    \resizebox{.95\textwidth}{!}{%
+    %\resizebox{.95\textwidth}{!}{%
     \begin{tabular}{llcccccc}\toprule
         \Th{Network}&\Th{Method}&\Th{Pool}&\Th{AD$\downarrow$}&\Th{AG$\uparrow$}&\Th{AI$\uparrow$}&\Th{I$\uparrow$}&\Th{D$\downarrow$}\\\midrule
     
@@ -38,5 +39,5 @@
     \end{tabular}
     %\caption{\textbf{Interpretability metrics} of \Ours \vs baseline \Th{GAP} for different networks and interpretability methods on ImageNet.}
     %\label{tab:intrecon-all}
-    }
+    %}
 \end{table}
