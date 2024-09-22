@@ -10,13 +10,13 @@
     \frametitle{Background}
     \framesubtitle{CAM Formalized}
     \small
-    We define CAM according to the following equation:
+    For an activation function ($h$) and  a feature map ($A^k_\ell$):
     \begin{equation}
-        \small S^c_\ell (\textbf{\mbox{u}}) \defn h \left(\sum_k w^c_k A^k_l \right)
+        \small S^c_\ell (\textbf{\mbox{u}}) \defn h \left(\sum_k w^c_k A^k_\ell \right)
         \label{eq:cam}
     \end{equation}
     \pause
-    The weighting coefficient $\mathbf{w^c_k}$ defining the CAM variant.\\\pause
+    The weighting coefficient ($\mathbf{w^c_k}$) defines the CAM variant.\\\pause
     Milestone CAM models:
     \vspace{10pt}
     \begin{columns}
@@ -59,13 +59,12 @@
     \end{itemize}
     \pause
     \vspace{20pt}
-    With feature map contribution $\mathbf{u^c}_k$:
+    With feature map contribution ($\mathbf{u^c}_k$), model ($f$), normalization ($n$) and upsampling ($\mathbf{up}$):
     \begin{equation}
         u^c_k \defn f (\mbox{\textbf{x}} \odot n(\mbox{up}(A^k_\ell)))_c - f(\mbox{\textbf{x}})_c
         \label{eq:inc_conf}
     \end{equation}
     \vspace{10pt}
-    %\emph{But what would happen if we compute differently the channel contribution?}
 \end{frame}
 %--------------------------------------------------------------------------------------------------
 \begin{frame}[t]
