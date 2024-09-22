@@ -20,35 +20,37 @@
             \node[] at (0.671681439593652, -2.55945455514603) (nlptxt) {\footnotesize Attention\\\footnotesize Based};
             \filldraw[color=magenta, fill=magenta!5, fill opacity=0.15] \attcirc; \pause
             \node[] at (-1.99668143959365, -1.48740271674108)  (cvtxt) {\footnotesize Gradient\\\footnotesize Based};
-            \filldraw[color=red, fill=red!5, fill opacity=0.15] \gradcirc;\pause
-            \node[] at (-1.99668143959365, 1.48740271674108) (dltxt) {\footnotesize Mask\\\footnotesize Based};    
-            \filldraw[color=cyan, fill=cyan!5, fill opacity=0.15] \maskcirc;\pause
-            \filldraw[color=orange, fill=orange!5, fill opacity=0.15] \camcirc;
-            \node[] at (0.671681439593652, 2.55945455514603) (camtxt) {\footnotesize CAM\\\footnotesize Based};\pause    
-
-            % Pure approaches
+            \filldraw[color=red, fill=red!5, fill opacity=0.15] \gradcirc;
             \node[] at (-5.5003381373, -1.48740271674108) (puregrad) {\textbf{Pure Gradient}\\
-                                                              Standard backpropagation\cite{simonyan2013deep}\\
-                                                              Guided backpropagation\cite{guidedbackprop}\\
-                                                              Smoothgrad\cite{smilkov2017smoothgrad}};
+                                                                      Standard backpropagation\cite{simonyan2013deep}\\
+                                                                      Guided backpropagation\cite{guidedbackprop}\\
+                                                                      Smoothgrad\cite{smilkov2017smoothgrad}};\pause
+            \node[] at (-1.99668143959365, 1.48740271674108) (dltxt) {\footnotesize Mask\\\footnotesize Based};    
+            \filldraw[color=cyan, fill=cyan!5, fill opacity=0.15] \maskcirc;
             \node[] at (-5.5003381373, 1.48740271674108) (masking) {\textbf{Pure Masking}\\
-                                                                 LIME\cite{ribeiro2016should}\\
-                                                                 RISE\cite{petsiuk2018rise}};
-                                                                 %Perturbations\cite{fong2017interpretable,fong2019understanding}};
+                                                                    LIME\cite{ribeiro2016should}\\
+                                                                    RISE\cite{petsiuk2018rise}};\pause
+            \filldraw[color=orange, fill=orange!5, fill opacity=0.15] \camcirc;
+            \node[] at (0.671681439593652, 2.55945455514603) (camtxt) {\footnotesize CAM\\\footnotesize Based};
             \node[] at (4.1588313, 2.56646194) (justcam) {\textbf{Pure CAM}\\CAM \cite{zhou2016learning}};\pause
             % Hybrid ones
-            \node[] at (-4.5003381373, 2.56646194) (perturb) {\textbf{Mask \& Learn}\\Perturbations\cite{fong2017interpretable,fong2019understanding}};
+            %\node[] at (-4.5003381373, 2.56646194) (perturb) {\textbf{Mask \& Learn}\\Perturbations\cite{fong2017interpretable,fong2019understanding}};
+            \node[] at (-5.5003381373, 0) (perturb) {\textbf{Mask \& Learn}\\Perturbations\cite{fong2017interpretable,fong2019understanding}};
             \node[] at (4.7958471865, 1.283) (gradcams) {\textbf{CAM \& Grad}\\Grad-CAM\cite{selvaraju2017grad}\\
                                                      Grad-CAM++\cite{chattopadhay2018grad}};
             \node[] at (5.5003381373, 0) (scorecam) {\textbf{CAM \& Mask}\\ Score-CAM\cite{wang2020score}};
             \pause
-            \node[draw, rectangle, color=olive] at (-5.5003381373, 0) (denoise) {\textbf{CAM \& Gradient} \\ \textbf{\& Transparency}\\ Gradient Denoise};
-            \node[draw, rectangle, color=olive] at (5.5003381373, -1.48740271674108) (optiCAM) {\textbf{CAM \& Learning}\\
+            %\node[draw, rectangle, color=olive] at (-5.5003381373, 0) (denoise) {\textbf{Gradient} \\ \textbf{\& Learning}\\ Gradient Denoise};
+            \node[draw, rectangle, color=olive] at (-4.5503381373, -3.05646194) (denoise) {\textbf{Gradient} \\ \textbf{\& Learning}\\ Gradient Denoise};
+            %\node[draw, rectangle, color=olive] at (5.5003381373, -1.48740271674108) (optiCAM) {\textbf{CAM \& Masking}\\
+            %                                                        Opti-CAM};
+            \node[draw, rectangle, color=olive] at (-4.5003381373, 2.56646194) (optiCAM) {\textbf{CAM \& Masking}\\
                                                                     Opti-CAM};
-            \node[draw, rectangle, color=olive] at (5.003381373, -2.56646194) (castream) {\textbf{CAM \& Learning \& Attention}\\
+            \node[draw, rectangle, color=olive] at (5.003381373, -2.56646194) (castream) {\textbf{Attention \& Learning}\\
                                                                 Cross-Attention Stream};
             
-    
+            % Add Arrows
+            % Better Positioning
             %% Text Nodes            
             %\pause
             %\filldraw[color=orange, fill=orange!5, fill opacity=0.15] \camcirc;

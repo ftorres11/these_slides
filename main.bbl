@@ -21,6 +21,10 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{madiega2021artificial}
+T.~Madiega, ``Artificial intelligence act,'' \emph{European Parliament:
+  European Parliamentary Research Service}, 2021.
+
 \bibitem{mythos_interp}
 Z.~C. Lipton, ``The mythos of model interpretability: In machine learning, the
   concept of interpretability is both important and slippery.'' \emph{Queue},
